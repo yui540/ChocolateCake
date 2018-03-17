@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.stage {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  perspective: 20px;
+  transform: rotate(0deg);
+}
+.stage__inner,
+.stage__filter {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.stage__inner { transform-style: preserve-3d; }
+.stage__filter { box-shadow: 0 0 300px #444 inset; }
+
+
+/**
+ * clock
+ */
+.clock {
+  position: absolute;
+  top: calc(50% - 250px); left: calc(50% - 250px);
+  width: 500px; height: 500px;
+  background-color: rgba(100, 100, 100, 0.1);
+  border-radius: 50%;
+  transform: translateZ(50px) scale(calc(1 - (50 / 100)));
+}
+
+/*** frame ***/
+.clock__frame {
+  position: absolute;
+  top: 20px; left: 20px;
+  width: calc(100% - 40px); height: calc(100% - 40px);
+}
+.clock__frame:before,
+.clock__frame:after {
+  content: ""; display: block;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: solid 1px #444;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.clock__frame:after {
+  top: 10px; left: 10px;
+  width: calc(100% - 20px); height: calc(100% - 20px);
+}
+.clock__frame div {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.clock__frame div:after {
+  content: ""; display: block;
+  position: absolute;
+  top: 0; left: calc(50% - 2.5px);
+  width: 5px; height: 10px;
+  background-color: #444;
+}
+/* 24分割して回転 --------------------------------------- */
+.clock__frame div:nth-child(1)  { transform: rotate(0deg); }
+.clock__frame div:nth-child(2)  { transform: rotate(15deg); }
+.clock__frame div:nth-child(3)  { transform: rotate(30deg); }
+.clock__frame div:nth-child(4)  { transform: rotate(45deg); }
+.clock__frame div:nth-child(5)  { transform: rotate(60deg); }
+.clock__frame div:nth-child(6)  { transform: rotate(75deg); }
+.clock__frame div:nth-child(7)  { transform: rotate(90deg); }
+.clock__frame div:nth-child(8)  { transform: rotate(105deg); }
+.clock__frame div:nth-child(9)  { transform: rotate(120deg); }
+.clock__frame div:nth-child(10) { transform: rotate(135deg); }
+.clock__frame div:nth-child(11) { transform: rotate(150deg); }
+.clock__frame div:nth-child(12) { transform: rotate(165deg); }
+.clock__frame div:nth-child(13) { transform: rotate(180deg); }
+.clock__frame div:nth-child(14) { transform: rotate(195deg); }
+.clock__frame div:nth-child(15) { transform: rotate(210deg); }
+.clock__frame div:nth-child(16) { transform: rotate(225deg); }
+.clock__frame div:nth-child(17) { transform: rotate(240deg); }
+.clock__frame div:nth-child(18) { transform: rotate(255deg); }
+.clock__frame div:nth-child(19) { transform: rotate(270deg); }
+.clock__frame div:nth-child(20) { transform: rotate(285deg); }
+.clock__frame div:nth-child(21) { transform: rotate(300deg); }
+.clock__frame div:nth-child(22) { transform: rotate(315deg); }
+.clock__frame div:nth-child(23) { transform: rotate(330deg); }
+.clock__frame div:nth-child(24) { transform: rotate(345deg); }
+
+/*** hands ***/
+.clock__hands {
+  position: absolute;
+  top: 35px; left: 35px;
+  width: calc(100% - 70px); height: calc(100% - 70px);
+}
+.clock__hands div {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.clock__hands div:after {
+  content: ""; display: block;
+  position: absolute;
+  top: 0; left: calc(50% - 5px);
+  width: 10px;
+  background-color: #444;
+  border-radius: 5px;
+}
+.clock__hands div:nth-child(1):after { height: 50%; }
+.clock__hands div:nth-child(2):after { height: 40%; top: 10%; }
+
+/*** image ***/
+.clock__image {
+  position: absolute;
+  top: 45px; left: 45px;
+  width: calc(100% - 90px); height: calc(100% - 90px);
+  background-image: url(/* お好みの画像を指定 */);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/**
+ * memories
+ */
+.memories {
+  position: absolute;
+  top: calc(50% - 250px); left: calc(50% - 250px);
+  width: 500px; height: 500px;
+}
+.memories_layer_1 { transform: translateZ(150px) scale(calc(1 - (150 / 200))); }
+.memories_layer_2 { transform: translateZ(250px) scale(calc(1 - (250 / 300))); }
+.memories_layer_3 { transform: translateZ(350px) scale(calc(1 - (350 / 400))); }
+.memories_layer_4 { transform: translateZ(450px) scale(calc(1 - (450 / 500))); }
+.memories_layer_5 { transform: translateZ(550px) scale(calc(1 - (550 / 600))); }
+
+/*** image ***/
+.memories__image {
+  position: absolute;
+  top: 50px; left: 50px;
+  width: calc(100% - 100px); height: calc(100% - 100px);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+}
+.memories__image:after {
+  content: ""; display: block;
+  position: absolute;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 40px #333 inset;
+}
+.memories__image_type_1 { background-image: url(/* お好みの画像を指定 */); }
+.memories__image_type_2 { background-image: url(/* お好みの画像を指定 */); }
+.memories__image_type_3 { background-image: url(/* お好みの画像を指定 */); }
+.memories__image_type_4 { background-image: url(/* お好みの画像を指定 */); }
+.memories__image_type_5 { background-image: url(/* お好みの画像を指定 */); }
+
+/*** frame ***/
+.memories__frame {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.memories__frame:before,
+.memories__frame:after {
+  content: ""; display: block;
+  position: absolute;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.memories__frame:before {
+  top: 25px; left: 25px;
+  width: calc(100% - 50px); height: calc(100% - 50px);
+  border: solid 1px #444;
+}
+.memories__frame:after {
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-top: solid 10px #444;
+  border-bottom: solid 10px #444;
+}
+
+/***********************************************************************************************
+  animation
+************************************************************************************************/
+.stage {
+  animation:
+    camera 8s ease-in-out 0s forwards,
+    camera 4s ease 8s reverse forwards;
+}
+.stage__inner { animation: sway 0.7s ease-in-out 0s alternate infinite; }
+.memories__frame:after { animation: rotate360 3.5s linear 0s infinite; }
+.clock__hands div:nth-child(1) { animation: rotate4320 30s linear 0s infinite; }
+.clock__hands div:nth-child(2) { animation: rotate360 30s linear 0s infinite; }
+
+/***********************************************************************************************
+  keyframes
+************************************************************************************************/
+@keyframes camera {
+  from { perspective: 20px; }
+  to   { perspective: 600px; }
+}
+@keyframes sway {
+  from { transform: translate(3px, 3px); }
+  to   { transform: translate(-3px, -3px); }
+}
+@keyframes rotate360 {
+  from { transform: rotate(0deg); }   
+  to   { transform: rotate(360deg); }   
+}
+@keyframes rotate180 {
+  from { transform: rotate(0deg); }   
+  to   { transform: rotate(180deg); }   
+}
+@keyframes rotate4320 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(4320deg); }
+}
