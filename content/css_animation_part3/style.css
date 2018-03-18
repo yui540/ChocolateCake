@@ -8,7 +8,6 @@
   width: 100%; height: 100%;
   overflow: hidden;
   perspective: 20px;
-  transform: rotate(0deg);
 }
 .stage__inner,
 .stage__filter {
@@ -213,10 +212,6 @@
 @keyframes rotate360 {
   from { transform: rotate(0deg); }   
   to   { transform: rotate(360deg); }   
-}
-@keyframes rotate180 {
-  from { transform: rotate(0deg); }   
-  to   { transform: rotate(180deg); }   
 }
 @keyframes rotate4320 {
   from { transform: rotate(0deg); }
