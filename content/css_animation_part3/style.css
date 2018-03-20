@@ -116,7 +116,7 @@
   position: absolute;
   top: 45px; left: 45px;
   width: calc(100% - 90px); height: calc(100% - 90px);
-  background-image: url(/* お好みの画像を指定 */);
+  background-image: url(./images/subaru.png);
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -154,11 +154,11 @@
   border-radius: 50%;
   box-shadow: 0 0 40px #333 inset;
 }
-.memories__image_type_1 { background-image: url(/* お好みの画像を指定 */); }
-.memories__image_type_2 { background-image: url(/* お好みの画像を指定 */); }
-.memories__image_type_3 { background-image: url(/* お好みの画像を指定 */); }
-.memories__image_type_4 { background-image: url(/* お好みの画像を指定 */); }
-.memories__image_type_5 { background-image: url(/* お好みの画像を指定 */); }
+.memories__image_type_1 { background-image: url(./images/1.png); }
+.memories__image_type_2 { background-image: url(./images/2.png); }
+.memories__image_type_3 { background-image: url(./images/3.png); }
+.memories__image_type_4 { background-image: url(./images/4.png); }
+.memories__image_type_5 { background-image: url(./images/5.png); }
 
 /*** frame ***/
 .memories__frame {
