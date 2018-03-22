@@ -1,0 +1,127 @@
+@include sp-layout {
+  .modal-view {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255,255,255,0.9);
+    overflow: auto;
+    animation: fadein 0.8s ease 0s forwards;
+  }
+
+  /*** close-btn ***/
+  .modal-view__close-btn {
+    position: absolute;
+    top: 0; right: 0;
+    transform: translate(100%, -100%);
+    width: 100px; height: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 30px #ccc;
+    border-radius: 50%;
+    transition: all 0.35s ease 0s;
+    animation: show-close-btn__sp 0.5s ease 0.4s forwards;
+
+    div {
+      position: absolute;
+      left: 25px; top: 25px;
+      width: 50px; height: 50px;
+
+      &::before,
+      &::after {
+        content: ""; display: block;
+        position: absolute;
+        top: 24.5px; left: 0;
+        width: 100%; height: 1px;
+        background-color: #999;
+      }
+      &::before { transform: rotate(45deg); }
+      &::after  { transform: rotate(-45deg); }
+    }
+  }
+  .modal-view__close-btn:hover { box-shadow: 0 0 60px rgba(0,150,255,0.4); }
+
+  /*** thumb ***/
+  .modal-view__thumb {
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 0 0 40px #ccc;
+  }
+
+  /*** title ***/
+  .modal-view__title {
+    width: 90%;
+    margin: 20px auto;
+    font-size: 22px;
+    color: #888;
+    text-align: center;
+  }
+
+  /*** desctiption ***/
+  .modal-view__description {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #999;
+    line-height: 24px;
+
+    a { color: rgb(0,180,255); }
+  }
+
+  /*** link ***/
+  .modal-view__link {
+    position: relative;
+    margin: 30px auto;
+    width: 180px; height: 40px;
+    border: solid 3px #888;
+    border-radius: 5px;
+    display: block;
+    overflow: hidden;
+    transition: all 0.5s ease 0s;
+
+    strong {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      font-size: 20px;
+      color: #888;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 5px;
+      display: block;
+      font-weight: bold;
+      transition: all 0.3s ease 0s;
+      z-index: 1;
+    }
+
+    &::before,
+    &::after {
+      content: ""; display: block;
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+    }
+    &::before {
+      background-color: #bbb;
+      transform: translateX(100%);
+      transition: all 0.3s ease 0s;
+    }
+    &::after {
+      background-color: #888;
+      transform: translateX(-100%);
+      transition: all 0.3s ease 0.2s;
+    }
+  }
+  .modal-view__link:hover {
+    border-radius: 15px;
+    strong { color: #fff; }
+    &::before { transform: translateX(0); }
+    &::after  { transform: translateX(0); }
+  }
+}
+
+@keyframes show-close-btn__sp {
+  from { transform: translate(100%, -100%); }
+  to   { transform: translate(20px, -20px); }
+}
