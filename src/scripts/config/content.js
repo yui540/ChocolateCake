@@ -24,6 +24,14 @@ export default [
     "thumb_large": "./images/thumb/large/css_animation_part3.png"
   },
   {
+    "id": "satella",
+    "title": "satella",
+    "link": "./content/satella/",
+    "description": "リゼロのサテラとの別れのシーンをCSS Animationで表現しました。<br />瞬きっぽい表現などにこだわりました。",
+    "thumb": "./images/thumb/small/satella.png",
+    "thumb_large": "./images/thumb/large/satella.png"
+  },
+  {
     "id": "darli-fra",
     "title": "FRANXX",
     "link": "./content/darli-fra/",

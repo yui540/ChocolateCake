@@ -1,0 +1,389 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  min-width: 1100px; min-height: 650px;
+  perspective: 20px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/**
+ * fantasy-world
+ */
+.fantasy-world {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  transform-style: preserve-3d;
+}
+
+.blackout {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: #000;
+  opacity: 0;
+  z-index: 5;
+}
+
+/*** bg ***/
+.bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url(./bg.jpg);
+  background-position: center;
+  background-size: cover;
+  transform: translateZ(5px) scale(1.2);
+}
+
+/*** satella ***/
+.satella {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url(./satella.png);
+  background-size: auto 90%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  transform: translateZ(90px);
+}
+
+/*** message ***/
+.message-3 {
+  position: absolute;
+  left: calc(50% - 325px); top: calc(50% + 50px);
+  width: 650px; height: 60px;
+  transform: translateZ(300px) scale(0.8);
+  text-shadow: 0 0 20px #fff;
+}
+.message-3 span { float: left; }
+.message-3 span:nth-child(1),
+.message-3 span:nth-child(3) {
+  font-size: 30px;
+  color: #fff;
+  display: block;
+  line-height: 60px;
+}
+.message-3 span:nth-child(2) {
+  position: relative;
+  width: 150px; height: 60px;
+}
+.message-3 span:nth-child(2):after {
+  content: ""; display: block;
+  position: absolute;
+  top: 29px; left: 20px;
+  width: 110px; height: 2px;
+  background-color: #fff;
+}
+
+
+
+/**
+ * eye
+ */
+.eye {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.eye:before,
+.eye:after {
+  position: absolute;
+  left: 0;
+  content: ""; display: block;
+  width: 100%; height: 50%;
+  background-color: #111;
+  z-index: 0;
+}
+.eye:before { top: 0; }
+.eye:after  { bottom: 0; }
+
+/*** message-1, message-2 ***/
+.eye .message-1,
+.eye .message-2 {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.eye .message-1 .text-bg,
+.eye .message-2 .text-bg {
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 5000px);
+  width: 10000px; height: 300px;
+  font-size: 220px;
+  line-height: 300px;
+  text-align: center;
+  color: #222;
+  opacity: 0;
+}
+.eye .message-1 .text,
+.eye .message-2 .text {
+  position: absolute;
+  top: calc(50% - 30px); left: 0;
+  width: 100%; height: 60px;
+  font-size: 32px;
+  color: #fff;
+  line-height: 60px;
+  text-align: center;
+  text-shadow: 0 0 20px #fff;
+  opacity: 0;
+}
+
+
+/**
+ * real-world
+ */
+.real-world {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  perspective: 2000px;
+  opacity: 0;
+  z-index: 10;
+}
+.inner {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  transform-style: preserve-3d;
+}
+
+/*** clock ***/
+.clock {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) translateZ(20px) rotateX(12deg);
+  width: 650px; height: 650px;
+  border: solid 5px #666;
+  border-radius: 50%;
+}
+.clock:before {
+  content: ""; display: block;
+  position: absolute;
+  top: 10px; left: 10px;
+  width: 630px; height: 630px;
+  border-radius: 50%;
+  border: dashed 1px #666;
+}
+
+.frame {
+  position: absolute;
+  top: 20px; left: 20px;
+  width: 610px; height: 610px;
+}
+.frame div {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.frame div:after {
+  content: ""; display: block;
+  position: absolute;
+  top: 0; left: calc(50% - 7.5px);
+  width: 15px; height: 25px;
+  background-color: #666;
+}
+.frame div:nth-child(1)  { transform: rotate(0deg); }
+.frame div:nth-child(2)  { transform: rotate(30deg); }
+.frame div:nth-child(3)  { transform: rotate(60deg); }
+.frame div:nth-child(4)  { transform: rotate(90deg); }
+.frame div:nth-child(5)  { transform: rotate(120deg); }
+.frame div:nth-child(6)  { transform: rotate(150deg); }
+.frame div:nth-child(7)  { transform: rotate(180deg); }
+.frame div:nth-child(8)  { transform: rotate(210deg); }
+.frame div:nth-child(9)  { transform: rotate(240deg); }
+.frame div:nth-child(10) { transform: rotate(270deg); }
+.frame div:nth-child(11) { transform: rotate(300deg); }
+.frame div:nth-child(12) { transform: rotate(330deg); }
+
+.hands {
+  position: absolute;
+  top: 20px; left: 20px;
+  width: 610px; height: 610px;
+}
+.hands div {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.hands div:after {
+  content: ""; display: block;
+  position: absolute;
+  top: 0; left: calc(50% - 7.5px);
+  width: 15px; height: 50%;
+  background-color: #666;
+}
+.hands div:nth-child(2):after {
+  top: 15%; left: calc(50% - 10px);
+  width: 20px; height: 35%;
+}
+
+/*** subaru ***/
+.subaru {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) translateZ(80px);
+  width: 200px; height: 459px;
+  background-image: url(./subaru.png);
+  background-size: 100%;
+}
+
+/*** message-1 ***/
+.real-world .message-1 {
+  position: absolute;
+  top: 50%; left: 0;
+  width: 100%; height: 60px;
+  transform: translate(0, -50%) translateZ(160px);
+  font-size: 50px;
+  color: #111;
+  text-align: center;
+  line-height: 60px;
+  text-shadow: 0 0 10px #999;
+}
+.real-world .message-1 span:nth-child(2) {
+  display: inline-block;
+  width: 140px; height: 2px;
+  margin: 0 10px;
+  margin-bottom: 19.5px;
+  background-color: #111;
+}
+
+/**
+ * slider
+ */
+#slider {
+  position: absolute;
+  bottom: 50px; left: calc(50% - 200px);
+  width: 400px;
+  display: block;
+  z-index: 100;
+  display: none;
+}
+
+
+/****************************************************************************************
+  animation
+*****************************************************************************************/
+.eye .message-1 .text-bg {
+  animation:
+    show-message 1s ease 0s forwards,
+    fadeout 1.5s ease 1.2s forwards;
+}
+.eye .message-1 .text {
+  animation:
+    show-message 1s ease 0.2s forwards,
+    fadeout 1.5s ease 1.2s forwards;
+}
+.message-2 .text-bg {
+  animation:
+    show-message 1s ease 1.5s forwards,
+    fadeout 1.5s ease 2.7s forwards;
+}
+.message-2 .text {
+  animation:
+    show-message 1s ease 1.7s forwards,
+    fadeout 1.5s ease 2.7s forwards;
+}
+
+.eye:before {
+  animation:
+    eye-1 0.4s ease-in-out 4s alternate 3 forwards,
+    eye-1 0.7s ease-in-out 7.5s alternate-reverse 2 forwards;
+}
+.eye:after {
+  animation:
+    eye-2 0.4s ease-in-out 4s alternate 3 forwards,
+    eye-2 0.7s ease-in-out 7.5s alternate-reverse 2 forwards;
+}
+
+#root {
+  animation:
+    camera 5s ease 4s forwards,
+    zoom 2s ease-in-out 9s forwards;
+}
+.fantasy-world { animation: sway 0.7s ease-in-out 4s alternate infinite; }
+.blackout { animation: blackout 2s ease-out 9s forwards; }
+.satella { animation: light 5s ease 4s forwards; }
+.message-3 { animation: blur 0.6s ease-out 0s alternate infinite; }
+
+
+.clock .hands div:nth-child(1) { animation: clock-1 20s linear 0s forwards; }
+.clock .hands div:nth-child(2) { animation: clock-2 20s linear 0s forwards; }
+.real-world {
+  animation:
+    fadein 0.8s ease 10.5s forwards,
+    camera-2 2s ease-out 10.5s forwards;
+}
+.real-world .inner { animation: sway 0.7s ease-in-out 10s alternate infinite; }
+
+/****************************************************************************************
+  keyframes
+*****************************************************************************************/
+@keyframes show-message {
+  from { opacity: 0; transform: scale(2); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+@keyframes eye-1 {
+  from { transform: translateY(0%); }
+  to   { transform: translateY(-100%); }
+}
+@keyframes eye-2 {
+  from { transform: translateY(0%); }
+  to   { transform: translateY(100%); }
+}
+@keyframes camera {
+  from { perspective: 5px; }
+  to   { perspective: 650px; }
+}
+@keyframes zoom {
+  from { perspective: 650px; }
+  to   { perspective: 1px; }
+}
+@keyframes sway {
+  from { transform: translate(7px, 7px); }
+  to   { transform: translate(-7px, -7px); }
+}
+@keyframes light {
+  from { filter: brightness(0.1); }
+  to   { filter: brightness(1); }
+}
+@keyframes blur {
+  from { filter: blur(5px); }
+  to   { filter: blur(0); }
+}
+@keyframes blackout {
+  from { opacity: 0; }
+  to   { opacity: 0.8; }
+}
+@keyframes clock-1 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(4320deg); }
+}
+@keyframes clock-2 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes camera-2 {
+  from { perspective: 2000px; }
+  to   { perspective: 80px; }
+}
