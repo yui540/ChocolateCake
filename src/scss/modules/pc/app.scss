@@ -1,0 +1,51 @@
+@include pc-layout {
+  .app {
+    min-width: 1100px;
+  }
+  .content-wrap {
+    width: 1100px;
+    margin: 0 auto;
+    padding-top: 35px;
+
+    &::after { content: ""; display: block; clear: both; }
+  }
+
+  .app__sitename {
+    width: 600px;
+    display: block;
+    margin: 30px auto;
+  }
+
+  .app__description {
+    width: 1000px;
+    margin: 30px auto;
+    font-size: 14px;
+    color: $theme-color-2;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  .app__info {
+    width: 100%;
+  }
+
+  .app__sns {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 120px; height: 60px;
+
+    .fa {
+      float: left;
+      width: 60px; height: 60px;
+      font-size: 40px;
+      text-align: center;
+      line-height: 80px;
+      color: $theme-color-2;
+      display: block;
+      transition: all 0.35s ease 0s;
+    }
+    .fa:hover { transform: scale(1.2); }
+
+    &::after { content: ""; display: block; clear: both; }
+  }
+}

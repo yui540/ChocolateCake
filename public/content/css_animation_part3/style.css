@@ -154,11 +154,11 @@
   border-radius: 50%;
   box-shadow: 0 0 40px #333 inset;
 }
-.memories__image_type_1 { background-image: url(./images/1.png); }
-.memories__image_type_2 { background-image: url(./images/2.png); }
-.memories__image_type_3 { background-image: url(./images/3.png); }
-.memories__image_type_4 { background-image: url(./images/4.png); }
-.memories__image_type_5 { background-image: url(./images/5.png); }
+.memories__image_type_1 { background-image: url(./images/1.jpeg); }
+.memories__image_type_2 { background-image: url(./images/2.jpeg); }
+.memories__image_type_3 { background-image: url(./images/3.jpeg); }
+.memories__image_type_4 { background-image: url(./images/4.jpeg); }
+.memories__image_type_5 { background-image: url(./images/5.jpeg); }
 
 /*** frame ***/
 .memories__frame {
