@@ -2,7 +2,7 @@ const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const globImporter = require('node-sass-glob-importer')
 
-const MODE = 'development'
+const MODE = 'production'
 
 const enabledSourceMap = (MODE === 'development')
 
