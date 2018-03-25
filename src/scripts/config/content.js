@@ -24,6 +24,14 @@ export default [
     "thumb_large": "./images/thumb/large/css_animation_part3.png"
   },
   {
+    "id": "miku",
+    "title": "三玖",
+    "link": "./content/miku/",
+    "description": "僕の好きな漫画「五等分の花嫁」のキャラクターである中野三玖が好きすぎて、その思いをアニメーションで表現しました。<br/ >みなさんもぜひ「五等分の花嫁」を買って読んでみてください。",
+    "thumb": "./images/thumb/small/miku.png",
+    "thumb_large": "./images/thumb/large/miku.png"
+  },
+  {
     "id": "satella",
     "title": "satella",
     "link": "./content/satella/",
