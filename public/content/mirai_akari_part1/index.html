@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="「ハロー、yuki540だよ！ﾋﾟﾛﾘﾝ」">
+    <meta name="keywords" content="yuki540,satella.io,yuki540.com,DropOut">
+    <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1">
+    <meta property="og:url" content="https://design.yuki540.com">
+    <meta property="og:image" content="https://design.yuki540.com/images/ogp.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ニートに学ぶCSS Animation演出講座">
+    <meta property="og:site_name" content="yuki540.com">
+    <meta property="og:description" content="「ハロー、yuki540だよ！ﾋﾟﾛﾘﾝ」">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@eriri_jp" />
+    <meta name="twitter:title" content="ニートに学ぶCSS Animation演出講座" />
+    <meta name="twitter:description" content="「ハロー、yuki540だよ！ﾋﾟﾛﾘﾝ」" />
+    <meta name="twitter:image" content="https://design.yuki540.com/images/ogp.png" />
+    <title>Mirai Akari Part1</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+    const isSP = () => {
+      const user_agent = navigator.userAgent.toLowerCase();
+      const reg = /(iphone|ipad|ipod|android|mobile)/;
+
+      return reg.test(user_agent);
+    }
+    if(isSP()) {
+      alert('このページはスマートフォンには対応していません')
+      location.replace('/')
+    }
+    </script>
+  </head>
+  <body>
+    <main id="stage">
+      <section class="front-stage">
+        <div class="front-stage__frame">
+          <div class="skip"></div>
+          <div class="skip"></div>
+        </div>
+        <div class="front-stage__thumb-box">
+          <div class="front-stage__thumb front-stage__thumb_type_4">
+            <img src="./images/4.png" alt="ミライアカリ" />
+          </div>
+          <div class="front-stage__thumb front-stage__thumb_type_3">
+            <img src="./images/3.png" alt="ミライアカリ" />
+          </div>
+          <div class="front-stage__thumb front-stage__thumb_type_2">
+            <img src="./images/2.png" alt="ミライアカリ" />
+          </div>
+          <div class="front-stage__thumb front-stage__thumb_type_1">
+            <img src="./images/1.png" alt="ミライアカリ" />
+          </div>
+        </div>
+        <div class="front-stage__yami">
+          <img src="./images/yami.png" alt="ココロヤミ" />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
