@@ -38,5 +38,13 @@ export default [
     "description": "僕の好きなアニメ「ダーリン・イン・ザ・フランキス」をCSS Animationで簡単にアニメーション演出してみました。<br />アニメーションやデザインの雰囲気を公式っぽくしました。<br />ちなみに僕の押しキャラはイチゴです。",
     "thumb": "./images/thumb/small/darli-fra.png",
     "thumb_large": "./images/thumb/large/darli-fra.png"
+  },
+  {
+    "id": "mirai_akari_part1",
+    "title": "Mirai Akari Part1",
+    "link": "./content/mirai_akari_part1/",
+    "description": "ミライアカリが好きなので、ミライアカリの画像を使ったアニメーション演出をしました。<br />ココロヤミも好きです。",
+    "thumb": "./images/thumb/small/mirai_akari_part1.png",
+    "thumb_large": "./images/thumb/large/mirai_akari_part1.png"
   }
 ]
