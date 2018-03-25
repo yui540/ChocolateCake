@@ -21,6 +21,7 @@
     <link rel="shortcut icon" href="../../images/icon.png" />
     <link rel="apple-touch-icon" href="../../images/icon.png" />
     <link rel="stylesheet" href="./style.css" />
+    <script src="../../scripts/util.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53682384-8"></script>
     <script>
@@ -29,6 +30,12 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-53682384-8');
+    </script>
+    <script>
+    if(isSP()) {
+      alert('このページはスマートフォンには対応していません')
+      location.replace('/')
+    }
     </script>
   </head>
   <body>

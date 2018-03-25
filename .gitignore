@@ -1,4 +1,4 @@
 .DS_Store
 node_modules/
-public/scripts/*.js
+public/scripts/app.min.js
 public/stylesheets/style.css
