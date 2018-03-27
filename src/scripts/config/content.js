@@ -54,5 +54,13 @@ export default [
     "description": "ミライアカリが好きなので、ミライアカリの画像を使ったアニメーション演出をしました。<br />ココロヤミも好きです。",
     "thumb": "./images/thumb/small/mirai_akari_part1.png",
     "thumb_large": "./images/thumb/large/mirai_akari_part1.png"
+  },
+  {
+    "id": "dropout",
+    "title": "DropOut",
+    "link": "./content/dropout/",
+    "description": "yuki540.com version_6.0.0のボツ作です。",
+    "thumb": "./images/thumb/small/dropout.png",
+    "thumb_large": "./images/thumb/large/dropout.png"
   }
 ]
