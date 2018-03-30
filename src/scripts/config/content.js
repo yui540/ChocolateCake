@@ -62,5 +62,13 @@ export default [
     "description": "yuki540.com version_6.0.0のボツ作です。",
     "thumb": "./images/thumb/small/dropout.png",
     "thumb_large": "./images/thumb/large/dropout.png"
+  },
+  {
+    "id": "satella-io",
+    "title": "satella.io",
+    "link": "./content/satella.io/",
+    "description": "satella.ioの公開前のプロモーションサイト",
+    "thumb": "./images/thumb/small/satella.io.png",
+    "thumb_large": "./images/thumb/large/satella.io.png"
   }
 ]
