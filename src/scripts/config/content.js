@@ -3,7 +3,7 @@ export default [
     "id": "css_animation_part1",
     "title": "ニートに学ぶCSS_Animation演出講座_１時間目",
     "link": "./content/css_animation_part1/",
-    "description": "「ニートに学ぶCSS Animation講座講座」の１時間目の制作物です。<br />シンプルで簡単なアニメーションですが、色々応用ができるパターンだと思います。<br /><br />魔法少女サイト: <a href=\"http://www.magical-girl.site\">http://www.magical-girl.site</a>",
+    "description": "「ニートに学ぶCSS Animation講座講座」の１時間目の制作物です。<br />シンプルで簡単なアニメーションですが、色々応用ができるパターンだと思います。<br /><br />魔法少女サイト: <a href=\"https://yuki540.hatenablog.jp/archive\">https://yuki540.hatenablog.jp</a>",
     "thumb": "./images/thumb/small/css_animation_part1.png",
     "thumb_large": "./images/thumb/large/css_animation_part1.png"
   },
@@ -11,7 +11,7 @@ export default [
     "id": "css_animation_part2",
     "title": "ニートに学ぶCSS_Animation演出講座_２時間目",
     "link": "./content/css_animation_part2/",
-    "description": "「ニートに学ぶCSS Animation講座講座」の２時間目の制作物です。<br />これは「<a href=\"http://v4.yuki540.com\">共依存</a>」でも使われた演出で画面を広く使った演出が特徴です。<br /><br />魔法少女サイト: <a href=\"http://www.magical-girl.site\">http://www.magical-girl.site</a>",
+    "description": "「ニートに学ぶCSS Animation講座講座」の２時間目の制作物です。<br />これは「<a href=\"http://v4.yuki540.com\">共依存</a>」でも使われた演出で画面を広く使った演出が特徴です。<br /><br />魔法少女サイト: <a href=\"https://yuki540.hatenablog.jp/archive\">https://yuki540.hatenablog.jp</a>",
     "thumb": "./images/thumb/small/css_animation_part2.png",
     "thumb_large": "./images/thumb/large/css_animation_part2.png"
   },
@@ -19,7 +19,7 @@ export default [
     "id": "css_animation_part3",
     "title": "ニートに学ぶCSS_Animation演出講座_３時間目",
     "link": "./content/css_animation_part3/",
-    "description": "「ニートに学ぶCSS Animation講座講座」の３時間目の制作物です。<br />キャラクターイラストを使った演出です。<br />リゼロの世界観に合わせたデザインにしました。<br /><br />魔法少女サイト: <a href=\"http://www.magical-girl.site\">http://www.magical-girl.site</a>",
+    "description": "「ニートに学ぶCSS Animation講座講座」の３時間目の制作物です。<br />キャラクターイラストを使った演出です。<br />リゼロの世界観に合わせたデザインにしました。<br /><br />魔法少女サイト: <a href=\"https://yuki540.hatenablog.jp/archive\">https://yuki540.hatenablog.jp</a>",
     "thumb": "./images/thumb/small/css_animation_part3.png",
     "thumb_large": "./images/thumb/large/css_animation_part3.png"
   },
@@ -70,5 +70,13 @@ export default [
     "description": "satella.ioの公開前のプロモーションサイト",
     "thumb": "./images/thumb/small/satella.io.png",
     "thumb_large": "./images/thumb/large/satella.io.png"
-  }
+  },
+  {
+    "id": "css_animation_part4",
+    "title": "ニートに学ぶCSS_Animation演出講座_4時間目",
+    "link": "./content/css_animation_part4/",
+    "description": "「ニートに学ぶCSS Animation講座講座」の4時間目の制作物です。<br /><br />魔法少女サイト: <a href=\"https://yuki540.hatenablog.jp/archive\">https://yuki540.hatenablog.jp</a>",
+    "thumb": "./images/thumb/small/css_animation_part4.png",
+    "thumb_large": "./images/thumb/large/css_animation_part4.png"
+  },
 ]
