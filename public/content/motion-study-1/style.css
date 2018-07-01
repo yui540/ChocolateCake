@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#stage {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+}
+
+/*** bg ***/
+.bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.bg div {
+  position: absolute;
+  top: calc(50% - 50vmax); left: calc(50% - 50vmax);
+  width: 100vmax; height: 100vmax;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: scale(0);
+}
+.bg div:nth-child(1) { background-color: #4A3F55; }
+.bg div:nth-child(2) { background-color: #A8CBC6; }
+.bg div:nth-child(3) { background-color: #C2617E; }
+.bg div:nth-child(4) { background-color: #fff; }
+.bg div:nth-child(4):after {
+  content: ""; display: block;
+  widows: 100%; height: 100%;
+  background-image: url(./images/bg.svg);
+  background-size: 10px;
+  opacity: 0.2;
+  transform: rotate(20deg);
+}
+
+/*** text ***/
+.text {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 1200px; height: 200px;
+  transform: translate(-50%, -50%);
+}
+.text .char {
+  position: relative;
+  float: left;
+  width: 200px; height: 200px;
+}
+.text .char:before,
+.text .char:after {
+  content: ""; display: block;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+} 
+.text .char:before { left: 8px; top: 8px; }
+.text .char:nth-child(1):before { background-image: url(./images/name/y_bg.svg); }
+.text .char:nth-child(1):after  { background-image: url(./images/name/y.svg); }
+.text .char:nth-child(2):before { background-image: url(./images/name/u_bg.svg); }
+.text .char:nth-child(2):after  { background-image: url(./images/name/u.svg); }
+.text .char:nth-child(3):before { background-image: url(./images/name/i_bg.svg); }
+.text .char:nth-child(3):after  { background-image: url(./images/name/i.svg); }
+.text .char:nth-child(4):before { background-image: url(./images/name/5_bg.svg); }
+.text .char:nth-child(4):after  { background-image: url(./images/name/5.svg); }
+.text .char:nth-child(5):before { background-image: url(./images/name/4_bg.svg); }
+.text .char:nth-child(5):after  { background-image: url(./images/name/4.svg); }
+.text .char:nth-child(6):before { background-image: url(./images/name/0_bg.svg); }
+.text .char:nth-child(6):after  { background-image: url(./images/name/0.svg); }
+
+
+/********************************************************************************************
+ * animation
+ ********************************************************************************************/
+.bg div:nth-child(1) { animation: scale 0.5s ease 0s forwards; }
+.bg div:nth-child(2) { animation: scale 0.5s ease 0.1s forwards; }
+.bg div:nth-child(3) { animation: scale 0.6s ease 0.3s forwards; }
+.bg div:nth-child(4) { animation: scale 0.9s ease 0.6s forwards; }
+
+.text .char:nth-child(1):before { animation: show-char 0.6s ease 1.2s forwards; }
+.text .char:nth-child(1):after  { animation: show-char 0.6s ease 1.25s forwards; }
+.text .char:nth-child(2):before { animation: show-char 0.6s ease 1.4s forwards; }
+.text .char:nth-child(2):after  { animation: show-char 0.6s ease 1.45s forwards; }
+.text .char:nth-child(3):before { animation: show-char 0.6s ease 1.5s forwards; }
+.text .char:nth-child(3):after  { animation: show-char 0.6s ease 1.55s forwards; }
+.text .char:nth-child(4):before { animation: show-char 0.6s ease 1.6s forwards; }
+.text .char:nth-child(4):after  { animation: show-char 0.6s ease 1.65s forwards; }
+.text .char:nth-child(5):before { animation: show-char 0.6s ease 1.7s forwards; }
+.text .char:nth-child(5):after  { animation: show-char 0.6s ease 1.75s forwards; }
+.text .char:nth-child(6):before { animation: show-char 0.6s ease 1.8s forwards; }
+.text .char:nth-child(6):after  { animation: show-char 0.6s ease 1.85s forwards; }
+
+
+/********************************************************************************************
+ * keyframes
+ ********************************************************************************************/
+@keyframes scale {
+  from { transform: scale(0); }
+  to   { transform: scale(1.3); }
+}
+@keyframes show-char {
+  from { transform: translate(300px, 400px) rotate(200deg); opacity: 0; }
+  to   { transform: translate(0px, 0px) rotate(0deg); opacity: 1; }
+}

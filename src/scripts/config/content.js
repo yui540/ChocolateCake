@@ -79,4 +79,12 @@ export default [
     "thumb": "./images/thumb/small/css_animation_part4.png",
     "thumb_large": "./images/thumb/large/css_animation_part4.png"
   },
+  {
+    "id": "motion-study-1",
+    "title": "動きの勉強 part1",
+    "link": "./content/motion-study-1/",
+    "description": "動きの勉強 その１",
+    "thumb": "./images/thumb/small/motion-study-1.png",
+    "thumb_large": "./images/thumb/large/motion-study-1.png"
+  },
 ]
