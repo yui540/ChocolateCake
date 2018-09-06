@@ -87,4 +87,13 @@ export default [
     "thumb": "./images/thumb/small/motion-study-1.png",
     "thumb_large": "./images/thumb/large/motion-study-1.png"
   },
+  {
+    "id": "transition-pattern-1",
+    "title": "よく使う遷移パターン part1",
+    "link": "./content/transition-pattern-1/",
+    "description": "僕がよく使う遷移パターンです。",
+    "thumb": "./images/thumb/small/transition-pattern-1.png",
+    "thumb_large": "./images/thumb/large/transition-pattern-1.png"
+  },
+
 ]

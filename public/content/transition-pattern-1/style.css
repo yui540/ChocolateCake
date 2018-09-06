@@ -1,0 +1,140 @@
+#root {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+}
+
+.view {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+/**
+ * view-1
+ */
+.view-1 div {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.view-1 div::before,
+.view-1 div::after {
+  content: ""; display: block;
+  position: absolute; left: 0;
+  width: 100%; height: 100%;
+}
+.view-1 div::before {
+  top: -50%;
+  transform-origin: left bottom;
+  transform: rotate(-20deg);
+}
+.view-1 div::after {
+  bottom: -50%;
+  transform-origin: left top;
+  transform: rotate(20deg);
+}
+
+.view-1 div:nth-child(1),
+.view-1 div:nth-child(1)::before,
+.view-1 div:nth-child(1)::after { background-color: #283c5f; }
+.view-1 div:nth-child(2),
+.view-1 div:nth-child(2)::before,
+.view-1 div:nth-child(2)::after { background-color: #c45c66; }
+.view-1 div:nth-child(3),
+.view-1 div:nth-child(3)::before,
+.view-1 div:nth-child(3)::after { background-color: #c3ce5f; }
+
+
+/**
+ * ball
+ */
+.ball {
+  position: absolute;
+  top: calc(50% - 25px); left: calc(50% - 25px);
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background-color: #283c5f;
+  transform: translateX(calc(50vw + 25px));
+}
+
+/**
+ * view-2
+ */
+.view-2 div {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  transform: translateY(calc(100% + 25.5vw));
+}
+.view-2 div::after {
+  content: ""; display: block;
+  position: absolute;
+  top: -25.5vw; left: 0;
+  width: 0; height: 0;
+  border-bottom: solid 25.5vw transparent;
+  border-left: solid 50vw transparent;
+  border-right: solid 50vw transparent;
+}
+
+.view-2 div:nth-child(1) { background-color: #c3ce5f; }
+.view-2 div:nth-child(1)::after { border-bottom-color: #c3ce5f; }
+.view-2 div:nth-child(2) { background-color: #c45c66; }
+.view-2 div:nth-child(2)::after { border-bottom-color: #c45c66; }
+.view-2 div:nth-child(3) { background-color: #283c5f; }
+.view-2 div:nth-child(3)::after { border-bottom-color: #283c5f; }
+
+
+/******************************************************************
+  animation
+*******************************************************************/
+.view-1 div:nth-child(3) { animation: slide-right 0.5s ease 0s forwards; }
+.view-1 div:nth-child(3)::before { animation: rotate-1 0.5s ease 0s forwards; }
+.view-1 div:nth-child(3)::after  { animation: rotate-2 0.5s ease 0s forwards; }
+
+.view-1 div:nth-child(2) { animation: slide-right 0.5s ease 0.2s forwards; }
+.view-1 div:nth-child(2)::before { animation: rotate-1 0.5s ease 0.2s forwards; }
+.view-1 div:nth-child(2)::after  { animation: rotate-2 0.5s ease 0.2s forwards; }
+
+.view-1 div:nth-child(1) { animation: slide-right 0.5s ease 0.4s forwards; }
+.view-1 div:nth-child(1)::before { animation: rotate-1 0.5s ease 0.4s forwards; }
+.view-1 div:nth-child(1)::after  { animation: rotate-2 0.5s ease 0.4s forwards; }
+
+.ball {
+  animation:
+    move-x-ball 0.4s cubic-bezier(0.1, 0.46, 0, 0.98) 0.8s forwards,
+    move-y-ball 0.4s cubic-bezier(1,-0.01, 0.93, 0.4) 1.2s forwards;
+}
+
+.view-2 div:nth-child(1) { animation: slide-top 0.6s cubic-bezier(0.97, 0.01, 0, 0.97) 1.6s forwards; }
+.view-2 div:nth-child(2) { animation: slide-top 0.6s cubic-bezier(0.97, 0.01, 0, 0.97) 1.8s forwards; }
+.view-2 div:nth-child(3) { animation: slide-top 0.6s cubic-bezier(0.97, 0.01, 0, 0.97) 2.0s forwards; }
+
+/******************************************************************
+  keyframes
+*******************************************************************/
+@keyframes slide-right {
+  from { transform: translateX(0); }
+  to   { transform: translateX(100%); }
+}
+@keyframes rotate-1 {
+  from { transform: rotate(-50deg); }
+  to   { transform: rotate(0); }
+}
+@keyframes rotate-2 {
+  from { transform: rotate(50deg); }
+  to   { transform: rotate(0); }
+}
+@keyframes move-x-ball {
+  from { transform: translateX(calc(50vw + 25px)); }
+  to   { transform: translateX(0); }
+}
+@keyframes move-y-ball {
+  from { transform: translateY(0); }
+  to   { transform: translateY(calc(50vh + 25px)); }
+}
+@keyframes slide-top {
+  from { transform: translateY(calc(100% + 25.5vw)); }
+  to   { transform: translateY(0); }
+}
