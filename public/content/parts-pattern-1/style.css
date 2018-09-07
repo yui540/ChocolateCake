@@ -1,0 +1,475 @@
+#root {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background-color: #283c5f;
+}
+
+.effects {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+/**
+ * effects-1
+ */
+.effects-1 div {
+  position: absolute;
+  width: 50vmin; height: 50vmin;
+}
+.effects-1 div::before,
+.effects-1 div::after {
+  content: ""; display: block;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  transform: scale(0);
+}
+.effects-1 div::before { background-color: #c3ce5f; }
+.effects-1 div::after  { background-color: #283c5f; }
+.effects-1 div:nth-child(1) { top: calc(50% - 25vmin); left: 0; }
+.effects-1 div:nth-child(2) { top: calc(50% - 25vmin); left: calc(50% - 25vmin); }
+.effects-1 div:nth-child(3) { top: calc(50% - 25vmin); right: 0; }
+
+/**
+ * effects-2
+ */
+.effects-2 div {
+  position: absolute;
+  width: 50vmin; height: 50vmin;
+}
+.effects-2 div::before,
+.effects-2 div::after {
+  content: ""; display: block;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  transform: scale(0);
+}
+.effects-2 div::before { background-color: #c45c66; }
+.effects-2 div::after  { background-color: #283c5f; }
+.effects-2 div:nth-child(1) { top: calc(50% - 25vmin); left: 0; }
+.effects-2 div:nth-child(2) { top: calc(50% - 25vmin); left: calc(50% - 25vmin); }
+.effects-2 div:nth-child(3) { top: calc(50% - 25vmin); right: 0; }
+
+/**
+ * effects-3
+ */
+.effects-3 div {
+  position: absolute;
+  width: 50vmin; height: 50vmin;
+  overflow: hidden;
+}
+.effects-3 div::before,
+.effects-3 div::after {
+  content: ""; display: block;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  transform-origin: left bottom;
+  transform: rotate(-90deg);
+}
+.effects-3 div::before { background-color: #4aa9a4; }
+.effects-3 div::after  { background-color: #283c5f; }
+.effects-3 div:nth-child(1) { top: calc(50% - 25vmin); left: 0; }
+.effects-3 div:nth-child(2) { top: calc(50% - 25vmin); left: calc(50% - 25vmin); }
+.effects-3 div:nth-child(3) { top: calc(50% - 25vmin); right: 0; }
+
+/**
+ * effects-4
+ */
+.effects-4 div {
+  position: absolute;
+  width: 50vmin; height: 50vmin;
+  overflow: hidden;
+}
+.effects-4 div span {
+  display: block;
+  width: 100%; height: 25%;
+  background-color: #ce9740;
+  transform: translateX(100%);
+}
+.effects-4 div:nth-child(1) { top: calc(50% - 25vmin); left: 0; }
+.effects-4 div:nth-child(2) { top: calc(50% - 25vmin); left: calc(50% - 25vmin); }
+.effects-4 div:nth-child(3) { top: calc(50% - 25vmin); right: 0; }
+
+/**
+ * effects-5
+ */
+.effects-5 div {
+  position: absolute;
+  width: 50vmin; height: 50vmin;
+  overflow: hidden;
+}
+.effects-5 div span {
+  display: block;
+  position: absolute;
+  top: 0; left: calc(50% - 2px);
+  width: 4px; height: 50%;
+  transform-origin: center bottom;
+  overflow: hidden;
+}
+.effects-5 div span::after {
+  content: ""; display: block;
+  width: 100%; height: 100%;
+  background-color: #B980AE;
+  transform: translateY(101%);
+}
+.effects-5 div span:nth-child(2) { transform: rotate(45deg); }
+.effects-5 div span:nth-child(3) { transform: rotate(90deg); }
+.effects-5 div span:nth-child(4) { transform: rotate(135deg); }
+.effects-5 div span:nth-child(5) { transform: rotate(180deg); }
+.effects-5 div span:nth-child(6) { transform: rotate(225deg); }
+.effects-5 div span:nth-child(7) { transform: rotate(270deg); }
+.effects-5 div span:nth-child(8) { transform: rotate(315deg); }
+.effects-5 div:nth-child(1) { top: calc(50% - 25vmin); left: 0; }
+.effects-5 div:nth-child(2) { top: calc(50% - 25vmin); left: calc(50% - 25vmin); }
+.effects-5 div:nth-child(3) { top: calc(50% - 25vmin); right: 0; }
+
+/**
+ * effects-6
+ */
+.effects-6 div {
+  position: absolute;
+  width: 50vmin; height: 50vmin;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+.effects-6 div span {
+  display: block;
+  width: 50%; height: 50%;
+  background-color: #A8CBC6;
+  transform: scale(0);
+}
+.effects-6 div:nth-child(1) { top: calc(50% - 25vmin); left: 0; }
+.effects-6 div:nth-child(2) { top: calc(50% - 25vmin); left: calc(50% - 25vmin); }
+.effects-6 div:nth-child(3) { top: calc(50% - 25vmin); right: 0; }
+
+/**
+ * effects-7
+ */
+.effects-7 div {
+  position: absolute;
+  width: 50vmin; height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+.effects-7 div::after {
+  content: ""; display: block;
+  position: absolute;
+  top: calc(50% - 5vmin); left: calc(50% - 5vmin);
+  width: 10vmin; height: 10vmin;
+  border-radius: 50%;
+  background-color: #C7D35E;
+  transform: translateY(-60vmin);
+}
+.effects-7 div:nth-child(1) { top: 0; left: 0; }
+.effects-7 div:nth-child(2) { top: 0; left: calc(50% - 25vmin); }
+.effects-7 div:nth-child(3) { top: 0; right: 0; }
+
+/**
+ * effects-8
+ */
+.effects-8 {
+  display: flex;
+}
+.effects-8 div {
+  width: 25%; height: 100%;
+  background-color: #faf7d9;
+  opacity: 0;
+}
+
+
+
+/******************************************************************
+  animation
+*******************************************************************/
+.effects-1 div:nth-child(1)::before { animation: scale0-1 0.4s ease 0s forwards; }
+.effects-1 div:nth-child(1)::after  { animation: scale0-1 0.4s ease 0.1s forwards; }
+.effects-1 div:nth-child(1) { animation: fadeout 0.1s ease 0.5s forwards; }
+.effects-1 div:nth-child(2)::before { animation: scale0-1 0.4s ease 0.2s forwards; }
+.effects-1 div:nth-child(2)::after  { animation: scale0-1 0.4s ease 0.3s forwards; }
+.effects-1 div:nth-child(2) { animation: fadeout 0.1s ease 0.7s forwards; }
+.effects-1 div:nth-child(3)::before { animation: scale0-1 0.4s ease 0.4s forwards; }
+.effects-1 div:nth-child(3)::after  { animation: scale0-1 0.4s ease 0.5s forwards; }
+.effects-1 div:nth-child(3) { animation: fadeout 0.1s ease 0.9s forwards; }
+
+
+.effects-2 div:nth-child(3)::before { animation: scale0-1 0.4s ease 0.9s forwards; }
+.effects-2 div:nth-child(3)::after  { animation: scale0-1 0.4s ease 1.0s forwards; }
+.effects-2 div:nth-child(3) {
+  animation:
+    rotate 0.5s ease 0.9s forwards,
+    fadeout 0.1s ease 1.5s forwards;
+}
+.effects-2 div:nth-child(2)::before { animation: scale0-1 0.4s ease 1.1s forwards; }
+.effects-2 div:nth-child(2)::after  { animation: scale0-1 0.4s ease 1.3s forwards; }
+.effects-2 div:nth-child(2) {
+  animation:
+    rotate 0.5s ease 1.1s forwards,
+    fadeout 0.1s ease 1.8s forwards;
+}
+.effects-2 div:nth-child(1)::before { animation: scale0-1 0.4s ease 1.1s forwards; }
+.effects-2 div:nth-child(1)::after  { animation: scale0-1 0.4s ease 1.3s forwards; }
+.effects-2 div:nth-child(1) {
+  animation:
+    rotate 0.5s ease 1.1s forwards,
+    fadeout 0.1s ease 1.8s forwards;
+}
+
+
+.effects-3 div:nth-child(1)::before {
+  animation:
+    rotate90minus 0.4s cubic-bezier(1, 0, 0, 1) 1.7s forwards,
+    rotate90 0.4s cubic-bezier(1, 0, 0, 1) 2.3s forwards;
+}
+.effects-3 div:nth-child(1)::after {
+  animation:
+    rotate90minus 0.4s cubic-bezier(1, 0, 0, 1) 1.8s forwards,
+    rotate90 0.4s cubic-bezier(1, 0, 0, 1) 2.2s forwards;
+}
+.effects-3 div:nth-child(2)::before {
+  animation:
+    rotate90minus 0.4s cubic-bezier(1, 0, 0, 1) 1.9s forwards,
+    rotate90 0.4s cubic-bezier(1, 0, 0, 1) 2.5s forwards;
+}
+.effects-3 div:nth-child(2)::after {
+  animation:
+    rotate90minus 0.4s cubic-bezier(1, 0, 0, 1) 2.0s forwards,
+    rotate90 0.4s cubic-bezier(1, 0, 0, 1) 2.4s forwards;
+}
+.effects-3 div:nth-child(3)::before {
+  animation:
+    rotate90minus 0.4s cubic-bezier(1, 0, 0, 1) 2.1s forwards,
+    rotate90 0.4s cubic-bezier(1, 0, 0, 1) 2.7s forwards;
+}
+.effects-3 div:nth-child(3)::after {
+  animation:
+    rotate90minus 0.4s cubic-bezier(1, 0, 0, 1) 2.2s forwards,
+    rotate90 0.4s cubic-bezier(1, 0, 0, 1) 2.6s forwards;
+}
+
+
+.effects-4 div:nth-child(3) span:nth-child(1) {
+  animation:
+    slide-left 0.3s cubic-bezier(1, 0, 0, 1) 3.1s forwards,
+    slide-right 0.3s cubic-bezier(1, 0, 0, 1) 3.4s reverse forwards;
+}
+.effects-4 div:nth-child(3) span:nth-child(2) {
+  animation:
+    slide-left 0.3s cubic-bezier(1, 0, 0, 1) 3.2s forwards,
+    slide-right 0.3s cubic-bezier(1, 0, 0, 1) 3.5s reverse forwards;
+}
+.effects-4 div:nth-child(3) span:nth-child(3) {
+  animation:
+    slide-left 0.3s cubic-bezier(1, 0, 0, 1) 3.3s forwards,
+    slide-right 0.3s cubic-bezier(1, 0, 0, 1) 3.6s reverse forwards;
+}
+.effects-4 div:nth-child(3) span:nth-child(4) {
+  animation:
+    slide-left 0.3s cubic-bezier(1, 0, 0, 1) 3.4s forwards,
+    slide-right 0.3s cubic-bezier(1, 0, 0, 1) 3.7s reverse forwards;
+}
+.effects-4 div:nth-child(2) span:nth-child(1) {
+  animation:
+    slide-left 0.3s cubic-bezier(1, 0, 0, 1) 3.2s forwards,
+    slide-right 0.3s cubic-bezier(1, 0, 0, 1) 3.6s reverse forwards;
+}
+.effects-4 div:nth-child(2) span:nth-child(2) {
+  animation:
+    slide-left 0.3s cubic-bezier(1, 0, 0, 1) 3.4s forwards,
+    slide-right 0.3s cubic-bezier(1, 0, 0, 1) 3.7s reverse forwards;
+}
+.effects-4 div:nth-child(2) span:nth-child(3) {
+  animation:
+    slide-left 0.3s cubic-bezier(1, 0, 0, 1) 3.5s forwards,
+    slide-right 0.3s cubic-bezier(1, 0, 0, 1) 3.8s reverse forwards;
+}
+.effects-4 div:nth-child(2) span:nth-child(4) {
+  animation:
+    slide-left 0.3s cubic-bezier(1, 0, 0, 1) 3.6s forwards,
+    slide-right 0.3s cubic-bezier(1, 0, 0, 1) 3.9s reverse forwards;
+}
+.effects-4 div:nth-child(1) span:nth-child(1) {
+  animation:
+    slide-left 0.3s cubic-bezier(1, 0, 0, 1) 3.4s forwards,
+    slide-right 0.3s cubic-bezier(1, 0, 0, 1) 3.8s reverse forwards;
+}
+.effects-4 div:nth-child(1) span:nth-child(2) {
+  animation:
+    slide-left 0.3s cubic-bezier(1, 0, 0, 1) 3.6s forwards,
+    slide-right 0.3s cubic-bezier(1, 0, 0, 1) 3.9s reverse forwards;
+}
+.effects-4 div:nth-child(1) span:nth-child(3) {
+  animation:
+    slide-left 0.3s cubic-bezier(1, 0, 0, 1) 3.7s forwards,
+    slide-right 0.3s cubic-bezier(1, 0, 0, 1) 4.0s reverse forwards;
+}
+.effects-4 div:nth-child(1) span:nth-child(4) {
+  animation:
+    slide-left 0.3s cubic-bezier(1, 0, 0, 1) 3.8s forwards,
+    slide-right 0.3s cubic-bezier(1, 0, 0, 1) 4.1s reverse forwards;
+}
+
+
+.effects-5 div:nth-child(1) span::after {
+  animation:
+    slide-top 0.3s cubic-bezier(1, 0, 0, 1) 4.4s forwards,
+    slide-bottom 0.3s cubic-bezier(1, 0, 0, 1) 4.7s reverse forwards;
+}
+.effects-5 div:nth-child(2) span::after {
+  animation:
+    slide-top 0.3s cubic-bezier(1, 0, 0, 1) 4.6s forwards,
+    slide-bottom 0.3s cubic-bezier(1, 0, 0, 1) 4.9s reverse forwards;
+}
+.effects-5 div:nth-child(3) span::after {
+  animation:
+    slide-top 0.3s cubic-bezier(1, 0, 0, 1) 4.8s forwards,
+    slide-bottom 0.3s cubic-bezier(1, 0, 0, 1) 5.1s reverse forwards;
+}
+
+
+.effects-6 div:nth-child(3) span:nth-child(1) {
+  animation:
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 5.4s forwards,
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 5.7s reverse forwards;
+}
+.effects-6 div:nth-child(3) span:nth-child(2) {
+  animation:
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 5.5s forwards,
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 5.8s reverse forwards;
+}
+.effects-6 div:nth-child(3) span:nth-child(3) {
+  animation:
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 5.6s forwards,
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 5.9s reverse forwards;
+}
+.effects-6 div:nth-child(3) span:nth-child(4) {
+  animation:
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 5.7s forwards,
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 6.0s reverse forwards;
+}
+.effects-6 div:nth-child(2) span:nth-child(1) {
+  animation:
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 5.6s forwards,
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 5.9s reverse forwards;
+}
+.effects-6 div:nth-child(2) span:nth-child(2) {
+  animation:
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 5.7s forwards,
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 6.0s reverse forwards;
+}
+.effects-6 div:nth-child(2) span:nth-child(3) {
+  animation:
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 5.8s forwards,
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 6.1s reverse forwards;
+}
+.effects-6 div:nth-child(2) span:nth-child(4) {
+  animation:
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 5.9s forwards,
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 6.2s reverse forwards;
+}
+.effects-6 div:nth-child(1) span:nth-child(1) {
+  animation:
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 5.8s forwards,
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 6.1s reverse forwards;
+}
+.effects-6 div:nth-child(1) span:nth-child(2) {
+  animation:
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 5.9s forwards,
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 6.2s reverse forwards;
+}
+.effects-6 div:nth-child(1) span:nth-child(3) {
+  animation:
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 6.0s forwards,
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 6.3s reverse forwards;
+}
+.effects-6 div:nth-child(1) span:nth-child(4) {
+  animation:
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 6.1s forwards,
+    scale0-1 0.3s cubic-bezier(0.01, 0.58, 0, 1) 6.4s reverse forwards;
+}
+
+
+.effects-7 div:nth-child(1)::after {
+  animation:
+    bound 0.3s ease 6.7s forwards,
+    scaleout 0.5s cubic-bezier(1, 0, 0, 1) 7s forwards;
+}
+.effects-7 div:nth-child(2)::after {
+  animation:
+    bound 0.3s ease 6.9s forwards,
+    scaleout 0.5s cubic-bezier(1, 0, 0, 1) 7.2s forwards;
+}
+.effects-7 div:nth-child(3)::after {
+  animation:
+    bound 0.3s ease 7.1s forwards,
+    scaleout 0.5s cubic-bezier(1, 0, 0, 1) 7.3s forwards;
+}
+
+
+.effects-8 div:nth-child(4) { animation: fadein 0.05s linear 7.8s 3 alternate forwards; }
+.effects-8 div:nth-child(3) { animation: fadein 0.05s linear 7.9s 3 alternate forwards; }
+.effects-8 div:nth-child(2) { animation: fadein 0.05s linear 8.0s 3 alternate forwards; }
+.effects-8 div:nth-child(1) { animation: fadein 0.05s linear 8.1s 3 alternate forwards; }
+
+
+/******************************************************************
+  keyframes
+*******************************************************************/
+@keyframes scale0-1 {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+@keyframes rotate {
+  from { transform: rotate(0); }
+  to   { transform: rotate(1turn); }
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+@keyframes rotate90 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(90deg); }
+}
+@keyframes rotate90minus {
+  from { transform: rotate(-90deg); }
+  to   { transform: rotate(0deg); }
+}
+@keyframes slide-left {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0%); }
+}
+@keyframes slide-right {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0%); }
+}
+@keyframes slide-top {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0%); }
+}
+@keyframes slide-bottom {
+  from { transform: translateY(-101%); }
+  to   { transform: translateY(0%); }
+}
+@keyframes bound {
+  0%   { transform: translateY(-50vh); }
+  35%  { transform: translateY(0vh); }
+  70%  { transform: translateY(-5vh); }
+  100% { transform: translateY(0vh); }
+}
+@keyframes scaleout {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(4); }
+  100% { transform: scale(0); }
+}

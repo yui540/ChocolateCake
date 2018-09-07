@@ -95,5 +95,12 @@ export default [
     "thumb": "./images/thumb/small/transition-pattern-1.png",
     "thumb_large": "./images/thumb/large/transition-pattern-1.png"
   },
-
+  {
+    "id": "parts-pattern-1",
+    "title": "よく使うパーツ part1",
+    "link": "./content/parts-pattern-1/",
+    "description": "僕がよく使うパーツです。",
+    "thumb": "./images/thumb/small/parts-pattern-1.png",
+    "thumb_large": "./images/thumb/large/parts-pattern-1.png"
+  },
 ]
