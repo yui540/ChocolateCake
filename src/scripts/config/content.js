@@ -103,4 +103,12 @@ export default [
     "thumb": "./images/thumb/small/parts-pattern-1.png",
     "thumb_large": "./images/thumb/large/parts-pattern-1.png"
   },
+  {
+    "id": "transition-pattern-2",
+    "title": "よく使う遷移パターン part2",
+    "link": "./content/transition-pattern-2/",
+    "description": "僕がよく使うパーツです。",
+    "thumb": "./images/thumb/small/transition-pattern-2.png",
+    "thumb_large": "./images/thumb/large/transition-pattern-2.png"
+  },
 ]
