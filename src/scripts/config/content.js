@@ -111,4 +111,12 @@ export default [
     "thumb": "./images/thumb/small/transition-pattern-2.png",
     "thumb_large": "./images/thumb/large/transition-pattern-2.png"
   },
+  {
+    "id": "text-pattern-1",
+    "title": "喜怒哀楽",
+    "link": "./content/text-pattern-1/",
+    "description": "喜怒哀楽を表現しました。",
+    "thumb": "./images/thumb/small/text-pattern-1.png",
+    "thumb_large": "./images/thumb/large/text-pattern-1.png"
+  },
 ]
