@@ -119,4 +119,12 @@ export default [
     "thumb": "./images/thumb/small/text-pattern-1.png",
     "thumb_large": "./images/thumb/large/text-pattern-1.png"
   },
+  {
+    "id": "text-pattern-2",
+    "title": "過去と未来",
+    "link": "./content/text-pattern-2/",
+    "description": "過去と未来を文字で表現しました。",
+    "thumb": "./images/thumb/small/text-pattern-2.png",
+    "thumb_large": "./images/thumb/large/text-pattern-2.png"
+  },
 ]
