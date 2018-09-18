@@ -127,4 +127,12 @@ export default [
     "thumb": "./images/thumb/small/text-pattern-2.png",
     "thumb_large": "./images/thumb/large/text-pattern-2.png"
   },
+  {
+    "id": "text-pattern-3",
+    "title": "雨のち晴れ",
+    "link": "./content/text-pattern-3/",
+    "description": "雨と晴れを文字で表現しました。",
+    "thumb": "./images/thumb/small/text-pattern-3.png",
+    "thumb_large": "./images/thumb/large/text-pattern-3.png"
+  },
 ]

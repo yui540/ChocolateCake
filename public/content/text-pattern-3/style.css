@@ -1,0 +1,462 @@
+#root {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background-color:hsl(204, 51%, 43%);
+}
+#root::before {
+  content: ""; display: block;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: #dca657;
+  transform: translateY(100%);
+}
+
+.view {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+/**
+ * rect
+ */
+.rect div {
+  position: absolute;
+  top: calc(50% - 35vmin); left: calc(50% - 35vmin);
+  width: 70vmin; height: 70vmin;
+  transform: scale(0);
+}
+.rect div:after {
+  content: ""; display: block;
+  width: 100%; height: 100%;
+  border: solid 1px #fff;
+  box-sizing: border-box;
+}
+
+/**
+ * ame
+ */
+.ame {
+  position: absolute;
+  top: calc(50% - 10vmin); left: calc(50% - 10vmin);
+  width: 20vmin; height: 20vmin;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ame div {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.ame div span {
+  display: block;
+  width: 50%; height: 50%;
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.ame div span { background-image: url(./images/ame.svg); }
+.ame div span:nth-child(1) { background-position: left top; }
+.ame div span:nth-child(2) { background-position: right top; }
+.ame div span:nth-child(3) { background-position: left bottom; }
+.ame div span:nth-child(4) { background-position: right bottom; }
+
+/**
+ * noti
+ */
+.noti {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.noti span {
+  display: block;
+  width: 15vmin; height: 15vmin;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 60%;
+  background-color: rgba(255,255,255,0.2);
+  opacity: 0;
+}
+.noti span:nth-child(1) { margin-right: 40px; background-image: url(./images/no.svg); }
+.noti span:nth-child(2) { background-image: url(./images/ti.svg); }
+
+/**
+ * ring
+ */
+.ring {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.ring div {
+  position: absolute;
+  top: calc(50% - 35vmin); left: calc(50% - 35vmin);
+  width: 70vmin; height: 70vmin;
+  transform: scale(0);
+}
+.ring div::after {
+  content: ""; display: block;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.ring div:nth-child(1)::after { border: solid 2px #00ff00; }
+.ring div:nth-child(2)::after { border: solid 2px #0000ff; }
+.ring div:nth-child(3)::after { border: solid 2px #ff0000; }
+
+/**
+ * hare
+ */
+.hare {
+  position: absolute;
+  top: calc(50% - 10vmin); left: calc(50% - 20vmin - 20px);
+  width: calc(40vmin + 40px); height: 20vmin;
+  display: flex;
+}
+.hare .ha,
+.hare .re {
+  position: relative;
+  width: 20vmin; height: 20vmin;
+}
+.hare .ha { margin-right: 40px; }
+.hare .ha div,
+.hare .re div {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.hare .ha div span,
+.hare .re div span {
+  display: block;
+  width: 50%; height: 50%;
+  opacity: 0;
+}
+.hare .ha div span::after,
+.hare .re div span::after {
+  content: ""; display: block;
+  width: 100%; height: 100%;
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+}
+.hare .ha div:nth-child(3) span::after { background-image: url(./images/hare/red-1.svg); }
+.hare .re div:nth-child(3) span::after { background-image: url(./images/hare/red-2.svg); }
+.hare .ha div:nth-child(1) span::after { background-image: url(./images/hare/green-1.svg); }
+.hare .re div:nth-child(1) span::after { background-image: url(./images/hare/green-2.svg); }
+.hare .ha div:nth-child(2) span::after { background-image: url(./images/hare/blue-1.svg); }
+.hare .re div:nth-child(2) span::after { background-image: url(./images/hare/blue-2.svg); }
+.hare .ha div span:nth-child(1)::after,
+.hare .re div span:nth-child(1)::after { background-position: left top; }
+.hare .ha div span:nth-child(2)::after,
+.hare .re div span:nth-child(2)::after { background-position: right top; }
+.hare .ha div span:nth-child(3)::after,
+.hare .re div span:nth-child(3)::after { background-position: left bottom; }
+.hare .ha div span:nth-child(4)::after,
+.hare .re div span:nth-child(4)::after { background-position: right bottom; }
+
+
+/******************************************************************
+  animation
+*******************************************************************/
+.rect div:nth-child(1) {
+  animation:
+    scale0-1 1s ease 0s forwards,
+    scale0-1 1s ease 2s reverse forwards;
+}
+.rect div:nth-child(1)::after {
+  animation:
+    rotate180 1.5s ease 0s forwards,
+    rotate180 1.5s ease 1.5s reverse forwards;
+}.rect div:nth-child(2) {
+  animation:
+    scale0-1 1s ease 0.1s forwards,
+    scale0-1 1s ease 2.1s reverse forwards;
+}
+.rect div:nth-child(2)::after {
+  animation:
+    rotate180 1.5s ease 0.1s forwards,
+    rotate180 1.5s ease 1.6s reverse forwards;
+}
+.rect div:nth-child(3) {
+  animation:
+    scale0-1 1s ease 0.2s forwards,
+    scale0-1 1s ease 2.2s reverse forwards;
+}
+.rect div:nth-child(3)::after {
+  animation:
+    rotate180 1.5s ease 0.2s forwards,
+    rotate180 1.5s ease 1.7s reverse forwards;
+}
+
+.ame div:nth-child(1) span:nth-child(1) {
+  animation:
+    show-word 1s cubic-bezier(0.01, 0.24, 0, 1) 0.5s forwards,
+    hidden-word 1s cubic-bezier(0.93, 0.01, 0.99, 0.62) 1.5s forwards;
+}
+.ame div:nth-child(1) span:nth-child(2) {
+  animation:
+    show-word 1s cubic-bezier(0.01, 0.24, 0, 1) 0.6s forwards,
+    hidden-word 1s cubic-bezier(0.93, 0.01, 0.99, 0.62) 1.6s forwards;
+}
+.ame div:nth-child(1) span:nth-child(3) {
+  animation:
+    show-word 1s cubic-bezier(0.01, 0.24, 0, 1) 0.7s forwards,
+    hidden-word 1s cubic-bezier(0.93, 0.01, 0.99, 0.62) 1.7s forwards;
+}
+.ame div:nth-child(1) span:nth-child(4) {
+  animation:
+    show-word 1s cubic-bezier(0.01, 0.24, 0, 1) 0.8s forwards,
+    hidden-word 1s cubic-bezier(0.93, 0.01, 0.99, 0.62) 1.8s forwards;
+}
+
+.ame div:nth-child(2) span:nth-child(1) {
+  animation:
+    show-word 1s cubic-bezier(0.01, 0.24, 0, 1) 0.9s forwards,
+    hidden-word 1s cubic-bezier(0.93, 0.01, 0.99, 0.62) 1.9s forwards;
+}
+.ame div:nth-child(2) span:nth-child(2) {
+  animation:
+    show-word 1s cubic-bezier(0.01, 0.24, 0, 1) 1.0s forwards,
+    hidden-word 1s cubic-bezier(0.93, 0.01, 0.99, 0.62) 2.0s forwards;
+}
+.ame div:nth-child(2) span:nth-child(3) {
+  animation:
+    show-word 1s cubic-bezier(0.01, 0.24, 0, 1) 1.1s forwards,
+    hidden-word 1s cubic-bezier(0.93, 0.01, 0.99, 0.62) 2.1s forwards;
+}
+.ame div:nth-child(2) span:nth-child(4) {
+  animation:
+    show-word 1s cubic-bezier(0.01, 0.24, 0, 1) 1.2s forwards,
+    hidden-word 1s cubic-bezier(0.93, 0.01, 0.99, 0.62) 2.2s forwards;
+}
+
+.noti span:nth-child(1) {
+  animation:
+    fadein 0.1s ease 3.2s 3 alternate forwards,
+    fadeout 2s ease 3.5s forwards;
+}
+.noti span:nth-child(2) {
+  animation:
+    fadein 0.1s ease 3.3s 3 alternate forwards,
+    fadeout 2s ease 3.6s forwards;
+}
+
+#root::before { animation: slide-top 1s cubic-bezier(0.77, 0.02, 0.25, 1) 3.2s forwards; }
+
+.hare .ha div:nth-child(1) span:nth-child(1) {
+  animation: show-word-1 1s cubic-bezier(0.01, 0.24, 0, 1) 4.6s forwards;
+}
+.hare .ha div:nth-child(1) span:nth-child(1)::after {
+  animation: sway-1 0.6s ease-in-out 4.6s alternate infinite;
+}
+.hare .ha div:nth-child(1) span:nth-child(4) {
+  animation: show-word-4 1s cubic-bezier(0.01, 0.24, 0, 1) 4.8s forwards;
+}
+.hare .ha div:nth-child(1) span:nth-child(4)::after {
+  animation: sway-1 0.6s ease-in-out 4.8s alternate infinite;
+}
+.hare .ha div:nth-child(1) span:nth-child(2) {
+  animation: show-word-2 1s cubic-bezier(0.01, 0.24, 0, 1) 5.0s forwards;
+}
+.hare .ha div:nth-child(1) span:nth-child(2)::after {
+  animation: sway-1 0.6s ease-in-out 5.0s alternate infinite;
+}
+.hare .ha div:nth-child(1) span:nth-child(3) {
+  animation: show-word-3 1s cubic-bezier(0.01, 0.24, 0, 1) 5.2s forwards;
+}
+.hare .ha div:nth-child(1) span:nth-child(3)::after {
+  animation: sway-1 0.6s ease-in-out 5.2s alternate infinite;
+}
+
+.hare .ha div:nth-child(2) span:nth-child(1) {
+  animation: show-word-1 1s cubic-bezier(0.01, 0.24, 0, 1) 5.4s forwards;
+}
+.hare .ha div:nth-child(2) span:nth-child(1)::after {
+  animation: sway-2 0.6s ease-in-out 5.4s alternate infinite;
+}
+.hare .ha div:nth-child(2) span:nth-child(4) {
+  animation: show-word-4 1s cubic-bezier(0.01, 0.24, 0, 1) 5.6s forwards;
+}
+.hare .ha div:nth-child(2) span:nth-child(4)::after {
+  animation: sway-2 0.6s ease-in-out 5.6s alternate infinite;
+}
+.hare .ha div:nth-child(2) span:nth-child(2) {
+  animation: show-word-2 1s cubic-bezier(0.01, 0.24, 0, 1) 5.8s forwards;
+}
+.hare .ha div:nth-child(2) span:nth-child(2)::after {
+  animation: sway-2 0.6s ease-in-out 5.8s alternate infinite;
+}
+.hare .ha div:nth-child(2) span:nth-child(3) {
+  animation: show-word-3 1s cubic-bezier(0.01, 0.24, 0, 1) 6.0s forwards;
+}
+.hare .ha div:nth-child(2) span:nth-child(3)::after {
+  animation: sway-2 0.6s ease-in-out 6.0s alternate infinite;
+}
+
+.hare .ha div:nth-child(3) span:nth-child(1) {
+  animation: show-word-1 1s cubic-bezier(0.01, 0.24, 0, 1) 6.2s forwards;
+}
+.hare .ha div:nth-child(3) span:nth-child(4) {
+  animation: show-word-4 1s cubic-bezier(0.01, 0.24, 0, 1) 6.4s forwards;
+}
+.hare .ha div:nth-child(3) span:nth-child(2) {
+  animation: show-word-2 1s cubic-bezier(0.01, 0.24, 0, 1) 6.6s forwards;
+}
+.hare .ha div:nth-child(3) span:nth-child(3) {
+  animation: show-word-3 1s cubic-bezier(0.01, 0.24, 0, 1) 6.8s forwards;
+}
+
+.hare .re div:nth-child(1) span:nth-child(1) {
+  animation: show-word-1 1s cubic-bezier(0.01, 0.24, 0, 1) 4.8s forwards;
+}
+.hare .re div:nth-child(1) span:nth-child(1)::after {
+  animation: sway-1 0.6s ease-in-out 4.8s alternate infinite;
+}
+.hare .re div:nth-child(1) span:nth-child(4) {
+  animation: show-word-4 1s cubic-bezier(0.01, 0.24, 0, 1) 5.0s forwards;
+}
+.hare .re div:nth-child(1) span:nth-child(4)::after {
+  animation: sway-1 0.6s ease-in-out 5.0s alternate infinite;
+}
+.hare .re div:nth-child(1) span:nth-child(2) {
+  animation: show-word-2 1s cubic-bezier(0.01, 0.24, 0, 1) 5.2s forwards;
+}
+.hare .re div:nth-child(1) span:nth-child(2)::after {
+  animation: sway-1 0.6s ease-in-out 5.2s alternate infinite;
+}
+.hare .re div:nth-child(1) span:nth-child(3) {
+  animation: show-word-3 1s cubic-bezier(0.01, 0.24, 0, 1) 5.4s forwards;
+}
+.hare .re div:nth-child(1) span:nth-child(3)::after {
+  animation: sway-1 0.6s ease-in-out 5.4s alternate infinite;
+}
+
+.hare .re div:nth-child(2) span:nth-child(1) {
+  animation: show-word-1 1s cubic-bezier(0.01, 0.24, 0, 1) 5.6s forwards;
+}
+.hare .re div:nth-child(2) span:nth-child(1)::after {
+  animation: sway-2 0.6s ease-in-out 5.6s alternate infinite;
+}
+.hare .re div:nth-child(2) span:nth-child(4) {
+  animation: show-word-4 1s cubic-bezier(0.01, 0.24, 0, 1) 5.8s forwards;
+}
+.hare .re div:nth-child(2) span:nth-child(4)::after {
+  animation: sway-2 0.6s ease-in-out 5.8s alternate infinite;
+}
+.hare .re div:nth-child(2) span:nth-child(2) {
+  animation: show-word-2 1s cubic-bezier(0.01, 0.24, 0, 1) 6.0s forwards;
+}
+.hare .re div:nth-child(2) span:nth-child(2)::after {
+  animation: sway-2 0.6s ease-in-out 6.0s alternate infinite;
+}
+.hare .re div:nth-child(2) span:nth-child(3) {
+  animation: show-word-3 1s cubic-bezier(0.01, 0.24, 0, 1) 6.2s forwards;
+}
+.hare .re div:nth-child(2) span:nth-child(3)::after {
+  animation: sway-2 0.6s ease-in-out 6.2s alternate infinite;
+}
+
+.hare .re div:nth-child(3) span:nth-child(1) {
+  animation: show-word-1 1s cubic-bezier(0.01, 0.24, 0, 1) 6.4s forwards;
+}
+.hare .re div:nth-child(3) span:nth-child(4) {
+  animation: show-word-4 1s cubic-bezier(0.01, 0.24, 0, 1) 6.6s forwards;
+}
+.hare .re div:nth-child(3) span:nth-child(2) {
+  animation: show-word-2 1s cubic-bezier(0.01, 0.24, 0, 1) 6.8s forwards;
+}
+.hare .re div:nth-child(3) span:nth-child(3) {
+  animation: show-word-3 1s cubic-bezier(0.01, 0.24, 0, 1) 7.0s forwards;
+}
+
+.ring div:nth-child(1) { animation: scale0-1 0.6s ease 4.6s forwards; }
+.ring div:nth-child(1)::after {
+  animation:
+    rotation 1s ease 4.6s alternate infinite;
+}
+.ring div:nth-child(2) { animation: scale0-1 0.6s ease 4.7s forwards; }
+.ring div:nth-child(2)::after {
+  animation:
+    rotation 1s ease 4.7s alternate infinite;
+}
+.ring div:nth-child(3) { animation: scale0-1 0.6s ease 4.8s forwards; }
+.ring div:nth-child(3)::after {
+  animation:
+    rotation 1s ease 4.8s alternate infinite;
+}
+
+/******************************************************************
+  keyframes
+*******************************************************************/
+@keyframes scale0-1 {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+@keyframes rotate180 {
+  from { transform: rotate(0); }
+  to   { transform: rotate(180deg); }
+}
+@keyframes show-word {
+  from { transform: scale(10) rotateX(0) rotateY(0); opacity: 0; }
+  to   { transform: scale(1) rotateX(360deg) rotateY(360deg); opacity: 0.7; }
+}
+@keyframes hidden-word {
+  from { transform: scale(1) rotateX(360deg) rotateY(360deg); opacity: 0.7; }
+  to   { transform: scale(0) rotateX(0deg) rotateY(0deg); opacity: 0; }
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+@keyframes slide-top {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0%); }
+}
+@keyframes show-word-1 {
+  from { transform: scale(10) rotateX(0deg) rotateY(0deg) translate(-50vw, -50vh); opacity: 0; }
+  to   { transform: scale(1) rotateX(360deg) rotateY(360deg) translate(0, 0); opacity: 1; }
+}
+@keyframes show-word-4 {
+  from { transform: scale(10) rotateX(0deg) rotateY(0deg) translate(50vw, 50vh); opacity: 0; }
+  to   { transform: scale(1) rotateX(360deg) rotateY(360deg) translate(0, 0); opacity: 1; }
+}
+@keyframes show-word-2 {
+  from { transform: scale(10) rotateX(0deg) rotateY(0deg) translate(50vw, -50vh); opacity: 0; }
+  to   { transform: scale(1) rotateX(360deg) rotateY(360deg) translate(0, 0); opacity: 1; }
+}
+@keyframes show-word-3 {
+  from { transform: scale(10) rotateX(0deg) rotateY(0deg) translate(-50vw, 50vh); opacity: 0; }
+  to   { transform: scale(1) rotateX(360deg) rotateY(360deg) translate(0, 0); opacity: 1; }
+}
+@keyframes sway-1 {
+  from { transform: translate(-5%, -5%); }
+  to   { transform: translate(5%, 5%); }
+}
+@keyframes sway-2 {
+  from { transform: translate(-5%, 5%); }
+  to   { transform: translate(5%, -5%); }
+}
+@keyframes rotation {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to   { transform: rotateX(180deg) rotateY(180deg); }
+}
