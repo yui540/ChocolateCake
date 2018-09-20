@@ -1,0 +1,465 @@
+#root {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background-clip: #fff;
+}
+
+.text {
+  position: absolute;
+  top: calc(50% - 20vmin - 10px); left: calc(50% - 10vmin);
+  width: 20vmin; height: calc(40vmin + 20px);
+}
+.text .char {
+  position: relative;
+  width: 20vmin; height: 20vmin;
+}
+.text .char:nth-child(1) { margin-bottom: 20px; }
+.text .char div {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.text .char div span {
+  width: 50%; height: 50%;
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.text .char div span:nth-child(1) { background-position: left top; }
+.text .char div span:nth-child(2) { background-position: right top; }
+.text .char div span:nth-child(3) { background-position: left bottom; }
+.text .char div span:nth-child(4) { background-position: right bottom; }
+
+/**
+ * text-1
+ */
+.text-1 .char:nth-child(1) div:nth-child(1) span { background-image: url(./images/kokubetu/yellow-1.svg); }
+.text-1 .char:nth-child(2) div:nth-child(1) span { background-image: url(./images/kokubetu/yellow-2.svg); }
+.text-1 .char:nth-child(1) div:nth-child(2) span { background-image: url(./images/kokubetu/blue-1.svg); }
+.text-1 .char:nth-child(2) div:nth-child(2) span { background-image: url(./images/kokubetu/blue-2.svg); }
+.text-1 .char:nth-child(1) div:nth-child(3) span { background-image: url(./images/kokubetu/green-1.svg); }
+.text-1 .char:nth-child(2) div:nth-child(3) span { background-image: url(./images/kokubetu/green-2.svg); }
+.text-1 .char:nth-child(1) div:nth-child(4) span { background-image: url(./images/kokubetu/red-1.svg); }
+.text-1 .char:nth-child(2) div:nth-child(4) span { background-image: url(./images/kokubetu/red-2.svg); }
+.text-1 .char:nth-child(1) div:nth-child(5) span { background-image: url(./images/kokubetu/black-1.svg); }
+.text-1 .char:nth-child(2) div:nth-child(5) span { background-image: url(./images/kokubetu/black-2.svg); }
+
+/**
+ * text-2
+ */
+.text-2 .char:nth-child(1) div:nth-child(1) span { background-image: url(./images/saikai/yellow-1.svg); }
+.text-2 .char:nth-child(2) div:nth-child(1) span { background-image: url(./images/saikai/yellow-2.svg); }
+.text-2 .char:nth-child(1) div:nth-child(2) span { background-image: url(./images/saikai/blue-1.svg); }
+.text-2 .char:nth-child(2) div:nth-child(2) span { background-image: url(./images/saikai/blue-2.svg); }
+.text-2 .char:nth-child(1) div:nth-child(3) span { background-image: url(./images/saikai/green-1.svg); }
+.text-2 .char:nth-child(2) div:nth-child(3) span { background-image: url(./images/saikai/green-2.svg); }
+.text-2 .char:nth-child(1) div:nth-child(4) span { background-image: url(./images/saikai/red-1.svg); }
+.text-2 .char:nth-child(2) div:nth-child(4) span { background-image: url(./images/saikai/red-2.svg); }
+.text-2 .char:nth-child(1) div:nth-child(5) span { background-image: url(./images/saikai/black-1.svg); }
+.text-2 .char:nth-child(2) div:nth-child(5) span { background-image: url(./images/saikai/black-2.svg); }
+
+/******************************************************************
+  animation
+*******************************************************************/
+.text-1 .char:nth-child(1) div:nth-child(1) span:nth-child(1) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 0.0s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(1) span:nth-child(2) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 0.1s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(1) span:nth-child(4) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 0.2s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(1) span:nth-child(3) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 0.3s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(1) { animation: hidden-text 1.4s ease-in 1.3s forwards; }
+
+.text-1 .char:nth-child(1) div:nth-child(2) span:nth-child(1) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 0.5s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(2) span:nth-child(2) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 0.6s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(2) span:nth-child(4) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 0.7s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(2) span:nth-child(3) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 0.8s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(2) { animation: hidden-text 1.4s ease-in 1.8s forwards; }
+
+.text-1 .char:nth-child(1) div:nth-child(3) span:nth-child(1) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 1.0s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(3) span:nth-child(2) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 1.1s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(3) span:nth-child(4) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 1.2s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(3) span:nth-child(3) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 1.3s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(3) { animation: hidden-text 1.4s ease-in 2.3s forwards; }
+
+.text-1 .char:nth-child(1) div:nth-child(4) span:nth-child(1) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 1.5s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(4) span:nth-child(2) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 1.6s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(4) span:nth-child(4) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 1.7s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(4) span:nth-child(3) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 1.8s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(4) { animation: hidden-text 1.4s ease-in 2.8s forwards; }
+
+.text-1 .char:nth-child(1) div:nth-child(5) span:nth-child(1) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 2.0s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(5) span:nth-child(2) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 2.1s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(5) span:nth-child(4) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 2.2s forwards;
+}
+.text-1 .char:nth-child(1) div:nth-child(5) span:nth-child(3) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 2.3s forwards;
+}
+
+
+.text-1 .char:nth-child(2) div:nth-child(1) span:nth-child(1) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 2.4s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(1) span:nth-child(2) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 2.5s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(1) span:nth-child(4) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 2.6s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(1) span:nth-child(3) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 2.7s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(1) { animation: hidden-text 1.4s ease-in 3.7s forwards; }
+
+.text-1 .char:nth-child(2) div:nth-child(2) span:nth-child(1) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 2.9s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(2) span:nth-child(2) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 3.0s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(2) span:nth-child(4) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 3.1s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(2) span:nth-child(3) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 3.2s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(2) { animation: hidden-text 1.4s ease-in 4.2s forwards; }
+
+.text-1 .char:nth-child(2) div:nth-child(3) span:nth-child(1) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 3.4s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(3) span:nth-child(2) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 3.5s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(3) span:nth-child(4) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 3.6s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(3) span:nth-child(3) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 3.7s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(3) { animation: hidden-text 1.4s ease-in 4.7s forwards; }
+
+.text-1 .char:nth-child(2) div:nth-child(4) span:nth-child(1) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 3.9s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(4) span:nth-child(2) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 4.0s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(4) span:nth-child(4) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 4.1s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(4) span:nth-child(3) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 4.2s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(4) { animation: hidden-text 1.4s ease-in 5.2s forwards; }
+
+.text-1 .char:nth-child(2) div:nth-child(5) span:nth-child(1) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 4.4s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(5) span:nth-child(2) {
+  animation:
+    show-tomodati-1  1s cubic-bezier(0.01, 0.24, 0, 1) 4.5s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(5) span:nth-child(4) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 4.6s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(5) span:nth-child(3) {
+  animation:
+    show-tomodati-2  1s cubic-bezier(0.01, 0.24, 0, 1) 4.7s forwards;
+}
+.text-1 .char:nth-child(2) div:nth-child(5) { animation: hidden-kokubetu 2s cubic-bezier(0.81,-0.01, 1, 0.46) 6s forwards; }
+.text-1 .char:nth-child(1) div:nth-child(5) { animation: hidden-kokubetu 2s cubic-bezier(0.81,-0.01, 1, 0.46) 6.4s forwards; }
+
+
+.text-2 .char:nth-child(1) div:nth-child(1) span:nth-child(1) {
+  animation:
+    show-saikai-2  1s cubic-bezier(0.01, 0.24, 0, 1) 8.0s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(1) span:nth-child(3) {
+  animation:
+    show-saikai-2  1s cubic-bezier(0.01, 0.24, 0, 1) 8.2s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(1) span:nth-child(2) {
+  animation:
+    show-saikai-1  1s cubic-bezier(0.01, 0.24, 0, 1) 8.4s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(1) span:nth-child(4) {
+  animation:
+    show-saikai-1  1s cubic-bezier(0.01, 0.24, 0, 1) 8.6s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(1) { animation: hidden-text 1.4s ease-in 9.6s forwards; }
+
+.text-2 .char:nth-child(1) div:nth-child(2) span:nth-child(1) {
+  animation:
+    show-saikai-3  1s cubic-bezier(0.01, 0.24, 0, 1) 8.8s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(2) span:nth-child(3) {
+  animation:
+    show-saikai-3  1s cubic-bezier(0.01, 0.24, 0, 1) 9.0s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(2) span:nth-child(2) {
+  animation:
+    show-saikai-4  1s cubic-bezier(0.01, 0.24, 0, 1) 9.2s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(2) span:nth-child(4) {
+  animation:
+    show-saikai-4  1s cubic-bezier(0.01, 0.24, 0, 1) 9.4s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(2) { animation: hidden-text 1.4s ease-in 10.4s forwards; }
+
+.text-2 .char:nth-child(1) div:nth-child(3) span:nth-child(1) {
+  animation:
+    show-saikai-2  1s cubic-bezier(0.01, 0.24, 0, 1) 9.6s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(3) span:nth-child(3) {
+  animation:
+    show-saikai-2  1s cubic-bezier(0.01, 0.24, 0, 1) 9.8s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(3) span:nth-child(2) {
+  animation:
+    show-saikai-1  1s cubic-bezier(0.01, 0.24, 0, 1) 10.0s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(3) span:nth-child(4) {
+  animation:
+    show-saikai-1  1s cubic-bezier(0.01, 0.24, 0, 1) 10.2s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(3) { animation: hidden-text 1.4s ease-in 11.2s forwards; }
+
+.text-2 .char:nth-child(1) div:nth-child(4) span:nth-child(1) {
+  animation:
+    show-saikai-3  1s cubic-bezier(0.01, 0.24, 0, 1) 10.4s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(4) span:nth-child(3) {
+  animation:
+    show-saikai-3  1s cubic-bezier(0.01, 0.24, 0, 1) 10.6s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(4) span:nth-child(2) {
+  animation:
+    show-saikai-4  1s cubic-bezier(0.01, 0.24, 0, 1) 10.8s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(4) span:nth-child(4) {
+  animation:
+    show-saikai-4  1s cubic-bezier(0.01, 0.24, 0, 1) 11.0s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(4) { animation: hidden-text 1.4s ease-in 12.0s forwards; }
+
+.text-2 .char:nth-child(1) div:nth-child(5) span:nth-child(1) {
+  animation:
+    show-saikai-2  1s cubic-bezier(0.01, 0.24, 0, 1) 11.2s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(5) span:nth-child(3) {
+  animation:
+    show-saikai-2  1s cubic-bezier(0.01, 0.24, 0, 1) 11.4s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(5) span:nth-child(2) {
+  animation:
+    show-saikai-1  1s cubic-bezier(0.01, 0.24, 0, 1) 11.6s forwards;
+}
+.text-2 .char:nth-child(1) div:nth-child(5) span:nth-child(4) {
+  animation:
+    show-saikai-1  1s cubic-bezier(0.01, 0.24, 0, 1) 11.8s forwards;
+}
+
+.text-2 .char:nth-child(2) div:nth-child(1) span:nth-child(1) {
+  animation:
+    show-saikai-2  1s cubic-bezier(0.01, 0.24, 0, 1) 12.0s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(1) span:nth-child(3) {
+  animation:
+    show-saikai-2  1s cubic-bezier(0.01, 0.24, 0, 1) 12.2s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(1) span:nth-child(2) {
+  animation:
+    show-saikai-1  1s cubic-bezier(0.01, 0.24, 0, 1) 12.4s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(1) span:nth-child(4) {
+  animation:
+    show-saikai-1  1s cubic-bezier(0.01, 0.24, 0, 1) 12.6s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(1) { animation: hidden-text 1.4s ease-in 13.6s forwards; }
+
+.text-2 .char:nth-child(2) div:nth-child(2) span:nth-child(1) {
+  animation:
+    show-saikai-3  1s cubic-bezier(0.01, 0.24, 0, 1) 12.8s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(2) span:nth-child(3) {
+  animation:
+    show-saikai-3  1s cubic-bezier(0.01, 0.24, 0, 1) 13.0s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(2) span:nth-child(2) {
+  animation:
+    show-saikai-4  1s cubic-bezier(0.01, 0.24, 0, 1) 13.2s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(2) span:nth-child(4) {
+  animation:
+    show-saikai-4  1s cubic-bezier(0.01, 0.24, 0, 1) 13.4s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(2) { animation: hidden-text 1.4s ease-in 14.4s forwards; }
+
+.text-2 .char:nth-child(2) div:nth-child(3) span:nth-child(1) {
+  animation:
+    show-saikai-2  1s cubic-bezier(0.01, 0.24, 0, 1) 13.6s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(3) span:nth-child(3) {
+  animation:
+    show-saikai-2  1s cubic-bezier(0.01, 0.24, 0, 1) 13.8s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(3) span:nth-child(2) {
+  animation:
+    show-saikai-1  1s cubic-bezier(0.01, 0.24, 0, 1) 14.0s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(3) span:nth-child(4) {
+  animation:
+    show-saikai-1  1s cubic-bezier(0.01, 0.24, 0, 1) 14.2s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(3) { animation: hidden-text 1.4s ease-in 15.2s forwards; }
+
+.text-2 .char:nth-child(2) div:nth-child(4) span:nth-child(1) {
+  animation:
+    show-saikai-3  1s cubic-bezier(0.01, 0.24, 0, 1) 14.4s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(4) span:nth-child(3) {
+  animation:
+    show-saikai-3  1s cubic-bezier(0.01, 0.24, 0, 1) 14.6s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(4) span:nth-child(2) {
+  animation:
+    show-saikai-4  1s cubic-bezier(0.01, 0.24, 0, 1) 14.8s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(4) span:nth-child(4) {
+  animation:
+    show-saikai-4  1s cubic-bezier(0.01, 0.24, 0, 1) 15.0s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(4) { animation: hidden-text 1.4s ease-in 16s forwards; }
+
+.text-2 .char:nth-child(2) div:nth-child(5) span:nth-child(1) {
+  animation:
+    show-saikai-2  1s cubic-bezier(0.01, 0.24, 0, 1) 15.2s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(5) span:nth-child(3) {
+  animation:
+    show-saikai-2  1s cubic-bezier(0.01, 0.24, 0, 1) 15.4s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(5) span:nth-child(2) {
+  animation:
+    show-saikai-1  1s cubic-bezier(0.01, 0.24, 0, 1) 15.6s forwards;
+}
+.text-2 .char:nth-child(2) div:nth-child(5) span:nth-child(4) {
+  animation:
+    show-saikai-1  1s cubic-bezier(0.01, 0.24, 0, 1) 15.8s forwards;
+}
+
+.text-2 .char:nth-child(2) div:nth-child(5) { animation: hidden-kokubetu 2s cubic-bezier(0.81,-0.01, 1, 0.46) 16.8s forwards; }
+.text-2 .char:nth-child(1) div:nth-child(5) { animation: hidden-kokubetu 2s cubic-bezier(0.81,-0.01, 1, 0.46) 17.2s forwards; }
+
+/******************************************************************
+  keyframes
+*******************************************************************/
+@keyframes show-tomodati-1 {
+  from { transform: scale(14) rotateX(0) rotateY(0); opacity: 0; }
+  to   { transform: scale(1) rotateX(360deg) rotateY(360deg); opacity: 0.7; }
+}
+@keyframes show-tomodati-2 {
+  from { transform: scale(14) rotateX(360deg) rotateY(360deg); opacity: 0; }
+  to   { transform: scale(1) rotateX(0deg) rotateY(0deg); opacity: 0.7; }
+}
+@keyframes show-saikai-1 {
+  from { transform: translateX(-50vw) translateY(-50vh) scale(14) rotateX(0) rotateY(0); opacity: 0; }
+  to   { transform: translateX(0vw) translateX(0vh) scale(1) rotateX(360deg) rotateY(360deg); opacity: 0.7; }
+}
+@keyframes show-saikai-2 {
+  from { transform: translateX(50vw) translateY(50vh) scale(14) rotateX(360deg) rotateY(360deg); opacity: 0; }
+  to   { transform: translateX(0vw) translate(0vh) scale(1) rotateX(0deg) rotateY(0deg); opacity: 0.7; }
+}
+@keyframes show-saikai-3 {
+  from { transform: translateX(50vw) translateY(-50vh) scale(14) rotateX(0) rotateY(0); opacity: 0; }
+  to   { transform: translateX(0vw) translateX(0vh) scale(1) rotateX(360deg) rotateY(360deg); opacity: 0.7; }
+}
+@keyframes show-saikai-4 {
+  from { transform: translateX(-50vw) translateY(50vh) scale(14) rotateX(360deg) rotateY(360deg); opacity: 0; }
+  to   { transform: translateX(0vw) translate(0vh) scale(1) rotateX(0deg) rotateY(0deg); opacity: 0.7; }
+}
+@keyframes hidden-text {
+  from { transform: scaleX(1); opacity: 1; }
+  to   { transform: scaleX(1.5); opacity: 0; }
+}
+@keyframes hidden-kokubetu {
+  from { transform: translateY(0) rotate(0); opacity: 1; }
+  to   { transform: translateY(100%) rotate(15deg); opacity: 0; }
+}

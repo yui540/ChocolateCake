@@ -135,4 +135,12 @@ export default [
     "thumb": "./images/thumb/small/text-pattern-3.png",
     "thumb_large": "./images/thumb/large/text-pattern-3.png"
   },
+  {
+    "id": "text-pattern-4",
+    "title": "滲ませるような表現",
+    "link": "./content/text-pattern-4/",
+    "description": "文字が滲んだような表現にしました。",
+    "thumb": "./images/thumb/small/text-pattern-4.png",
+    "thumb_large": "./images/thumb/large/text-pattern-4.png"
+  },
 ]
