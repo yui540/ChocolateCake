@@ -143,4 +143,12 @@ export default [
     "thumb": "./images/thumb/small/text-pattern-4.png",
     "thumb_large": "./images/thumb/large/text-pattern-4.png"
   },
+  {
+    "id": "slice",
+    "title": "ばばば、ば〜ん",
+    "link": "./content/slice/",
+    "description": "「ばばば、ば〜ん」となんかカラフルに動く。",
+    "thumb": "./images/thumb/small/slice.png",
+    "thumb_large": "./images/thumb/large/slice.png"
+  },
 ]
