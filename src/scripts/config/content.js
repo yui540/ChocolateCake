@@ -151,4 +151,12 @@ export default [
     "thumb": "./images/thumb/small/slice.png",
     "thumb_large": "./images/thumb/large/slice.png"
   },
+  {
+    "id": "bound",
+    "title": "バウンド",
+    "link": "./content/bound/",
+    "description": "ぼよよ〜ん。",
+    "thumb": "./images/thumb/small/bound.png",
+    "thumb_large": "./images/thumb/large/bound.png"
+  },
 ]
