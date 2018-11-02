@@ -175,4 +175,12 @@ export default [
     "thumb": "./images/thumb/small/lain.png",
     "thumb_large": "./images/thumb/large/lain.png"
   },
+  {
+    "id": "lens",
+    "title": "lens",
+    "link": "./content/lens/",
+    "description": "わーい。",
+    "thumb": "./images/thumb/small/lens.png",
+    "thumb_large": "./images/thumb/large/lens.png"
+  },
 ]
