@@ -167,4 +167,12 @@ export default [
     "thumb": "./images/thumb/small/logic.png",
     "thumb_large": "./images/thumb/large/logic.png"
   },
+  {
+    "id": "lain",
+    "title": "lain",
+    "link": "./content/lain/",
+    "description": "レインがどーちゃらこーちゃら。",
+    "thumb": "./images/thumb/small/lain.png",
+    "thumb_large": "./images/thumb/large/lain.png"
+  },
 ]

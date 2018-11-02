@@ -2,9 +2,9 @@
   <main class="app">
     <img class="app__sitename" src="./images/title-logo.png" alt="タイトルロゴ" />
     <p class="app__description">
-      ChocolateCakeは、yui540が作った簡単なCSS Animation作品一覧サイトです。<br />
+      ChocolateCakeは、yui540が作ったアニメーション作品一覧サイトです。<br />
       ブログでの制作物や暇な時間に作ったものをまとめています。<br />
-      作品は全て、アニメーション部分はCSS Animationを使っています。
+      ソースコードは全て、GitHubにて公開しています。
     </p>
     <article class="content-wrap">
       <content
@@ -19,7 +19,7 @@
   </main>
   <aside class="app__info">
     <section class="app__sns">
-      <a class="fa fa-github" href="https://github.com/yui540"></a>
+      <a class="fa fa-github" href="https://github.com/yui540/ChocolateCake"></a>
       <a class="fa fa-twitter" href="https://twitter.com/yui540"></a>
     </section>
   </aside>
