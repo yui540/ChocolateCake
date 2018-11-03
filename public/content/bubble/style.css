@@ -1,0 +1,91 @@
+#root {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+}
+
+.ball {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+}
+.ball div {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+}
+.ball div::after {
+  content: ""; display: block;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+}
+.ball div:nth-child(1) {
+  left: 0%; width: 20vmin; height: 20vmin;
+}
+.ball div:nth-child(2) {
+  left: 20%; width: 15vmin; height: 15vmin;
+}
+.ball div:nth-child(3) {
+  left: 40%; width: 30vmin; height: 30vmin;
+}
+.ball div:nth-child(4) {
+  left: 60%; width: 10vmin; height: 10vmin;
+}
+.ball div:nth-child(5) {
+  left: 70%; width: 12vmin; height: 12vmin;
+}
+.ball div:nth-child(6) {
+  left: 90%; width: 19vmin; height: 20vmin;
+}
+
+.ball-1 div::after { box-shadow: 0 0 30px #ccc inset; }
+
+.ball-2 div::after { background-color: #ccc; }
+
+
+/******************************************************************
+  animation
+*******************************************************************/
+.ball-1 div:nth-child(1) { animation: up 4s ease-in 0s infinite; }
+.ball-1 div:nth-child(1)::after { animation: sway1 2s ease-in-out 0s alternate infinite; }
+.ball-1 div:nth-child(2) { animation: up 3s ease-in 0s infinite; }
+.ball-1 div:nth-child(2)::after { animation: sway2 1s ease-in-out 0s alternate infinite; }
+.ball-1 div:nth-child(3) { animation: up 7s ease-in 0s infinite; }
+.ball-1 div:nth-child(3)::after { animation: sway1 2s ease-in-out 0s alternate infinite; }
+.ball-1 div:nth-child(4) { animation: up 2s ease-in 0s infinite; }
+.ball-1 div:nth-child(4)::after { animation: sway2 1.6s ease-in-out 0s alternate infinite; }
+.ball-1 div:nth-child(5) { animation: up 3.5s ease-in 0s infinite; }
+.ball-1 div:nth-child(5)::after { animation: sway1 2.3s ease-in-out 0s alternate infinite; }
+.ball-1 div:nth-child(6) { animation: up 6s ease-in 0s infinite; }
+.ball-1 div:nth-child(6)::after { animation: sway2 4s ease-in-out 0s alternate infinite; }
+
+.ball-2 div:nth-child(1) { animation: up 4s ease-in 3s infinite; }
+.ball-2 div:nth-child(1)::after { animation: sway1 2s ease-in-out 3s alternate infinite; }
+.ball-2 div:nth-child(2) { animation: up 3s ease-in 4s infinite; }
+.ball-2 div:nth-child(2)::after { animation: sway2 1s ease-in-out 4s alternate infinite; }
+.ball-2 div:nth-child(3) { animation: up 7s ease-in 2s infinite; }
+.ball-2 div:nth-child(3)::after { animation: sway1 2s ease-in-out 2s alternate infinite; }
+.ball-2 div:nth-child(4) { animation: up 2s ease-in 4s infinite; }
+.ball-2 div:nth-child(4)::after { animation: sway2 1.6s ease-in-out 4s alternate infinite; }
+.ball-2 div:nth-child(5) { animation: up 3.5s ease-in 3s infinite; }
+.ball-2 div:nth-child(5)::after { animation: sway1 2.3s ease-in-out 3s alternate infinite; }
+.ball-2 div:nth-child(6) { animation: up 6s ease-in 2s infinite; }
+.ball-2 div:nth-child(6)::after { animation: sway2 4s ease-in-out 2s alternate infinite; }
+
+/******************************************************************
+  keyframes
+*******************************************************************/
+@keyframes up {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(-100vh); }
+}
+@keyframes sway1 {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
+}
+@keyframes sway2 {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(-100%); }
+}

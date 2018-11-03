@@ -183,4 +183,12 @@ export default [
     "thumb": "./images/thumb/small/lens.png",
     "thumb_large": "./images/thumb/large/lens.png"
   },
+  {
+    "id": "bubble",
+    "title": "bubble",
+    "link": "./content/bubble/",
+    "description": "あわあわあわわわわわ。",
+    "thumb": "./images/thumb/small/bubble.png",
+    "thumb_large": "./images/thumb/large/bubble.png"
+  },
 ]
