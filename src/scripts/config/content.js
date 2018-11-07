@@ -191,4 +191,12 @@ export default [
     "thumb": "./images/thumb/small/bubble.png",
     "thumb_large": "./images/thumb/large/bubble.png"
   },
+  {
+    "id": "layer",
+    "title": "layer",
+    "link": "./content/layer/",
+    "description": "色が重なる。",
+    "thumb": "./images/thumb/small/layer.png",
+    "thumb_large": "./images/thumb/large/layer.png"
+  },
 ]
