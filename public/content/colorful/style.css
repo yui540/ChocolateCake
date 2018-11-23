@@ -1,0 +1,72 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.bg {
+  position: absolute;
+  top: calc(50% - 50vmax);
+  left: calc(50% - 50vmax);
+  width: 100vmax; height: 100vmax;
+  border-radius: 50%;
+  transition: all 0.8s cubic-bezier(0.78, -0.01, 0.25, 1.01) 0s;
+  background-color: #C9608B;
+  transform: scale(0);
+}
+
+.menu-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  border: solid 2px #eee;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out 0s;
+  background-color: #fff;
+  cursor: pointer;
+}
+.menu-btn .inner {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px; height: 55px;
+  overflow: hidden;
+}
+.menu-btn .inner div {
+  position: absolute; left: 0;
+  width: 100%; height: 3px;
+  background-color: rgba(0,0,0,0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.5s ease 0s;
+}
+.menu-btn .inner div::after {
+  content: ""; display: block;
+  width: 100%; height: 100%;
+  background-color: #C9608B;
+  transform: translateX(-100%);
+}
+.menu-btn .inner div:nth-child(1) { top: 0; }
+.menu-btn .inner div:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.menu-btn .inner div:nth-child(3) { bottom: 0; }
+.menu-btn .inner div:nth-child(1)::after { transition: all 0.25s ease 0s; }
+.menu-btn .inner div:nth-child(2)::after { transition: all 0.25s ease 0.1s; }
+.menu-btn .inner div:nth-child(3)::after { transition: all 0.25s ease 0.2s; }
+
+.menu-btn:hover { box-shadow: 10px 10px 30px rgba(0,0,0,0.15); }
+.menu-btn:hover .inner div::after { transform: translateX(0); }
+.menu-btn:focus { outline: none; }
+
+.bg[data-state="active"] {
+  transform: scale(1.4);
+}
+.bg[data-state="active"] + .menu-btn .inner div:nth-child(1) {
+  top: 50%; transform: translateY(-50%) rotate(45deg);
+}
+.bg[data-state="active"] + .menu-btn .inner div:nth-child(2) { transform: translateX(-100%); }
+.bg[data-state="active"] + .menu-btn .inner div:nth-child(3) {
+  bottom: 50%; transform: translateY(50%) rotate(-45deg);
+}

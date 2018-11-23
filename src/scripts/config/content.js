@@ -199,4 +199,12 @@ export default [
     "thumb": "./images/thumb/small/layer.png",
     "thumb_large": "./images/thumb/large/layer.png"
   },
+  {
+    "id": "colorful",
+    "title": "colorful",
+    "link": "./content/colorful/",
+    "description": "ホバーしたり、クリックしたり。",
+    "thumb": "./images/thumb/small/colorful.png",
+    "thumb_large": "./images/thumb/large/colorful.png"
+  },
 ]
