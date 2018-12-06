@@ -191,4 +191,68 @@ export default [
     "thumb": "./images/thumb/small/colorful.png",
     "thumb_large": "./images/thumb/large/colorful.png"
   },
+  {
+    "id": "color-catalog",
+    "title": "color-catalog",
+    "link": "./content/color-catalog/",
+    "description": "color-catalog",
+    "thumb": "./images/thumb/small/color-catalog.png",
+    "thumb_large": "./images/thumb/large/color-catalog.png"
+  },
+  {
+    "id": "color-content",
+    "title": "color-content",
+    "link": "./content/color-content/",
+    "description": "color-content",
+    "thumb": "./images/thumb/small/color-content.png",
+    "thumb_large": "./images/thumb/large/color-content.png"
+  },
+  {
+    "id": "color-loading",
+    "title": "color-loading",
+    "link": "./content/color-loading/",
+    "description": "color-loading",
+    "thumb": "./images/thumb/small/color-loading.png",
+    "thumb_large": "./images/thumb/large/color-loading.png"
+  },
+  {
+    "id": "color-message-form",
+    "title": "color-message-form",
+    "link": "./content/color-message-form/",
+    "description": "color-message-form",
+    "thumb": "./images/thumb/small/color-message-form.png",
+    "thumb_large": "./images/thumb/large/color-message-form.png"
+  },
+  {
+    "id": "color-modal",
+    "title": "color-modal",
+    "link": "./content/color-modal/",
+    "description": "color-modal",
+    "thumb": "./images/thumb/small/color-modal.png",
+    "thumb_large": "./images/thumb/large/color-modal.png"
+  },
+  {
+    "id": "color-people",
+    "title": "color-people",
+    "link": "./content/color-people/",
+    "description": "color-people",
+    "thumb": "./images/thumb/small/color-people.png",
+    "thumb_large": "./images/thumb/large/color-people.png"
+  },
+  {
+    "id": "color-profile",
+    "title": "color-profile",
+    "link": "./content/color-profile/",
+    "description": "color-profile",
+    "thumb": "./images/thumb/small/color-profile.png",
+    "thumb_large": "./images/thumb/large/color-profile.png"
+  },
+  {
+    "id": "color-tomodati",
+    "title": "color-tomodati",
+    "link": "./content/color-tomodati/",
+    "description": "color-tomodati",
+    "thumb": "./images/thumb/small/color-tomodati.png",
+    "thumb_large": "./images/thumb/large/color-tomodati.png"
+  },
 ]
