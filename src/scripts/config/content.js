@@ -271,4 +271,12 @@ export default [
     "thumb": "./images/thumb/small/alphabet.png",
     "thumb_large": "./images/thumb/large/alphabet.png"
   },
+  {
+    "id": "rotate-bound",
+    "title": "rotate-bound",
+    "link": "./content/rotate-bound/",
+    "description": "回転。",
+    "thumb": "./images/thumb/small/rotate-bound.png",
+    "thumb_large": "./images/thumb/large/rotate-bound.png"
+  },
 ]
