@@ -327,4 +327,12 @@ export default [
     "thumb": "./images/thumb/small/box-scale.png",
     "thumb_large": "./images/thumb/large/box-scale.png"
   },
+  {
+    "id": "box-3d",
+    "title": "box-3d",
+    "link": "./content/box-3d/",
+    "description": "立体な箱",
+    "thumb": "./images/thumb/small/box-3d.png",
+    "thumb_large": "./images/thumb/large/box-3d.png"
+  },
 ]
