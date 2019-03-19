@@ -1,0 +1,145 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #D7D7D7;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+}
+.box .ball {
+  width: 25%;
+  height: 25%;
+  opacity: 0;
+  transform-origin: center bottom;
+}
+.box .ball:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: solid 6px #FDF6E5;
+  transform: scale(.8);
+  font-size: 25px;
+  line-height: 60px;
+  text-align: center;
+  color: #FDF6E5;
+  font-weight: bold;
+}
+.box .ball:nth-child(1n)::after { background-color: #D2747A; }
+.box .ball:nth-child(2n)::after { background-color: #599199; }
+
+.box .ball:nth-child(1)::after { content: "A"; }
+.box .ball:nth-child(2)::after { content: "B"; }
+.box .ball:nth-child(3)::after { content: "C"; }
+.box .ball:nth-child(4)::after { content: "D"; }
+.box .ball:nth-child(5)::after { content: "E"; }
+.box .ball:nth-child(6)::after { content: "F"; }
+.box .ball:nth-child(7)::after { content: "D"; }
+.box .ball:nth-child(8)::after { content: "H"; }
+.box .ball:nth-child(9)::after { content: "I"; }
+.box .ball:nth-child(10)::after { content: "J"; }
+.box .ball:nth-child(11)::after { content: "K"; }
+.box .ball:nth-child(12)::after { content: "L"; }
+.box .ball:nth-child(13)::after { content: "M"; }
+.box .ball:nth-child(14)::after { content: "N"; }
+.box .ball:nth-child(15)::after { content: "O"; }
+.box .ball:nth-child(16)::after { content: "P"; }
+
+.box .ball:nth-child(16) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 0s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 1.6s forwards;
+}
+.box .ball:nth-child(15) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 0.1s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 1.7s forwards;
+}
+.box .ball:nth-child(14) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 0.2s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 1.8s forwards;
+}
+.box .ball:nth-child(13) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 0.3s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 1.9s forwards;
+}
+.box .ball:nth-child(12) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 0.4s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 2s forwards;
+}
+.box .ball:nth-child(11) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 0.5s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 2.1s forwards;
+}
+.box .ball:nth-child(10) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 0.6s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 2.2s forwards;
+}
+.box .ball:nth-child(9) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 0.7s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 2.3s forwards;
+}
+.box .ball:nth-child(8) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 0.8s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 2.4s forwards;
+}
+.box .ball:nth-child(7) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 0.9s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 2.5s forwards;
+}
+.box .ball:nth-child(6) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 1.0s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 2.6s forwards;
+}
+.box .ball:nth-child(5) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 1.1s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 2.7s forwards;
+}
+.box .ball:nth-child(4) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 1.2s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 2.8s forwards;
+}
+.box .ball:nth-child(3) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 1.3s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 2.9s forwards;
+}
+.box .ball:nth-child(2) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 1.4s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 3.0s forwards;
+}
+.box .ball:nth-child(1) {
+  animation: fall .6s cubic-bezier(0.85, 0.01, 1, 1.02) 1.5s forwards,
+    fall- .6s cubic-bezier(0.85, 0.01, 1, 0.46) 3.1s forwards;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-500%) scaleX(1) scaleY(1); opacity: 0; }
+  40% { transform: translateY(0%) scaleX(1.6) scaleY(1); opacity: 1; }
+  50% { transform: translateY(-20%) scaleX(1) scaleY(1); opacity: 1; }
+  60% { transform: translateY(0%) scaleX(1.3) scaleY(1); opacity: 1; }
+  70% { transform: translateY(-10%) scaleX(1) scaleY(1); opacity: 1; }
+  80% { transform: translateY(0%) scaleX(1.15) scaleY(1); opacity: 1; }
+  90% { transform: translateY(-5%) scaleX(1) scaleY(1); opacity: 1; }
+  100% { transform: translateY(0%) scaleX(1) scaleY(1); opacity: 1; }
+}
+@keyframes fall- {
+  from { transform: translateY(0%) scaleX(1); }
+  to   { transform: translateY(500%) scaleX(0); }
+}

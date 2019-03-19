@@ -263,4 +263,12 @@ export default [
     "thumb": "./images/thumb/small/thank-you.png",
     "thumb_large": "./images/thumb/large/thank-you.png"
   },
+  {
+    "id": "alphabet",
+    "title": "alphabet",
+    "link": "./content/alphabet/",
+    "description": "アルファベット",
+    "thumb": "./images/thumb/small/alphabet.png",
+    "thumb_large": "./images/thumb/large/alphabet.png"
+  },
 ]
