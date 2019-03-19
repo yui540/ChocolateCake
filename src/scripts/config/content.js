@@ -311,4 +311,12 @@ export default [
     "thumb": "./images/thumb/small/kusa.png",
     "thumb_large": "./images/thumb/large/kusa.png"
   },
+  {
+    "id": "meiro",
+    "title": "meiro",
+    "link": "./content/meiro/",
+    "description": "迷路。",
+    "thumb": "./images/thumb/small/meiro.png",
+    "thumb_large": "./images/thumb/large/meiro.png"
+  },
 ]
