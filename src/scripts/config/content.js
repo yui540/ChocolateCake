@@ -279,4 +279,20 @@ export default [
     "thumb": "./images/thumb/small/rotate-bound.png",
     "thumb_large": "./images/thumb/large/rotate-bound.png"
   },
+  {
+    "id": "pikapika",
+    "title": "pikapika",
+    "link": "./content/pikapika/",
+    "description": "ピカピカ。",
+    "thumb": "./images/thumb/small/pikapika.png",
+    "thumb_large": "./images/thumb/large/pikapika.png"
+  },
+  {
+    "id": "noise",
+    "title": "noise",
+    "link": "./content/noise/",
+    "description": "ノイズ。",
+    "thumb": "./images/thumb/small/noise.png",
+    "thumb_large": "./images/thumb/large/noise.png"
+  },
 ]
