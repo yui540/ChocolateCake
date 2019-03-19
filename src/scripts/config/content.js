@@ -335,4 +335,12 @@ export default [
     "thumb": "./images/thumb/small/box-3d.png",
     "thumb_large": "./images/thumb/large/box-3d.png"
   },
+  {
+    "id": "ponponpon",
+    "title": "ponponpon",
+    "link": "./content/ponponpon/",
+    "description": "ぽんぽんぽん",
+    "thumb": "./images/thumb/small/ponponpon.png",
+    "thumb_large": "./images/thumb/large/ponponpon.png"
+  },
 ]

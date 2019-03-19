@@ -1,0 +1,198 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #FCF1EA;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+}
+
+.box .ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  transform-origin: center bottom;
+}
+.box .ball .line {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1px);
+  width: 2px;
+  height: 100%;
+  overflow: hidden;
+}
+.box .ball .line::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+}
+.box .ball::after {
+  position: absolute;
+  left: calc(50% - 20px);
+  top: 0;
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transform: scale(0);
+}
+.box .ball:nth-child(2n - 1)::after,
+.box .ball:nth-child(2n - 1) .line::after { background-color: #97D1D5; }
+.box .ball:nth-child(2n)::after,
+.box .ball:nth-child(2n) .line::after { background-color: #D8835F; }
+.box .ball:nth-child(1)  { transform: rotate(0deg); }
+.box .ball:nth-child(2)  { transform: rotate(36deg); }
+.box .ball:nth-child(3)  { transform: rotate(72deg); }
+.box .ball:nth-child(4)  { transform: rotate(108deg); }
+.box .ball:nth-child(5)  { transform: rotate(144deg); }
+.box .ball:nth-child(6)  { transform: rotate(180deg); }
+.box .ball:nth-child(7)  { transform: rotate(216deg); }
+.box .ball:nth-child(8)  { transform: rotate(252deg); }
+.box .ball:nth-child(9)  { transform: rotate(288deg); }
+.box .ball:nth-child(10) { transform: rotate(324deg); }
+
+.box .ball:nth-child(1)::after {
+  animation: fly .5s cubic-bezier(0.01, 0.41, 0.08, 0.99) 0s forwards,
+    bound .7s cubic-bezier(0.78, 0.01, 1, 1.04) .6s forwards,
+    popout .7s cubic-bezier(0.01, 0, 0.24, 1) 1.3s forwards;
+}
+.box .ball:nth-child(1) .line::after {
+  animation:
+    bound-line .7s cubic-bezier(0.78, 0.01, 1, 1.04) .6s forwards,
+    hidden-line .4s cubic-bezier(0.78, 0.01, 1, 1.04) 1.3s forwards;
+}
+.box .ball:nth-child(2)::after {
+  animation: fly .5s cubic-bezier(0.01, 0.41, 0.08, 0.99) .1s forwards,
+    bound .7s cubic-bezier(0.78, 0.01, 1, 1.04) .7s forwards,
+    popout .7s cubic-bezier(0.01, 0, 0.24, 1) 1.4s forwards;
+}
+.box .ball:nth-child(2) .line::after {
+  animation: bound-line .7s cubic-bezier(0.78, 0.01, 1, 1.04) .7s forwards,
+    hidden-line .4s cubic-bezier(0.78, 0.01, 1, 1.04) 1.4s forwards;
+}
+.box .ball:nth-child(3)::after {
+  animation: fly .5s cubic-bezier(0.01, 0.41, 0.08, 0.99) .2s forwards,
+    bound .7s cubic-bezier(0.78, 0.01, 1, 1.04) .8s forwards,
+    popout .7s cubic-bezier(0.01, 0, 0.24, 1) 1.5s forwards;
+}
+.box .ball:nth-child(3) .line::after {
+  animation: bound-line .7s cubic-bezier(0.78, 0.01, 1, 1.04) .8s forwards,
+    hidden-line .4s cubic-bezier(0.78, 0.01, 1, 1.04) 1.5s forwards;
+}
+.box .ball:nth-child(4)::after {
+  animation: fly .5s cubic-bezier(0.01, 0.41, 0.08, 0.99) .3s forwards,
+    bound .7s cubic-bezier(0.78, 0.01, 1, 1.04) .9s forwards,
+    popout .7s cubic-bezier(0.01, 0, 0.24, 1) 1.6s forwards;
+}
+.box .ball:nth-child(4) .line::after {
+  animation: bound-line .7s cubic-bezier(0.78, 0.01, 1, 1.04) .9s forwards,
+    hidden-line .4s cubic-bezier(0.78, 0.01, 1, 1.04) 1.6s forwards;
+}
+.box .ball:nth-child(5)::after {
+  animation: fly .5s cubic-bezier(0.01, 0.41, 0.08, 0.99) .4s forwards,
+    bound .7s cubic-bezier(0.78, 0.01, 1, 1.04) 1s forwards,
+    popout .7s cubic-bezier(0.01, 0, 0.24, 1) 1.7s forwards;
+}
+.box .ball:nth-child(5) .line::after {
+  animation: bound-line .7s cubic-bezier(0.78, 0.01, 1, 1.04) 1s forwards,
+    hidden-line .4s cubic-bezier(0.78, 0.01, 1, 1.04) 1.7s forwards;
+}
+.box .ball:nth-child(6)::after {
+  animation: fly .5s cubic-bezier(0.01, 0.41, 0.08, 0.99) .5s forwards,
+    bound .7s cubic-bezier(0.78, 0.01, 1, 1.04) 1.1s forwards,
+    popout .7s cubic-bezier(0.01, 0, 0.24, 1) 1.8s forwards;
+}
+.box .ball:nth-child(6) .line::after {
+  animation: bound-line .7s cubic-bezier(0.78, 0.01, 1, 1.04) 1.1s forwards,
+    hidden-line .4s cubic-bezier(0.78, 0.01, 1, 1.04) 1.8s forwards;
+}
+.box .ball:nth-child(7)::after {
+  animation: fly .5s cubic-bezier(0.01, 0.41, 0.08, 0.99) .6s forwards,
+    bound .7s cubic-bezier(0.78, 0.01, 1, 1.04) 1.2s forwards,
+      popout .7s cubic-bezier(0.01, 0, 0.24, 1) 1.9s forwards;
+}
+.box .ball:nth-child(7) .line::after {
+  animation: bound-line .7s cubic-bezier(0.78, 0.01, 1, 1.04) 1.2s forwards,
+    hidden-line .4s cubic-bezier(0.78, 0.01, 1, 1.04) 1.9s forwards;
+}
+.box .ball:nth-child(8)::after {
+  animation: fly .5s cubic-bezier(0.01, 0.41, 0.08, 0.99) .7s forwards,
+    bound .7s cubic-bezier(0.78, 0.01, 1, 1.04) 1.3s forwards,
+      popout .7s cubic-bezier(0.01, 0, 0.24, 1) 2.0s forwards;
+}
+.box .ball:nth-child(8) .line::after {
+  animation: bound-line .7s cubic-bezier(0.78, 0.01, 1, 1.04) 1.3s forwards,
+    hidden-line .4s cubic-bezier(0.78, 0.01, 1, 1.04) 2.0s forwards;
+}
+.box .ball:nth-child(9)::after {
+  animation: fly .5s cubic-bezier(0.01, 0.41, 0.08, 0.99) .8s forwards,
+    bound .7s cubic-bezier(0.78, 0.01, 1, 1.04) 1.4s forwards,
+    popout .7s cubic-bezier(0.01, 0, 0.24, 1) 2.1s forwards;
+}
+.box .ball:nth-child(9) .line::after {
+  animation: bound-line .7s cubic-bezier(0.78, 0.01, 1, 1.04) 1.4s forwards,
+    hidden-line .4s cubic-bezier(0.78, 0.01, 1, 1.04) 2.1s forwards;
+}
+.box .ball:nth-child(10)::after {
+  animation: fly .5s cubic-bezier(0.01, 0.41, 0.08, 0.99) .9s forwards,
+    bound .7s cubic-bezier(0.78, 0.01, 1, 1.04) 1.5s forwards,
+    popout .7s cubic-bezier(0.01, 0, 0.24, 1) 2.2s forwards;
+}
+.box .ball:nth-child(10) .line::after {
+  animation: bound-line .7s cubic-bezier(0.78, 0.01, 1, 1.04) 1.5s forwards,
+    hidden-line .4s cubic-bezier(0.78, 0.01, 1, 1.04) 2.2s forwards;
+}
+
+@keyframes fly {
+  from { transform: translateY(0) scale(0); }
+  to   { transform: translateY(210px) scale(1); }
+}
+@keyframes bound {
+  0%   { transform: translateY(210px); }
+  40%  { transform: translateY(0); }
+  50%  { transform: translateY(60%); }
+  60%  { transform: translateY(0); }
+  70%  { transform: translateY(30%); }
+  80%  { transform: translateY(0); }
+  90%  { transform: translateY(15%); }
+  100% { transform: translateY(0); }
+}
+@keyframes bound-line {
+  0%   { transform: translateY(100%); }
+  40%  { transform: translateY(0); }
+  50%  { transform: translateY(10%); }
+  60%  { transform: translateY(0); }
+  70%  { transform: translateY(5%); }
+  80%  { transform: translateY(0); }
+  90%  { transform: translateY(2.5%); }
+  100% { transform: translateY(0); }
+}
+@keyframes popout {
+  0% { transform: scale(1); }
+  50% { transform: scale(2); }
+  100% { transform: scale(0); }
+}
+@keyframes hidden-line {
+  from { transform: translateY(0%); }
+  to   { transform: translateY(-100%); }
+}
