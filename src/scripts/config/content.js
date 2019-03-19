@@ -319,4 +319,12 @@ export default [
     "thumb": "./images/thumb/small/meiro.png",
     "thumb_large": "./images/thumb/large/meiro.png"
   },
+  {
+    "id": "box-scale",
+    "title": "box-scale",
+    "link": "./content/box-scale/",
+    "description": "ばいーん。",
+    "thumb": "./images/thumb/small/box-scale.png",
+    "thumb_large": "./images/thumb/large/box-scale.png"
+  },
 ]

@@ -1,0 +1,93 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #DAC2C3;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  width: 400px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+}
+.box .bar {
+  width: 100%;
+  height: 20%;
+  transform: scaleX(0);
+}
+.box .bar:nth-child(1n) { background-color: #A8565E; }
+.box .bar:nth-child(2n) { background-color: #5C737D; }
+
+.box .bar:nth-child(1) {
+  animation: boundX .6s cubic-bezier(0.83, 0.01, 1, 1.02) 0s forwards,
+    boundX- .6s cubic-bezier(0.83, 0.01, 1, 1.02) 1.8s forwards;
+}
+.box .bar:nth-child(2) {
+  animation: boundY .6s cubic-bezier(0.83, 0.01, 1, 1.02) 0.15s forwards,
+    boundY- .6s cubic-bezier(0.83, 0.01, 1, 1.02) 1.65s forwards;
+}
+.box .bar:nth-child(3) {
+  animation: boundX .6s cubic-bezier(0.83, 0.01, 1, 1.02) 0.3s forwards,
+    boundX- .6s cubic-bezier(0.83, 0.01, 1, 1.02) 1.5s forwards;
+}
+.box .bar:nth-child(4) {
+  animation: boundY .6s cubic-bezier(0.83, 0.01, 1, 1.02) 0.45s forwards,
+    boundY- .6s cubic-bezier(0.83, 0.01, 1, 1.02) 1.35s forwards;
+}
+.box .bar:nth-child(5) {
+  animation: boundX .6s cubic-bezier(0.83, 0.01, 1, 1.02) 0.6s forwards,
+    boundX- .6s cubic-bezier(0.83, 0.01, 1, 1.02) 1.2s forwards;
+}
+
+@keyframes boundX {
+  0%   { transform: scaleX(0); }
+  40%  { transform: scaleX(1); }
+  50%  { transform: scaleX(.7); }
+  60%  { transform: scaleX(1); }
+  70%  { transform: scaleX(.8); }
+  80%  { transform: scaleX(1); }
+  90%  { transform: scaleX(.95); }
+  100% { transform: scaleX(1); }
+}
+@keyframes boundX- {
+  0%   { transform: scaleX(1); }
+  40%  { transform: scaleX(0); }
+  50%  { transform: scaleX(.3); }
+  60%  { transform: scaleX(0); }
+  70%  { transform: scaleX(.2); }
+  80%  { transform: scaleX(0); }
+  90%  { transform: scaleX(.05); }
+  100% { transform: scaleX(0); }
+}
+@keyframes boundY {
+  0%   { transform: scaleY(0); }
+  40%  { transform: scaleY(1); }
+  50%  { transform: scaleY(.7); }
+  60%  { transform: scaleY(1); }
+  70%  { transform: scaleY(.8); }
+  80%  { transform: scaleY(1); }
+  90%  { transform: scaleY(.95); }
+  100% { transform: scaleY(1); }
+}
+@keyframes boundY- {
+  0%   { transform: scaleY(1); }
+  40%  { transform: scaleY(0); }
+  50%  { transform: scaleY(.3); }
+  60%  { transform: scaleY(0); }
+  70%  { transform: scaleY(.2); }
+  80%  { transform: scaleY(0); }
+  90%  { transform: scaleY(.05); }
+  100% { transform: scaleY(0); }
+}
