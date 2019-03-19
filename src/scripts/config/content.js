@@ -255,4 +255,12 @@ export default [
     "thumb": "./images/thumb/small/color-tomodati.png",
     "thumb_large": "./images/thumb/large/color-tomodati.png"
   },
+  {
+    "id": "thank-you",
+    "title": "thank you.",
+    "link": "./content/thank-you/",
+    "description": "ありがとう。",
+    "thumb": "./images/thumb/small/thank-you.png",
+    "thumb_large": "./images/thumb/large/thank-you.png"
+  },
 ]
