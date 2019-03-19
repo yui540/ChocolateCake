@@ -303,4 +303,12 @@ export default [
     "thumb": "./images/thumb/small/fall-ball.png",
     "thumb_large": "./images/thumb/large/fall-ball.png"
   },
+  {
+    "id": "kusa",
+    "title": "kusa",
+    "link": "./content/kusa/",
+    "description": "草。",
+    "thumb": "./images/thumb/small/kusa.png",
+    "thumb_large": "./images/thumb/large/kusa.png"
+  },
 ]
