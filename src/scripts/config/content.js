@@ -343,4 +343,12 @@ export default [
     "thumb": "./images/thumb/small/ponponpon.png",
     "thumb_large": "./images/thumb/large/ponponpon.png"
   },
+  {
+    "id": "batan",
+    "title": "batan",
+    "link": "./content/batan/",
+    "description": "バタンバタン。",
+    "thumb": "./images/thumb/small/batan.png",
+    "thumb_large": "./images/thumb/large/batan.png"
+  },
 ]
