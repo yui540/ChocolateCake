@@ -351,4 +351,12 @@ export default [
     "thumb": "./images/thumb/small/batan.png",
     "thumb_large": "./images/thumb/large/batan.png"
   },
+  {
+    "id": "kirakira-pen",
+    "title": "kirakira-pen",
+    "link": "./content/kirakira-pen/",
+    "description": "キラキラペン。",
+    "thumb": "./images/thumb/small/kirakira-pen.png",
+    "thumb_large": "./images/thumb/large/kirakira-pen.png"
+  },
 ]

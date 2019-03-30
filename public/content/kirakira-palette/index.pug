@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    link(rel="stylesheet" href="./style.css")
+  body
+    .stage
+      - var list = ['#ca7a92', '#A8CBC6', '#817487', '#4A3F55', '#E5B8BD', '#C2617E', '#C2617E', '#B7D7B6', '#b46d95', '#c5848b', '#79A7B5', '#D29595', '#E8A8C9', '#C45F41', '#EF99A3', '#48939D']
+      each colorcode in list
+        .color
+          .bg
+            - var directions = ['left', 'right', 'top', 'bottom']
+            each direction in directions
+              .line(class=`${direction}` style=`background-color: ${colorcode};`)
+          .panel(style=`background-color: ${colorcode};`)
+          .colorcode= colorcode
+          .overray
+            - for(var x=0; x < 16; x++)
+              div
