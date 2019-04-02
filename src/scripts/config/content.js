@@ -352,11 +352,19 @@ export default [
     "thumb_large": "./images/thumb/large/batan.png"
   },
   {
-    "id": "kirakira-pen",
-    "title": "kirakira-pen",
-    "link": "./content/kirakira-pen/",
+    "id": "kirakira-palette",
+    "title": "kirakira-palette",
+    "link": "./content/kirakira-palette/",
     "description": "キラキラペン。",
-    "thumb": "./images/thumb/small/kirakira-pen.png",
-    "thumb_large": "./images/thumb/large/kirakira-pen.png"
+    "thumb": "./images/thumb/small/kirakira-palette.png",
+    "thumb_large": "./images/thumb/large/kirakira-palette.png"
+  },
+  {
+    "id": "paka",
+    "title": "paka",
+    "link": "./content/paka/",
+    "description": "ぱかっ！",
+    "thumb": "./images/thumb/small/paka.png",
+    "thumb_large": "./images/thumb/large/paka.png"
   },
 ]

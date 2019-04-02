@@ -1,0 +1,212 @@
+.stage .ball .overray::before, .stage .ball .overray::after {
+  content: "";
+  display: block; }
+
+.stage .ball .text, .stage .ball .overray {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+body {
+  margin: 0; }
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F3F6; }
+  .stage .ball {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 100px;
+    opacity: 0;
+    transform-origin: center bottom; }
+    .stage .ball .text {
+      font-size: 40px;
+      text-align: center;
+      line-height: 120px;
+      font-weight: bold;
+      color: #677482; }
+    .stage .ball .overray {
+      display: flex; }
+      .stage .ball .overray::before, .stage .ball .overray::after {
+        width: 50%;
+        height: 100%;
+        background-image: url(./yui540.jpg);
+        background-size: auto 100%; }
+      .stage .ball .overray::before {
+        background-position: left;
+        transform-origin: right bottom;
+        border-top-left-radius: 60px;
+        border-bottom-left-radius: 60px; }
+      .stage .ball .overray::after {
+        background-position: right;
+        transform-origin: left bottom;
+        border-top-right-radius: 60px;
+        border-bottom-right-radius: 60px; }
+    .stage .ball:last-child {
+      margin: 0; }
+
+.stage .ball:nth-child(1) {
+  animation: fall-bound 0.7s cubic-bezier(0.94, 0.01, 1, 1) 0.15s forwards; }
+  .stage .ball:nth-child(1) .overray {
+    animation: rotation 0.6s ease 1s forwards; }
+    .stage .ball:nth-child(1) .overray::before {
+      animation: paka 0.6s cubic-bezier(0.94, 0.01, 1, 1) 1.6s forwards; }
+    .stage .ball:nth-child(1) .overray::after {
+      animation: paka- 0.6s cubic-bezier(0.94, 0.01, 1, 1) 1.6s forwards; }
+  .stage .ball:nth-child(1) .text {
+    animation: slide-top 0.5s cubic-bezier(0.68, 0.04, 0.25, 1) 1.6s forwards; }
+
+.stage .ball:nth-child(2) {
+  animation: fall-bound 0.7s cubic-bezier(0.94, 0.01, 1, 1) 0.3s forwards; }
+  .stage .ball:nth-child(2) .overray {
+    animation: rotation 0.6s ease 1.15s forwards; }
+    .stage .ball:nth-child(2) .overray::before {
+      animation: paka 0.6s cubic-bezier(0.94, 0.01, 1, 1) 1.75s forwards; }
+    .stage .ball:nth-child(2) .overray::after {
+      animation: paka- 0.6s cubic-bezier(0.94, 0.01, 1, 1) 1.75s forwards; }
+  .stage .ball:nth-child(2) .text {
+    animation: slide-top 0.5s cubic-bezier(0.68, 0.04, 0.25, 1) 1.75s forwards; }
+
+.stage .ball:nth-child(3) {
+  animation: fall-bound 0.7s cubic-bezier(0.94, 0.01, 1, 1) 0.45s forwards; }
+  .stage .ball:nth-child(3) .overray {
+    animation: rotation 0.6s ease 1.3s forwards; }
+    .stage .ball:nth-child(3) .overray::before {
+      animation: paka 0.6s cubic-bezier(0.94, 0.01, 1, 1) 1.9s forwards; }
+    .stage .ball:nth-child(3) .overray::after {
+      animation: paka- 0.6s cubic-bezier(0.94, 0.01, 1, 1) 1.9s forwards; }
+  .stage .ball:nth-child(3) .text {
+    animation: slide-top 0.5s cubic-bezier(0.68, 0.04, 0.25, 1) 1.9s forwards; }
+
+.stage .ball:nth-child(4) {
+  animation: fall-bound 0.7s cubic-bezier(0.94, 0.01, 1, 1) 0.6s forwards; }
+  .stage .ball:nth-child(4) .overray {
+    animation: rotation 0.6s ease 1.45s forwards; }
+    .stage .ball:nth-child(4) .overray::before {
+      animation: paka 0.6s cubic-bezier(0.94, 0.01, 1, 1) 2.05s forwards; }
+    .stage .ball:nth-child(4) .overray::after {
+      animation: paka- 0.6s cubic-bezier(0.94, 0.01, 1, 1) 2.05s forwards; }
+  .stage .ball:nth-child(4) .text {
+    animation: slide-top 0.5s cubic-bezier(0.68, 0.04, 0.25, 1) 2.05s forwards; }
+
+.stage .ball:nth-child(5) {
+  animation: fall-bound 0.7s cubic-bezier(0.94, 0.01, 1, 1) 0.75s forwards; }
+  .stage .ball:nth-child(5) .overray {
+    animation: rotation 0.6s ease 1.6s forwards; }
+    .stage .ball:nth-child(5) .overray::before {
+      animation: paka 0.6s cubic-bezier(0.94, 0.01, 1, 1) 2.2s forwards; }
+    .stage .ball:nth-child(5) .overray::after {
+      animation: paka- 0.6s cubic-bezier(0.94, 0.01, 1, 1) 2.2s forwards; }
+  .stage .ball:nth-child(5) .text {
+    animation: slide-top 0.5s cubic-bezier(0.68, 0.04, 0.25, 1) 2.2s forwards; }
+
+.stage .ball:nth-child(6) {
+  animation: fall-bound 0.7s cubic-bezier(0.94, 0.01, 1, 1) 0.9s forwards; }
+  .stage .ball:nth-child(6) .overray {
+    animation: rotation 0.6s ease 1.75s forwards; }
+    .stage .ball:nth-child(6) .overray::before {
+      animation: paka 0.6s cubic-bezier(0.94, 0.01, 1, 1) 2.35s forwards; }
+    .stage .ball:nth-child(6) .overray::after {
+      animation: paka- 0.6s cubic-bezier(0.94, 0.01, 1, 1) 2.35s forwards; }
+  .stage .ball:nth-child(6) .text {
+    animation: slide-top 0.5s cubic-bezier(0.68, 0.04, 0.25, 1) 2.35s forwards; }
+
+@keyframes fall-bound {
+  0% {
+    transform: translateY(-500%) scaleX(1) scaleY(1);
+    opacity: 0; }
+  40% {
+    transform: translateY(0%) scaleX(1.6) scaleY(0.8);
+    opacity: 1; }
+  50% {
+    transform: translateY(-6%) scaleX(1) scaleY(1);
+    opacity: 1; }
+  60% {
+    transform: translateY(0%) scaleX(1.3) scaleY(0.9);
+    opacity: 1; }
+  70% {
+    transform: translateY(-3%) scaleX(1) scaleY(1);
+    opacity: 1; }
+  80% {
+    transform: translateY(0%) scaleX(1.15) scaleY(0.95);
+    opacity: 1; }
+  90% {
+    transform: translateY(-1.5%) scaleX(1) scaleY(1);
+    opacity: 1; }
+  100% {
+    transform: translateY(0%) scaleX(1) scaleY(1);
+    opacity: 1; } }
+
+@keyframes rotation {
+  0% {
+    transform: rotate(30deg); }
+  40% {
+    transform: rotate(-360deg); }
+  50% {
+    transform: rotate(-350deg); }
+  60% {
+    transform: rotate(-360deg); }
+  70% {
+    transform: rotate(-355deg); }
+  80% {
+    transform: rotate(-360deg); }
+  90% {
+    transform: rotate(-357.5deg); }
+  100% {
+    transform: rotate(-360deg); } }
+
+@keyframes paka {
+  0% {
+    transform: rotate(0deg); }
+  40% {
+    transform: rotate(-50deg); }
+  50% {
+    transform: rotate(-42deg); }
+  60% {
+    transform: rotate(-50deg); }
+  70% {
+    transform: rotate(-46deg); }
+  80% {
+    transform: rotate(-50deg); }
+  90% {
+    transform: rotate(-48deg); }
+  100% {
+    transform: rotate(-50deg); } }
+
+@keyframes paka- {
+  0% {
+    transform: rotate(0deg); }
+  40% {
+    transform: rotate(50deg); }
+  50% {
+    transform: rotate(42deg); }
+  60% {
+    transform: rotate(50deg); }
+  70% {
+    transform: rotate(46deg); }
+  80% {
+    transform: rotate(50deg); }
+  90% {
+    transform: rotate(48deg); }
+  100% {
+    transform: rotate(50deg); } }
+
+@keyframes slide-top {
+  from {
+    transform: translateY(20%);
+    opacity: 0; }
+  to {
+    transform: translateY(-30%);
+    opacity: 1; } }
