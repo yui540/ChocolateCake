@@ -367,4 +367,12 @@ export default [
     "thumb": "./images/thumb/small/paka.png",
     "thumb_large": "./images/thumb/large/paka.png"
   },
+  {
+    "id": "kurukuru",
+    "title": "kurukuru",
+    "link": "./content/kurukuru/",
+    "description": "くるくる〜。",
+    "thumb": "./images/thumb/small/kurukuru.png",
+    "thumb_large": "./images/thumb/large/kurukuru.png"
+  },
 ]

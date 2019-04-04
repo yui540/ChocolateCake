@@ -1,0 +1,87 @@
+%fixed100per {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.stage {
+  @extend %fixed100per;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #FCF1EA;
+
+  .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 450px;
+    transform: translate(-50%, -50%);
+
+    .line-wrapper {
+      position: absolute;
+      top: 0;
+      left: calc(50% - 30px);
+      width: 30px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .line {
+        width: 2px;
+        height: 0%;
+        background-color: #DE9491;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #DE9491;
+        transform: scale(0);
+      }
+    }
+  }
+}
+
+.stage {
+  @for $i from 1 through 8 {
+    .line-wrapper:nth-child(#{$i}) {
+      animation: turn 3s linear #{$i * 0.2}s infinite;
+      .line {
+        animation: drawing 1s ease-out #{$i * 0.2}s infinite;
+      }
+
+      &::before,
+      &::after {
+        animation: scale0-1 1s ease-out #{$i * 0.2}s infinite;
+      }
+    }
+  }
+}
+
+@keyframes turn {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(1turn); }
+}
+@keyframes scale0-1 {
+  0%   { transform: scale(0); }
+  50%  { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+@keyframes drawing {
+  0%   { height: 0; }
+  50%  { height: calc(100% - 60px); }
+  100% { height: 0; }
+}
