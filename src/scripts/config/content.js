@@ -383,4 +383,12 @@ export default [
     "thumb": "./images/thumb/small/happy.png",
     "thumb_large": "./images/thumb/large/happy.png"
   },
+  {
+    "id": "dynamic",
+    "title": "dynamic",
+    "link": "./content/dynamic/",
+    "description": "ダイナミック。",
+    "thumb": "./images/thumb/small/dynamic.png",
+    "thumb_large": "./images/thumb/large/dynamic.png"
+  },
 ]
