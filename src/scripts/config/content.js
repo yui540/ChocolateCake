@@ -375,4 +375,12 @@ export default [
     "thumb": "./images/thumb/small/kurukuru.png",
     "thumb_large": "./images/thumb/large/kurukuru.png"
   },
+  {
+    "id": "happy",
+    "title": "happy",
+    "link": "./content/happy/",
+    "description": "ハッピー。",
+    "thumb": "./images/thumb/small/happy.png",
+    "thumb_large": "./images/thumb/large/happy.png"
+  },
 ]

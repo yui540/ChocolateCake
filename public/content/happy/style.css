@@ -1,0 +1,118 @@
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+body {
+  margin: 0; }
+
+.stage {
+  background-color: #F3DCD6; }
+  .stage .ball-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(-50%, -50%); }
+    .stage .ball-wrapper .ball {
+      position: absolute;
+      top: 0;
+      left: calc(50% - 60px);
+      width: 120px;
+      height: 50%;
+      transform-origin: center bottom; }
+      .stage .ball-wrapper .ball::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        transform: scale(0); }
+    .stage .ball-wrapper:nth-child(1) .ball::after {
+      background-color: #E1928E; }
+    .stage .ball-wrapper:nth-child(2) .ball::after {
+      background-color: #88B7B5; }
+    .stage .ball-wrapper:nth-child(3) .ball::after {
+      background-color: #D28F6F; }
+    .stage .ball-wrapper:nth-child(4) .ball::after {
+      background-color: #B2A159; }
+    .stage .ball-wrapper:nth-child(5) .ball::after {
+      background-color: #BD785F; }
+    .stage .ball-wrapper:nth-child(6) .ball::after {
+      background-color: #677384; }
+    .stage .ball-wrapper .ball:nth-child(1) {
+      transform: rotate(45deg); }
+    .stage .ball-wrapper .ball:nth-child(2) {
+      transform: rotate(90deg); }
+    .stage .ball-wrapper .ball:nth-child(3) {
+      transform: rotate(135deg); }
+    .stage .ball-wrapper .ball:nth-child(4) {
+      transform: rotate(180deg); }
+    .stage .ball-wrapper .ball:nth-child(5) {
+      transform: rotate(225deg); }
+    .stage .ball-wrapper .ball:nth-child(6) {
+      transform: rotate(270deg); }
+    .stage .ball-wrapper .ball:nth-child(7) {
+      transform: rotate(315deg); }
+    .stage .ball-wrapper .ball:nth-child(8) {
+      transform: rotate(360deg); }
+  .stage .ball-wrapper:nth-child(1) {
+    animation: turn 5s linear 0.7s forwards; }
+    .stage .ball-wrapper:nth-child(1) .ball::after {
+      animation: bound 0.8s ease-in 0.7s forwards, fadeout 0.7s ease-in-out 1.5s forwards; }
+  .stage .ball-wrapper:nth-child(2) {
+    animation: turn 5s linear 1.4s forwards; }
+    .stage .ball-wrapper:nth-child(2) .ball::after {
+      animation: bound 0.8s ease-in 1.4s forwards, fadeout 0.7s ease-in-out 2.2s forwards; }
+  .stage .ball-wrapper:nth-child(3) {
+    animation: turn 5s linear 2.1s forwards; }
+    .stage .ball-wrapper:nth-child(3) .ball::after {
+      animation: bound 0.8s ease-in 2.1s forwards, fadeout 0.7s ease-in-out 2.9s forwards; }
+  .stage .ball-wrapper:nth-child(4) {
+    animation: turn 5s linear 2.8s forwards; }
+    .stage .ball-wrapper:nth-child(4) .ball::after {
+      animation: bound 0.8s ease-in 2.8s forwards, fadeout 0.7s ease-in-out 3.6s forwards; }
+  .stage .ball-wrapper:nth-child(5) {
+    animation: turn 5s linear 3.5s forwards; }
+    .stage .ball-wrapper:nth-child(5) .ball::after {
+      animation: bound 0.8s ease-in 3.5s forwards, fadeout 0.7s ease-in-out 4.3s forwards; }
+  .stage .ball-wrapper:nth-child(6) {
+    animation: turn 5s linear 4.2s forwards; }
+    .stage .ball-wrapper:nth-child(6) .ball::after {
+      animation: bound 0.8s ease-in 4.2s forwards, fadeout 0.7s ease-in-out 5s forwards; }
+
+@keyframes bound {
+  0% {
+    transform: translateY(-500%) scale(0); }
+  40% {
+    transform: translateY(0%) scale(1); }
+  50% {
+    transform: translateY(-30%) scale(0.8); }
+  60% {
+    transform: translateY(0%) scale(1); }
+  70% {
+    transform: translateY(-15%) scale(0.9); }
+  80% {
+    transform: translateY(0%) scale(1); }
+  90% {
+    transform: translateY(-7.5%) scale(0.95); }
+  100% {
+    transform: translateY(0%) scale(1); } }
+
+@keyframes turn {
+  from {
+    transform: translate(-50%, -50%) rotate(0); }
+  to {
+    transform: translate(-50%, -50%) rotate(1turn); } }
+
+@keyframes fadeout {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
