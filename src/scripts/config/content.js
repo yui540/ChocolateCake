@@ -391,4 +391,12 @@ export default [
     "thumb": "./images/thumb/small/dynamic.png",
     "thumb_large": "./images/thumb/large/dynamic.png"
   },
+  {
+    "id": "half-circle",
+    "title": "half-circle",
+    "link": "./content/half-circle/",
+    "description": "くるくるくる〜。",
+    "thumb": "./images/thumb/small/half-circle.png",
+    "thumb_large": "./images/thumb/large/half-circle.png"
+  },
 ]

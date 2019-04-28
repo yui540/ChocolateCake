@@ -1,0 +1,171 @@
+body {
+  margin: 0; }
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #E4D6CE; }
+  .stage .circle-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    transform: translate(-50%, -50%); }
+    .stage .circle-wrapper .left, .stage .circle-wrapper .right {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      overflow: hidden; }
+      .stage .circle-wrapper .left::after, .stage .circle-wrapper .right::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -50%;
+        width: 200%;
+        height: 200%;
+        transform: rotate(-180deg); }
+    .stage .circle-wrapper .left::after {
+      right: 0;
+      transform-origin: right;
+      transform: translateX(2px) rotate(-180deg); }
+    .stage .circle-wrapper .right::after {
+      left: 0;
+      transform-origin: left; }
+    .stage .circle-wrapper.type-9 {
+      width: 90vh;
+      height: 90vh; }
+      .stage .circle-wrapper.type-9 .right::after,
+      .stage .circle-wrapper.type-9 .left::after {
+        background-color: #b46d95; }
+    .stage .circle-wrapper.type-8 {
+      width: 80vh;
+      height: 80vh; }
+      .stage .circle-wrapper.type-8 .right::after,
+      .stage .circle-wrapper.type-8 .left::after {
+        background-color: #F2C047; }
+    .stage .circle-wrapper.type-7 {
+      width: 70vh;
+      height: 70vh; }
+      .stage .circle-wrapper.type-7 .right::after,
+      .stage .circle-wrapper.type-7 .left::after {
+        background-color: #C7D35E; }
+    .stage .circle-wrapper.type-6 {
+      width: 60vh;
+      height: 60vh; }
+      .stage .circle-wrapper.type-6 .right::after,
+      .stage .circle-wrapper.type-6 .left::after {
+        background-color: #c55c66; }
+    .stage .circle-wrapper.type-5 {
+      width: 50vh;
+      height: 50vh; }
+      .stage .circle-wrapper.type-5 .right::after,
+      .stage .circle-wrapper.type-5 .left::after {
+        background-color: #90bdbd; }
+    .stage .circle-wrapper.type-4 {
+      width: 40vh;
+      height: 40vh; }
+      .stage .circle-wrapper.type-4 .right::after,
+      .stage .circle-wrapper.type-4 .left::after {
+        background-color: #C2617E; }
+    .stage .circle-wrapper.type-3 {
+      width: 30vh;
+      height: 30vh; }
+      .stage .circle-wrapper.type-3 .right::after,
+      .stage .circle-wrapper.type-3 .left::after {
+        background-color: #4A3F55; }
+    .stage .circle-wrapper.type-2 {
+      width: 20vh;
+      height: 20vh; }
+      .stage .circle-wrapper.type-2 .right::after,
+      .stage .circle-wrapper.type-2 .left::after {
+        background-color: #E5B8BD; }
+    .stage .circle-wrapper.type-1 {
+      width: 10vh;
+      height: 10vh; }
+      .stage .circle-wrapper.type-1 .right::after,
+      .stage .circle-wrapper.type-1 .left::after {
+        background-color: #817487; }
+
+.stage .circle-wrapper.type-1 .right::after {
+  animation: progress 0.3s linear 0.4s forwards, progress- 0.3s linear 1s forwards; }
+
+.stage .circle-wrapper.type-1 .left::after {
+  animation: progress2 0.3s linear 0.7s forwards, progress2- 0.3s linear 1.3s forwards; }
+
+.stage .circle-wrapper.type-2 .right::after {
+  animation: progress 0.3s linear 0.8s forwards, progress- 0.3s linear 1.4s forwards; }
+
+.stage .circle-wrapper.type-2 .left::after {
+  animation: progress2 0.3s linear 1.1s forwards, progress2- 0.3s linear 1.7s forwards; }
+
+.stage .circle-wrapper.type-3 .right::after {
+  animation: progress 0.3s linear 1.2s forwards, progress- 0.3s linear 1.8s forwards; }
+
+.stage .circle-wrapper.type-3 .left::after {
+  animation: progress2 0.3s linear 1.5s forwards, progress2- 0.3s linear 2.1s forwards; }
+
+.stage .circle-wrapper.type-4 .right::after {
+  animation: progress 0.3s linear 1.6s forwards, progress- 0.3s linear 2.2s forwards; }
+
+.stage .circle-wrapper.type-4 .left::after {
+  animation: progress2 0.3s linear 1.9s forwards, progress2- 0.3s linear 2.5s forwards; }
+
+.stage .circle-wrapper.type-5 .right::after {
+  animation: progress 0.3s linear 2s forwards, progress- 0.3s linear 2.6s forwards; }
+
+.stage .circle-wrapper.type-5 .left::after {
+  animation: progress2 0.3s linear 2.3s forwards, progress2- 0.3s linear 2.9s forwards; }
+
+.stage .circle-wrapper.type-6 .right::after {
+  animation: progress 0.3s linear 2.4s forwards, progress- 0.3s linear 3s forwards; }
+
+.stage .circle-wrapper.type-6 .left::after {
+  animation: progress2 0.3s linear 2.7s forwards, progress2- 0.3s linear 3.3s forwards; }
+
+.stage .circle-wrapper.type-7 .right::after {
+  animation: progress 0.3s linear 2.8s forwards, progress- 0.3s linear 3.4s forwards; }
+
+.stage .circle-wrapper.type-7 .left::after {
+  animation: progress2 0.3s linear 3.1s forwards, progress2- 0.3s linear 3.7s forwards; }
+
+.stage .circle-wrapper.type-8 .right::after {
+  animation: progress 0.3s linear 3.2s forwards, progress- 0.3s linear 3.8s forwards; }
+
+.stage .circle-wrapper.type-8 .left::after {
+  animation: progress2 0.3s linear 3.5s forwards, progress2- 0.3s linear 4.1s forwards; }
+
+.stage .circle-wrapper.type-9 .right::after {
+  animation: progress 0.3s linear 3.6s forwards, progress- 0.3s linear 4.2s forwards; }
+
+.stage .circle-wrapper.type-9 .left::after {
+  animation: progress2 0.3s linear 3.9s forwards, progress2- 0.3s linear 4.5s forwards; }
+
+@keyframes progress {
+  from {
+    transform: rotate(-180deg); }
+  to {
+    transform: rotate(0deg); } }
+
+@keyframes progress2 {
+  from {
+    transform: translateX(2px) rotate(-180deg); }
+  to {
+    transform: translateX(2px) rotate(0deg); } }
+
+@keyframes progress- {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(180deg); } }
+
+@keyframes progress2- {
+  from {
+    transform: translateX(2px) rotate(0deg); }
+  to {
+    transform: translateX(2px) rotate(180deg); } }

@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+}
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #E4D6CE;
+
+  .circle-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    transform: translate(-50%, -50%);
+
+    .left, .right {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -50%;
+        width: 200%;
+        height: 200%;
+        transform: rotate(-180deg);
+      }
+    }
+    .left {
+      &::after {
+        right: 0;
+        transform-origin: right;
+        transform: translateX(2px) rotate(-180deg);
+      }
+    }
+    .right {
+      &::after {
+        left: 0;
+        transform-origin: left;
+      }
+    }
+    
+    &.type-9 {
+      width: 90vh;
+      height: 90vh;
+
+      .right::after,
+      .left::after {
+        background-color: #b46d95;
+      }
+    }
+    &.type-8 {
+      width: 80vh;
+      height: 80vh;
+
+      .right::after,
+      .left::after {
+        background-color: #F2C047;
+      }
+    }
+    &.type-7 {
+      width: 70vh;
+      height: 70vh;
+
+      .right::after,
+      .left::after {
+        background-color: #C7D35E;
+      }
+    }
+    &.type-6 {
+      width: 60vh;
+      height: 60vh;
+
+      .right::after,
+      .left::after {
+        background-color: #c55c66;
+      }
+    }
+    &.type-5 {
+      width: 50vh;
+      height: 50vh;
+
+      .right::after,
+      .left::after {
+        background-color: #90bdbd;
+      }
+    }
+    &.type-4 {
+      width: 40vh;
+      height: 40vh;
+
+      .right::after,
+      .left::after {
+        background-color: #C2617E;
+      }
+    }
+    &.type-3 {
+      width: 30vh;
+      height: 30vh;
+      
+      .right::after,
+      .left::after {
+        background-color: #4A3F55;
+      }
+    }
+    &.type-2 {
+      width: 20vh;
+      height: 20vh;
+
+      .right::after,
+      .left::after {
+        background-color: #E5B8BD;
+      }
+    }
+    &.type-1 {
+      width: 10vh;
+      height: 10vh;
+      
+      .right::after,
+      .left::after {
+        background-color: #817487;
+      }
+    }
+  }
+}
+
+.stage {
+  .circle-wrapper {
+    @for $i from 1 through 9 {
+      &.type-#{$i} {
+        .right::after {
+          animation: progress 0.3s linear #{$i * 0.4}s forwards,
+            progress- 0.3s linear #{$i * 0.4 + 0.6}s forwards;
+        }
+        .left::after {
+          animation: progress2 0.3s linear #{$i * 0.4 + 0.3}s forwards,
+            progress2- 0.3s linear #{$i * 0.4 + 0.9}s forwards;
+        }
+      }
+    }
+  }
+}
+
+@keyframes progress {
+  from { transform: rotate(-180deg); }
+  to   { transform: rotate(0deg); }
+}
+@keyframes progress2 {
+  from { transform: translateX(2px) rotate(-180deg); }
+  to   { transform: translateX(2px) rotate(0deg); }
+}
+@keyframes progress- {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(180deg); }
+}
+@keyframes progress2- {
+  from { transform: translateX(2px) rotate(0deg); }
+  to   { transform: translateX(2px) rotate(180deg); }
+}
