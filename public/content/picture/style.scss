@@ -1,0 +1,90 @@
+%fixed100per {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.stage {
+  @extend %fixed100per;
+  background-color: #DAD3D1;
+
+  .picture-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+
+    .picture {
+      @extend %fixed100per;
+      background-image: url(./ogp.png);
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+
+      @for $y from 1 through 10 {
+        @for $x from 1 through 20 {
+          &:nth-child(#{$x + (($y - 1) * 20)}) {
+            clip: rect(#{30 * ($y - 1)}px, #{30 * ($x - 1) + 30px}, #{30 * ($y - 1) + 30px}, #{30 * ($x - 1)}px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.picture-wrapper {
+  .picture {
+    @for $y from 1 through 10 {
+      @for $x from 1 through 20 {
+        &:nth-child(#{$x + (($y - 1) * 20)}) {
+          $time: random();
+          animation: fly1 #{$time * 0.8 + 0.6}s ease-in #{$time}s forwards;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes bound {
+  0% { transform: scale(0); }
+  40% { transform: scale(1); }
+  50% { transform: scale(0.9); }
+  60% { transform: scale(1); }
+  70% { transform: scale(0.95); }
+  80% { transform: scale(1); }
+  90% { transform: scale(0.975); }
+  100% { transform: scale(1); }
+}
+@keyframes bound- {
+  0% { transform: scale(1); }
+  40% { transform: scale(0); }
+  50% { transform: scale(0.1); }
+  60% { transform: scale(0); }
+  70% { transform: scale(0.05); }
+  80% { transform: scale(0); }
+  90% { transform: scale(0.075); }
+  100% { transform: scale(0); }
+}
+
+@keyframes fly1 {
+  0% { transform: rotate(0deg) scale(2); opacity: 0; }
+  40% { transform: rotate(360deg) scale(1); opacity: 1; }
+  50% { transform: rotate(360deg) scale(1.075); opacity: 1; }
+  60% { transform: rotate(360deg) scale(1); opacity: 1; }
+  70% { transform: rotate(360deg) scale(1.04); opacity: 1; }
+  80% { transform: rotate(360deg) scale(1); opacity: 1; }
+  90% { transform: rotate(360deg) scale(1.02); opacity: 1; }
+  100% { transform: rotate(360deg) scale(1); opacity: 1; }
+}

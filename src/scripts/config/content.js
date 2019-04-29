@@ -399,4 +399,12 @@ export default [
     "thumb": "./images/thumb/small/half-circle.png",
     "thumb_large": "./images/thumb/large/half-circle.png"
   },
+  {
+    "id": "picture",
+    "title": "picture",
+    "link": "./content/picture/",
+    "description": "がばばば〜。",
+    "thumb": "./images/thumb/small/picture.png",
+    "thumb_large": "./images/thumb/large/picture.png"
+  },
 ]
