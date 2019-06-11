@@ -415,4 +415,13 @@ export default [
     "thumb": "./images/thumb/small/image-modal.png",
     "thumb_large": "./images/thumb/large/image-modal.png"
   },
+  {
+    "id": "huwahuwa-loading",
+    "title": "huwahuwa-loading",
+    "link": "./content/huwahuwa-loading/",
+    "description": "ふわふわ〜。",
+    "thumb": "./images/thumb/small/huwahuwa-loading.png",
+    "thumb_large": "./images/thumb/large/huwahuwa-loading.png"
+  },
+
 ]

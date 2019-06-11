@@ -1,0 +1,109 @@
+body {
+  margin: 0; }
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #e9e5e3; }
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 10px; }
+
+.box-1 {
+  display: flex; }
+  .box-1 .line {
+    width: 10%;
+    height: 100%;
+    background-color: #aec7cc;
+    transform: scaleY(0); }
+
+.box-2 {
+  display: flex; }
+  .box-2 .line {
+    width: 10%;
+    height: 100%;
+    background-color: #e9e5e3;
+    transform: scaleY(0); }
+
+.box-3 {
+  background-image: url(./load.svg);
+  background-position: center;
+  background-size: 70% auto;
+  background-repeat: no-repeat; }
+
+.box-1 .line:nth-child(1) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 0.05s forwards; }
+
+.box-1 .line:nth-child(2) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 0.1s forwards; }
+
+.box-1 .line:nth-child(3) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 0.15s forwards; }
+
+.box-1 .line:nth-child(4) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 0.2s forwards; }
+
+.box-1 .line:nth-child(5) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 0.25s forwards; }
+
+.box-1 .line:nth-child(6) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 0.3s forwards; }
+
+.box-1 .line:nth-child(7) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 0.35s forwards; }
+
+.box-1 .line:nth-child(8) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 0.4s forwards; }
+
+.box-1 .line:nth-child(9) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 0.45s forwards; }
+
+.box-1 .line:nth-child(10) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 0.5s forwards; }
+
+.box-2 .line:nth-child(1) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 1.05s forwards; }
+
+.box-2 .line:nth-child(2) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 1.1s forwards; }
+
+.box-2 .line:nth-child(3) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 1.15s forwards; }
+
+.box-2 .line:nth-child(4) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 1.2s forwards; }
+
+.box-2 .line:nth-child(5) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 1.25s forwards; }
+
+.box-2 .line:nth-child(6) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 1.3s forwards; }
+
+.box-2 .line:nth-child(7) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 1.35s forwards; }
+
+.box-2 .line:nth-child(8) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 1.4s forwards; }
+
+.box-2 .line:nth-child(9) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 1.45s forwards; }
+
+.box-2 .line:nth-child(10) {
+  animation: slide-top 0.5s cubic-bezier(0.39, 2, 0.41, 0.39) 1.5s forwards; }
+
+@keyframes slide-top {
+  from {
+    transform: scaleY(0); }
+  to {
+    transform: scaleY(1); } }
