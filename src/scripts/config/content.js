@@ -407,4 +407,12 @@ export default [
     "thumb": "./images/thumb/small/picture.png",
     "thumb_large": "./images/thumb/large/picture.png"
   },
+  {
+    "id": "image-modal",
+    "title": "image-modal",
+    "link": "./content/image-modal/",
+    "description": "すばばば〜。",
+    "thumb": "./images/thumb/small/image-modal.png",
+    "thumb_large": "./images/thumb/large/image-modal.png"
+  },
 ]

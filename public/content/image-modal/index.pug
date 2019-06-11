@@ -1,0 +1,27 @@
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title image-modal
+    link(rel="stylesheet", href="./style.css")
+  body
+    .stage
+      .imgs-wrapper
+        - for (var i=1; i <= 11; i++)
+          .img-box(data-num=`${i}`)
+            .img
+            .effects
+              - for (var x=0; x < 8; x++)
+                .line
+            .text
+              .frame
+                - for (var x=0; x < 8; x++)
+                  .line
+      .large-img
+        .img
+        .effects
+          - for (var x=0; x < 8; x++)
+            .line
+        .close
+    script(src="./app.js")
