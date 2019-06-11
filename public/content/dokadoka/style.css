@@ -1,0 +1,123 @@
+body {
+  margin: 0; }
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #E7DAD0; }
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  transform: translate(-50%, -50%); }
+  .box .ball {
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    background-color: #EA8F8D;
+    opacity: 0; }
+    .box .ball:nth-child(2n) {
+      background-color: #efacaf; }
+
+.box .ball:nth-child(1) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.03s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.53s forwards; }
+
+.box .ball:nth-child(2) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.06s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.56s forwards; }
+
+.box .ball:nth-child(3) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.09s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.59s forwards; }
+
+.box .ball:nth-child(4) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.12s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.62s forwards; }
+
+.box .ball:nth-child(5) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.15s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.65s forwards; }
+
+.box .ball:nth-child(6) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.18s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.68s forwards; }
+
+.box .ball:nth-child(7) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.21s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.71s forwards; }
+
+.box .ball:nth-child(8) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.24s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.74s forwards; }
+
+.box .ball:nth-child(9) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.27s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.77s forwards; }
+
+.box .ball:nth-child(10) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.3s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.8s forwards; }
+
+.box .ball:nth-child(11) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.33s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.83s forwards; }
+
+.box .ball:nth-child(12) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.36s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.86s forwards; }
+
+.box .ball:nth-child(13) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.39s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.89s forwards; }
+
+.box .ball:nth-child(14) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.42s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.92s forwards; }
+
+.box .ball:nth-child(15) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.45s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.95s forwards; }
+
+.box .ball:nth-child(16) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.48s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 0.98s forwards; }
+
+.box .ball:nth-child(17) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.51s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 1.01s forwards; }
+
+.box .ball:nth-child(18) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.54s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 1.04s forwards; }
+
+.box .ball:nth-child(19) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.57s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 1.07s forwards; }
+
+.box .ball:nth-child(20) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.6s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 1.1s forwards; }
+
+.box .ball:nth-child(21) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.63s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 1.13s forwards; }
+
+.box .ball:nth-child(22) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.66s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 1.16s forwards; }
+
+.box .ball:nth-child(23) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.69s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 1.19s forwards; }
+
+.box .ball:nth-child(24) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.72s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 1.22s forwards; }
+
+.box .ball:nth-child(25) {
+  animation: up 0.35s cubic-bezier(0.39, 0.05, 0.58, 0.96) 0.75s forwards, down 0.4s cubic-bezier(0.93, 0.03, 0.93, 0.58) 1.25s forwards; }
+
+@keyframes up {
+  0% {
+    transform: translateY(200%);
+    opacity: 0; }
+  50% {
+    transform: translateY(-200%);
+    opacity: 1; }
+  100% {
+    transform: translateY(0%);
+    opacity: 1; } }
+
+@keyframes down {
+  from {
+    transform: translateY(0);
+    opacity: 1; }
+  to {
+    transform: translateY(100%);
+    opacity: 0; } }
