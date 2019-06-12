@@ -1,0 +1,398 @@
+body {
+  margin: 0;
+}
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #deeaea;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 210px;
+  height: 210px;
+  transform: translate(-50%, -50%) scale(1.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.child-1,
+.child-3 {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+}
+.child-1 div,
+.child-3 div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #a1bec0;
+  transform-origin: right bottom;
+  transform: rotate(-90deg);
+}
+.child-1 div:nth-child(1),
+.child-3 div:nth-child(1) {
+  opacity: 0.4;
+}
+.child-1 div:nth-child(2),
+.child-3 div:nth-child(2) {
+  opacity: 0.8;
+}
+
+.child-2 {
+  position: relative;
+  width: 100px;
+  height: 45px;
+  display: flex;
+}
+.child-2 div {
+  width: 20%;
+  height: 100%;
+  background-color: #a1bec0;
+  transform-origin: right bottom;
+  transform: rotate(-90deg);
+  opacity: 0;
+}
+
+.child-1 div:nth-child(1) {
+  animation: bound-up- 0.5s cubic-bezier(0.97, 0.01, 1, 0.99) 0s forwards;
+}
+.child-1 div:nth-child(2) {
+  animation: bound-up- 0.5s cubic-bezier(0.97, 0.01, 1, 0.99) 0.1s forwards;
+}
+.child-1 div:nth-child(3) {
+  animation: bound-up- 0.5s cubic-bezier(0.97, 0.01, 1, 0.99) 0.2s forwards;
+}
+
+.child-2 div:nth-child(1) {
+  animation: bound-up 0.5s cubic-bezier(0.97, 0.01, 1, 0.99) 0.3s forwards;
+}
+.child-2 div:nth-child(2) {
+  animation: bound-up 0.5s cubic-bezier(0.97, 0.01, 1, 0.99) 0.4s forwards;
+}
+.child-2 div:nth-child(3) {
+  animation: bound-up 0.5s cubic-bezier(0.97, 0.01, 1, 0.99) 0.5s forwards;
+}
+.child-2 div:nth-child(4) {
+  animation: bound-up 0.5s cubic-bezier(0.97, 0.01, 1, 0.99) 0.6s forwards;
+}
+.child-2 div:nth-child(5) {
+  animation: bound-up 0.5s cubic-bezier(0.97, 0.01, 1, 0.99) 0.7s forwards;
+}
+
+.child-3 div:nth-child(1) {
+  animation: bound-up- 0.5s cubic-bezier(0.97, 0.01, 1, 0.99) 0.8s forwards;
+}
+.child-3 div:nth-child(2) {
+  animation: bound-up- 0.5s cubic-bezier(0.97, 0.01, 1, 0.99) 0.9s forwards;
+}
+.child-3 div:nth-child(3) {
+  animation: bound-up- 0.5s cubic-bezier(0.97, 0.01, 1, 0.99) 1s forwards;
+}
+
+@keyframes bound-up- {
+  0% {
+    transform: rotate(-90deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(-15deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(-7.5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes bound-up {
+  0% {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  60% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  70% {
+    transform: rotate(-15deg);
+    opacity: 1;
+  }
+  80% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  90% {
+    transform: rotate(-7.5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.child-4,
+.child-5 {
+  position: relative;
+  width: 100px;
+  height: 45px;
+  overflow: hidden;
+}
+.child-4 div,
+.child-5 div {
+  width: 100%;
+  height: 25%;
+  background-color: #a1bec0;
+  transform: translateX(-100%);
+}
+
+.child-4 div:nth-child(1) {
+  animation: fly 0.6s cubic-bezier(0, -0.01, 1, 0.27) 1.1s forwards;
+}
+.child-4 div:nth-child(2) {
+  animation: fly 0.6s cubic-bezier(0, -0.01, 1, 0.27) 1.2s forwards;
+}
+.child-4 div:nth-child(3) {
+  animation: fly 0.6s cubic-bezier(0, -0.01, 1, 0.27) 1.3s forwards;
+}
+.child-4 div:nth-child(4) {
+  animation: fly 0.6s cubic-bezier(0, -0.01, 1, 0.27) 1.4s forwards;
+}
+.child-5 div:nth-child(1) {
+  animation: fly 0.6s cubic-bezier(0, -0.01, 1, 0.27) 1.5s forwards;
+}
+.child-5 div:nth-child(2) {
+  animation: fly 0.6s cubic-bezier(0, -0.01, 1, 0.27) 1.6s forwards;
+}
+.child-5 div:nth-child(3) {
+  animation: fly 0.6s cubic-bezier(0, -0.01, 1, 0.27) 1.7s forwards;
+}
+.child-5 div:nth-child(4) {
+  animation: fly 0.6s cubic-bezier(0, -0.01, 1, 0.27) 1.8s forwards;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(100%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+  85% {
+    transform: translateX(20%);
+  }
+  90% {
+    transform: translateX(0%);
+  }
+  95% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.child-6,
+.child-8 {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  overflow: hidden;
+}
+.child-6 div,
+.child-8 div {
+  width: 25%;
+  height: 100%;
+  background-color: #a1bec0;
+  transform: translateY(100%);
+}
+
+.child-7 {
+  position: relative;
+  width: 100px;
+  height: 45px;
+  display: flex;
+  overflow: hidden;
+}
+.child-7 div {
+  width: 12.5%;
+  height: 100%;
+  background-color: #a1bec0;
+  transform: translateY(100%);
+}
+
+.child-6 div:nth-child(1) {
+  animation: fly- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 1.9s forwards;
+}
+.child-6 div:nth-child(2) {
+  animation: fly- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 2s forwards;
+}
+.child-6 div:nth-child(3) {
+  animation: fly- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 2.1s forwards;
+}
+.child-6 div:nth-child(4) {
+  animation: fly- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 2.2s forwards;
+}
+.child-7 div:nth-child(1) {
+  animation: fly- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 2.3s forwards;
+}
+.child-7 div:nth-child(2) {
+  animation: fly-- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 2.4s forwards;
+}
+.child-7 div:nth-child(3) {
+  animation: fly- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 2.5s forwards;
+}
+.child-7 div:nth-child(4) {
+  animation: fly-- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 2.6s forwards;
+}
+.child-7 div:nth-child(5) {
+  animation: fly- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 2.7s forwards;
+}
+.child-7 div:nth-child(6) {
+  animation: fly-- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 2.8s forwards;
+}
+.child-7 div:nth-child(7) {
+  animation: fly- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 2.9s forwards;
+}
+.child-7 div:nth-child(8) {
+  animation: fly-- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 3s forwards;
+}
+.child-8 div:nth-child(1) {
+  animation: fly- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 3.1s forwards;
+}
+.child-8 div:nth-child(2) {
+  animation: fly- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 3.2s forwards;
+}
+.child-8 div:nth-child(3) {
+  animation: fly- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 3.3s forwards;
+}
+.child-8 div:nth-child(4) {
+  animation: fly- 0.6s cubic-bezier(0, -0.01, 1, 0.27) 3.4s forwards;
+}
+
+@keyframes fly- {
+  0% {
+    transform: translateY(100%);
+  }
+  40% {
+    transform: translateY(-100%);
+  }
+  80% {
+    transform: translateY(0%);
+  }
+  85% {
+    transform: translateY(-20%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes fly-- {
+  0% {
+    transform: translateY(-100%);
+  }
+  40% {
+    transform: translateY(100%);
+  }
+  80% {
+    transform: translateY(0%);
+  }
+  85% {
+    transform: translateY(20%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.child-9,
+.child-10 {
+  position: relative;
+  width: 100px;
+  height: 45px;
+  display: flex;
+  overflow: hidden;
+}
+.child-9 div,
+.child-10 div {
+  width: 20%;
+  height: 100%;
+  background-color: #a1bec0;
+  opacity: 0;
+}
+
+.child-9 div:nth-child(3) {
+  animation: fadein 0.07s linear 3.5s 5 alternate forwards;
+}
+.child-9 div:nth-child(2) {
+  animation: fadein 0.07s linear 3.55s 5 alternate forwards;
+}
+.child-9 div:nth-child(4) {
+  animation: fadein 0.07s linear 3.55s 5 alternate forwards;
+}
+.child-9 div:nth-child(1) {
+  animation: fadein 0.07s linear 3.6s 5 alternate forwards;
+}
+.child-9 div:nth-child(5) {
+  animation: fadein 0.07s linear 3.6s 5 alternate forwards;
+}
+
+.child-10 div:nth-child(3) {
+  animation: fadein 0.07s linear 3.7s 5 alternate forwards;
+}
+.child-10 div:nth-child(2) {
+  animation: fadein 0.07s linear 3.75s 5 alternate forwards;
+}
+.child-10 div:nth-child(4) {
+  animation: fadein 0.07s linear 3.75s 5 alternate forwards;
+}
+.child-10 div:nth-child(1) {
+  animation: fadein 0.07s linear 3.8s 5 alternate forwards;
+}
+.child-10 div:nth-child(5) {
+  animation: fadein 0.07s linear 3.8s 5 alternate forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
