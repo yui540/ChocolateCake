@@ -423,5 +423,28 @@ export default [
     "thumb": "./images/thumb/small/huwahuwa-loading.png",
     "thumb_large": "./images/thumb/large/huwahuwa-loading.png"
   },
-
+  {
+    "id": "dokadoka",
+    "title": "dokadoka",
+    "link": "./content/dokadoka/",
+    "description": "ドカドカ。",
+    "thumb": "./images/thumb/small/dokadoka.png",
+    "thumb_large": "./images/thumb/large/dokadoka.png"
+  },
+  {
+    "id": "grid",
+    "title": "grid",
+    "link": "./content/grid/",
+    "description": "グリッド",
+    "thumb": "./images/thumb/small/grid.png",
+    "thumb_large": "./images/thumb/large/grid.png"
+  },
+  {
+    "id": "hover",
+    "title": "hover",
+    "link": "./content/hover/",
+    "description": "ホバー。",
+    "thumb": "./images/thumb/small/hover.png",
+    "thumb_large": "./images/thumb/large/hover.png"
+  },
 ]

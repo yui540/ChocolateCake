@@ -1,0 +1,302 @@
+body {
+  margin: 0;
+  background-color: #f9f2e7;
+}
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 720px;
+  height: 100%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 30px 30px 0;
+  cursor: pointer;
+  transition: all 0.6s ease-out 0s;
+}
+.box:hover {
+  box-shadow: 10px 10px 10px #ccc;
+}
+
+.box-1 {
+  display: flex;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.box-1 div {
+  width: 12.5%;
+  height: 100%;
+  background-color: #b8c382;
+  transform-origin: center bottom;
+  transform: translateY(100%);
+}
+.box-1 div:nth-child(1) {
+  transition: transform 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0s;
+}
+.box-1 div:nth-child(2) {
+  transition: transform 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.05s;
+}
+.box-1 div:nth-child(3) {
+  transition: transform 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.1s;
+}
+.box-1 div:nth-child(4) {
+  transition: transform 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.15s;
+}
+.box-1 div:nth-child(5) {
+  transition: transform 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.2s;
+}
+.box-1 div:nth-child(6) {
+  transition: transform 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.25s;
+}
+.box-1 div:nth-child(7) {
+  transition: transform 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.3s;
+}
+.box-1 div:nth-child(8) {
+  transition: transform 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.35s;
+}
+.box-1:hover div {
+  transform: translateY(0);
+}
+
+.box-2 {
+  display: flex;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.box-2 div {
+  width: 12.5%;
+  height: 100%;
+  background-color: #c5696e;
+  transform-origin: center bottom;
+  transform: translateY(100%);
+}
+.box-2 div:nth-child(1) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0s;
+}
+.box-2 div:nth-child(2) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.05s;
+}
+.box-2 div:nth-child(3) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.1s;
+}
+.box-2 div:nth-child(4) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.15s;
+}
+.box-2 div:nth-child(5) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.15s;
+}
+.box-2 div:nth-child(6) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.1s;
+}
+.box-2 div:nth-child(7) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.05s;
+}
+.box-2 div:nth-child(8) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0s;
+}
+.box-2:hover div {
+  transform: translateY(0);
+}
+
+.box-3 {
+  display: flex;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.box-3 div {
+  width: 12.5%;
+  height: 100%;
+  background-color: #d1a54e;
+  transform-origin: center bottom;
+  transform: translateY(100%);
+}
+.box-3 div:nth-child(2n) {
+  transform: translateY(-100%);
+}
+.box-3 div:nth-child(1) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0s;
+}
+.box-3 div:nth-child(2) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.05s;
+}
+.box-3 div:nth-child(3) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.1s;
+}
+.box-3 div:nth-child(4) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.15s;
+}
+.box-3 div:nth-child(5) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.15s;
+}
+.box-3 div:nth-child(6) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.1s;
+}
+.box-3 div:nth-child(7) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.05s;
+}
+.box-3 div:nth-child(8) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0s;
+}
+.box-3:hover div {
+  transform: translateY(0);
+}
+
+.box-4 {
+  display: flex;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.box-4 div {
+  width: 12.5%;
+  height: 100%;
+  background-color: #b59294;
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+.box-4 div:nth-child(1) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0s;
+}
+.box-4 div:nth-child(2) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.05s;
+}
+.box-4 div:nth-child(3) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.1s;
+}
+.box-4 div:nth-child(4) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.15s;
+}
+.box-4 div:nth-child(5) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.2s;
+}
+.box-4 div:nth-child(6) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.25s;
+}
+.box-4 div:nth-child(7) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.3s;
+}
+.box-4 div:nth-child(8) {
+  transition: transform 0.4s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.35s;
+}
+.box-4:hover div {
+  transform: scaleX(1);
+}
+
+.box-5 {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.box-5 div {
+  width: 33.3%;
+  height: 33.4%;
+  background-color: #709e94;
+  transform: scale(0);
+}
+.box-5 div:nth-child(5) {
+  transition: transform 0.4s cubic-bezier(1, 0, 0.41, 0.85) 0s;
+}
+.box-5 div:nth-child(2) {
+  transition: transform 0.4s cubic-bezier(1, 0, 0.41, 0.85) 0.05s;
+}
+.box-5 div:nth-child(4) {
+  transition: transform 0.4s cubic-bezier(1, 0, 0.41, 0.85) 0.05s;
+}
+.box-5 div:nth-child(6) {
+  transition: transform 0.4s cubic-bezier(1, 0, 0.41, 0.85) 0.05s;
+}
+.box-5 div:nth-child(8) {
+  transition: transform 0.4s cubic-bezier(1, 0, 0.41, 0.85) 0.05s;
+}
+.box-5 div:nth-child(1) {
+  transition: transform 0.4s cubic-bezier(1, 0, 0.41, 0.85) 0.1s;
+}
+.box-5 div:nth-child(3) {
+  transition: transform 0.4s cubic-bezier(1, 0, 0.41, 0.85) 0.1s;
+}
+.box-5 div:nth-child(7) {
+  transition: transform 0.4s cubic-bezier(1, 0, 0.41, 0.85) 0.1s;
+}
+.box-5 div:nth-child(9) {
+  transition: transform 0.4s cubic-bezier(1, 0, 0.41, 0.85) 0.1s;
+}
+.box-5:hover div {
+  transform: scale(1);
+}
+
+.box-6 {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.box-6 div {
+  width: 25%;
+  height: 25%;
+  background-color: #7770ac;
+  transform: translateY(-60%);
+  opacity: 0;
+}
+.box-6 div:nth-child(1) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.45s;
+}
+.box-6 div:nth-child(2) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.42s;
+}
+.box-6 div:nth-child(3) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.39s;
+}
+.box-6 div:nth-child(4) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.36s;
+}
+.box-6 div:nth-child(5) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.33s;
+}
+.box-6 div:nth-child(6) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.3s;
+}
+.box-6 div:nth-child(7) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.27s;
+}
+.box-6 div:nth-child(8) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.24s;
+}
+.box-6 div:nth-child(9) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.21s;
+}
+.box-6 div:nth-child(10) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.18s;
+}
+.box-6 div:nth-child(11) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.15s;
+}
+.box-6 div:nth-child(12) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.12s;
+}
+.box-6 div:nth-child(13) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.09s;
+}
+.box-6 div:nth-child(14) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.06s;
+}
+.box-6 div:nth-child(15) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0.03s;
+}
+.box-6 div:nth-child(16) {
+  transition: all 0.3s cubic-bezier(0.34, 1.63, 0.61, 0.3) 0s;
+}
+.box-6:hover div {
+  opacity: 1;
+  transform: translateY(0);
+}
