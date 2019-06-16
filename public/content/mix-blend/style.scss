@@ -1,0 +1,252 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #F1F1F3;
+}
+
+.box,
+.box2 {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 100%;
+  height: 80px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+}
+.box2 {
+  flex-direction: row-reverse;
+  transform: translateY(-80%);
+}
+
+.ball-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  .ball {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    transform-origin: center bottom;
+    transform: translateX(-50%);
+    opacity: 0;
+    mix-blend-mode: screen;
+
+    &:nth-child(2) {
+      width: 30%;
+      height: 30%;
+    }
+    &:nth-child(3) {
+      width: 60%;
+      height: 60%;
+    }
+    &:nth-child(4) {
+      width: 40%;
+      height: 40%;
+    }
+    &:nth-child(5) {
+      width: 20%;
+      height: 20%;
+    }
+    &:nth-child(6) {
+      width: 35%;
+      height: 35%;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  &:nth-child(1n)::after { background-color: #C37074; }
+  &:nth-child(1n) .ball::after { background-color: #C37074; }
+  &:nth-child(2n)::after { background-color: #CFD7B1; }
+  &:nth-child(2n) .ball::after { background-color: #CFD7B1; }
+  &:nth-child(3n)::after { background-color: #BDEAE9; }
+  &:nth-child(3n) .ball::after { background-color: #BDEAE9; }
+  &:nth-child(4n)::after { background-color: #9692CD; }
+  &:nth-child(4n) .ball::after { background-color: #9692CD; }
+  &:nth-child(5n)::after { background-color: #E6C9AC; }
+  &:nth-child(5n) .ball::after { background-color: #E6C9AC; }
+}
+
+.box2 {
+  @for $i from 1 through 5 {
+    .ball-wrapper:nth-child(#{$i}) {
+      &::after {
+        animation:
+          fall 0.4s cubic-bezier(0.82, 0.01, 1, 1) #{$i * 0.1 + 0.35}s forwards,
+          scale 0.3s cubic-bezier(0.36, 0.4, 0.98,-0.15) #{$i * 0.1 + 0.4 + 0.35}s forwards;
+      }
+
+      .ball:nth-child(1) {
+        animation: bound1 0.4s ease-out #{$i * 0.1 + 0.4 + 0.35}s forwards;
+        &::after { animation: left1 0.4s ease #{$i * 0.1 + 0.4 + 0.35}s forwards; }
+      }
+      .ball:nth-child(2) {
+        animation: bound3 0.4s ease-out #{$i * 0.1 + 0.45 + 0.35}s forwards;
+        &::after { animation: right1 0.4s ease #{$i * 0.1 + 0.45 + 0.35}s forwards; }
+      }
+      .ball:nth-child(3) {
+        animation: bound1 0.4s ease-out #{$i * 0.1 + 0.5 + 0.35}s forwards;
+        &::after { animation: left2 0.4s ease #{$i * 0.1 + 0.5 + 0.35}s forwards; }
+      }
+      .ball:nth-child(4) {
+        animation: bound3 0.4s ease-out #{$i * 0.1 + 0.55 + 0.35}s forwards;
+        &::after { animation: right2 0.4s ease #{$i * 0.1 + 0.55 + 0.35}s forwards; }
+      }
+      .ball:nth-child(5) {
+        animation: bound1 0.4s ease-out #{$i * 0.1 + 0.6 + 0.35}s forwards;
+        &::after { animation: left3 0.4s ease #{$i * 0.1 + 0.6 + 0.35}s forwards; }
+      }
+      .ball:nth-child(6) {
+        animation: bound3 0.4s ease-out #{$i * 0.1 + 0.65 + 0.35}s forwards;
+        &::after { animation: right3 0.4s ease #{$i * 0.1 + 0.65 + 0.35}s forwards; }
+      }
+      .ball:nth-child(7) {
+        animation: bound1 0.4s ease-out #{$i * 0.1 + 0.7 + 0.35}s forwards;
+        &::after { animation: left1 0.4s ease #{$i * 0.1 + 0.7 + 0.35}s forwards; }
+      }
+      .ball:nth-child(8) {
+        animation: bound3 0.4s ease-out #{$i * 0.1 + 0.75 + 0.35}s forwards;
+        &::after { animation: right1 0.4s ease #{$i * 0.1 + 0.75 + 0.35}s forwards; }
+      }
+    }
+  }
+}
+.box {
+  @for $i from 1 through 5 {
+    .ball-wrapper:nth-child(#{$i}) {
+      &::after {
+        animation:
+          fall 0.4s cubic-bezier(0.82, 0.01, 1, 1) #{$i * 0.1}s forwards,
+          scale 0.3s cubic-bezier(0.36, 0.4, 0.98,-0.15) #{$i * 0.1 + 0.4}s forwards;
+      }
+
+      .ball:nth-child(1) {
+        animation: bound1 0.4s ease-out #{$i * 0.1 + 0.4}s forwards;
+        &::after { animation: left1 0.4s ease #{$i * 0.1 + 0.4}s forwards; }
+      }
+      .ball:nth-child(2) {
+        animation: bound3 0.4s ease-out #{$i * 0.1 + 0.45}s forwards;
+        &::after { animation: right1 0.4s ease #{$i * 0.1 + 0.45}s forwards; }
+      }
+      .ball:nth-child(3) {
+        animation: bound1 0.4s ease-out #{$i * 0.1 + 0.5}s forwards;
+        &::after { animation: left2 0.4s ease #{$i * 0.1 + 0.5}s forwards; }
+      }
+      .ball:nth-child(4) {
+        animation: bound3 0.4s ease-out #{$i * 0.1 + 0.55}s forwards;
+        &::after { animation: right2 0.4s ease #{$i * 0.1 + 0.55}s forwards; }
+      }
+      .ball:nth-child(5) {
+        animation: bound1 0.4s ease-out #{$i * 0.1 + 0.6}s forwards;
+        &::after { animation: left3 0.4s ease #{$i * 0.1 + 0.6}s forwards; }
+      }
+      .ball:nth-child(6) {
+        animation: bound3 0.4s ease-out #{$i * 0.1 + 0.65}s forwards;
+        &::after { animation: right3 0.4s ease #{$i * 0.1 + 0.65}s forwards; }
+      }
+      .ball:nth-child(7) {
+        animation: bound1 0.4s ease-out #{$i * 0.1 + 0.7}s forwards;
+        &::after { animation: left1 0.4s ease #{$i * 0.1 + 0.7}s forwards; }
+      }
+      .ball:nth-child(8) {
+        animation: bound3 0.4s ease-out #{$i * 0.1 + 0.75}s forwards;
+        &::after { animation: right1 0.4s ease #{$i * 0.1 + 0.75}s forwards; }
+      }
+    }
+  }
+}
+
+@keyframes scale {
+  from { transform: scale(1); }
+  to   { transform: scale(0); }
+}
+@keyframes fall {
+  from { transform: translateY(-800%); opacity: 0; }
+  to   { transform: translateY(0%); opacity: 1; }
+}
+@keyframes bound1 {
+  0%   { transform: translate(-50%, 0%); opacity: 0; }
+  30%  { transform: translate(-50%, -100%); opacity: 1; }
+  40%  { transform: translate(-50%, 0%); opacity: 1; }
+  50%  { transform: translate(-50%, -40%); opacity: 1; }
+  60%  { transform: translate(-50%, 0%); opacity: 1; }
+  70%  { transform: translate(-50%, -20%); opacity: 1; }
+  80%  { transform: translate(-50%, 0%); opacity: 1; }
+  90%  { transform: translate(-50%, -10%); opacity: 1; }
+  100% { transform: translate(-50%, 0%); opacity: 1; }
+}
+@keyframes bound2 {
+  0%   { transform: translate(-50%, 0%); opacity: 0; }
+  30%  { transform: translate(-50%, -200%); opacity: 1; }
+  40%  { transform: translate(-50%, 0%); opacity: 1; }
+  50%  { transform: translate(-50%, -80%); opacity: 1; }
+  60%  { transform: translate(-50%, 0%); opacity: 1; }
+  70%  { transform: translate(-50%, -40%); opacity: 1; }
+  80%  { transform: translate(-50%, 0%); opacity: 1; }
+  90%  { transform: translate(-50%, -20%); opacity: 1; }
+  100% { transform: translate(-50%, 0%); opacity: 1; }
+}
+@keyframes bound3 {
+  0%   { transform: translate(-50%, 0%); opacity: 0; }
+  30%  { transform: translate(-50%, -150%); opacity: 1; }
+  40%  { transform: translate(-50%, 0%); opacity: 1; }
+  50%  { transform: translate(-50%, -30%); opacity: 1; }
+  60%  { transform: translate(-50%, 0%); opacity: 1; }
+  70%  { transform: translate(-50%, -15%); opacity: 1; }
+  80%  { transform: translate(-50%, 0%); opacity: 1; }
+  90%  { transform: translate(-50%, -7.5%); opacity: 1; }
+  100% { transform: translate(-50%, 0%); opacity: 1; }
+}
+@keyframes left1 {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-300%); }
+}
+@keyframes right1 {
+  from { transform: translateX(0); }
+  to   { transform: translateX(240%); }
+}
+@keyframes left2 {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-80%); }
+}
+@keyframes right2 {
+  from { transform: translateX(0); }
+  to   { transform: translateX(140%); }
+}
+@keyframes left3 {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-140%); }
+}
+@keyframes right3 {
+  from { transform: translateX(0); }
+  to   { transform: translateX(80%); }
+}

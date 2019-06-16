@@ -1,0 +1,658 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #F1F1F3; }
+
+.box,
+.box2 {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 100%;
+  height: 80px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center; }
+
+.box2 {
+  flex-direction: row-reverse;
+  transform: translateY(-80%); }
+
+.ball-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; }
+  .ball-wrapper::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0; }
+  .ball-wrapper .ball {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    transform-origin: center bottom;
+    transform: translateX(-50%);
+    opacity: 0;
+    mix-blend-mode: screen; }
+    .ball-wrapper .ball:nth-child(2) {
+      width: 30%;
+      height: 30%; }
+    .ball-wrapper .ball:nth-child(3) {
+      width: 60%;
+      height: 60%; }
+    .ball-wrapper .ball:nth-child(4) {
+      width: 40%;
+      height: 40%; }
+    .ball-wrapper .ball:nth-child(5) {
+      width: 20%;
+      height: 20%; }
+    .ball-wrapper .ball:nth-child(6) {
+      width: 35%;
+      height: 35%; }
+    .ball-wrapper .ball::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%; }
+  .ball-wrapper:nth-child(1n)::after {
+    background-color: #C37074; }
+  .ball-wrapper:nth-child(1n) .ball::after {
+    background-color: #C37074; }
+  .ball-wrapper:nth-child(2n)::after {
+    background-color: #CFD7B1; }
+  .ball-wrapper:nth-child(2n) .ball::after {
+    background-color: #CFD7B1; }
+  .ball-wrapper:nth-child(3n)::after {
+    background-color: #BDEAE9; }
+  .ball-wrapper:nth-child(3n) .ball::after {
+    background-color: #BDEAE9; }
+  .ball-wrapper:nth-child(4n)::after {
+    background-color: #9692CD; }
+  .ball-wrapper:nth-child(4n) .ball::after {
+    background-color: #9692CD; }
+  .ball-wrapper:nth-child(5n)::after {
+    background-color: #E6C9AC; }
+  .ball-wrapper:nth-child(5n) .ball::after {
+    background-color: #E6C9AC; }
+
+.box2 .ball-wrapper:nth-child(1)::after {
+  animation: fall 0.4s cubic-bezier(0.82, 0.01, 1, 1) 0.45s forwards, scale 0.3s cubic-bezier(0.36, 0.4, 0.98, -0.15) 0.85s forwards; }
+
+.box2 .ball-wrapper:nth-child(1) .ball:nth-child(1) {
+  animation: bound1 0.4s ease-out 0.85s forwards; }
+  .box2 .ball-wrapper:nth-child(1) .ball:nth-child(1)::after {
+    animation: left1 0.4s ease 0.85s forwards; }
+
+.box2 .ball-wrapper:nth-child(1) .ball:nth-child(2) {
+  animation: bound3 0.4s ease-out 0.9s forwards; }
+  .box2 .ball-wrapper:nth-child(1) .ball:nth-child(2)::after {
+    animation: right1 0.4s ease 0.9s forwards; }
+
+.box2 .ball-wrapper:nth-child(1) .ball:nth-child(3) {
+  animation: bound1 0.4s ease-out 0.95s forwards; }
+  .box2 .ball-wrapper:nth-child(1) .ball:nth-child(3)::after {
+    animation: left2 0.4s ease 0.95s forwards; }
+
+.box2 .ball-wrapper:nth-child(1) .ball:nth-child(4) {
+  animation: bound3 0.4s ease-out 1s forwards; }
+  .box2 .ball-wrapper:nth-child(1) .ball:nth-child(4)::after {
+    animation: right2 0.4s ease 1s forwards; }
+
+.box2 .ball-wrapper:nth-child(1) .ball:nth-child(5) {
+  animation: bound1 0.4s ease-out 1.05s forwards; }
+  .box2 .ball-wrapper:nth-child(1) .ball:nth-child(5)::after {
+    animation: left3 0.4s ease 1.05s forwards; }
+
+.box2 .ball-wrapper:nth-child(1) .ball:nth-child(6) {
+  animation: bound3 0.4s ease-out 1.1s forwards; }
+  .box2 .ball-wrapper:nth-child(1) .ball:nth-child(6)::after {
+    animation: right3 0.4s ease 1.1s forwards; }
+
+.box2 .ball-wrapper:nth-child(1) .ball:nth-child(7) {
+  animation: bound1 0.4s ease-out 1.15s forwards; }
+  .box2 .ball-wrapper:nth-child(1) .ball:nth-child(7)::after {
+    animation: left1 0.4s ease 1.15s forwards; }
+
+.box2 .ball-wrapper:nth-child(1) .ball:nth-child(8) {
+  animation: bound3 0.4s ease-out 1.2s forwards; }
+  .box2 .ball-wrapper:nth-child(1) .ball:nth-child(8)::after {
+    animation: right1 0.4s ease 1.2s forwards; }
+
+.box2 .ball-wrapper:nth-child(2)::after {
+  animation: fall 0.4s cubic-bezier(0.82, 0.01, 1, 1) 0.55s forwards, scale 0.3s cubic-bezier(0.36, 0.4, 0.98, -0.15) 0.95s forwards; }
+
+.box2 .ball-wrapper:nth-child(2) .ball:nth-child(1) {
+  animation: bound1 0.4s ease-out 0.95s forwards; }
+  .box2 .ball-wrapper:nth-child(2) .ball:nth-child(1)::after {
+    animation: left1 0.4s ease 0.95s forwards; }
+
+.box2 .ball-wrapper:nth-child(2) .ball:nth-child(2) {
+  animation: bound3 0.4s ease-out 1s forwards; }
+  .box2 .ball-wrapper:nth-child(2) .ball:nth-child(2)::after {
+    animation: right1 0.4s ease 1s forwards; }
+
+.box2 .ball-wrapper:nth-child(2) .ball:nth-child(3) {
+  animation: bound1 0.4s ease-out 1.05s forwards; }
+  .box2 .ball-wrapper:nth-child(2) .ball:nth-child(3)::after {
+    animation: left2 0.4s ease 1.05s forwards; }
+
+.box2 .ball-wrapper:nth-child(2) .ball:nth-child(4) {
+  animation: bound3 0.4s ease-out 1.1s forwards; }
+  .box2 .ball-wrapper:nth-child(2) .ball:nth-child(4)::after {
+    animation: right2 0.4s ease 1.1s forwards; }
+
+.box2 .ball-wrapper:nth-child(2) .ball:nth-child(5) {
+  animation: bound1 0.4s ease-out 1.15s forwards; }
+  .box2 .ball-wrapper:nth-child(2) .ball:nth-child(5)::after {
+    animation: left3 0.4s ease 1.15s forwards; }
+
+.box2 .ball-wrapper:nth-child(2) .ball:nth-child(6) {
+  animation: bound3 0.4s ease-out 1.2s forwards; }
+  .box2 .ball-wrapper:nth-child(2) .ball:nth-child(6)::after {
+    animation: right3 0.4s ease 1.2s forwards; }
+
+.box2 .ball-wrapper:nth-child(2) .ball:nth-child(7) {
+  animation: bound1 0.4s ease-out 1.25s forwards; }
+  .box2 .ball-wrapper:nth-child(2) .ball:nth-child(7)::after {
+    animation: left1 0.4s ease 1.25s forwards; }
+
+.box2 .ball-wrapper:nth-child(2) .ball:nth-child(8) {
+  animation: bound3 0.4s ease-out 1.3s forwards; }
+  .box2 .ball-wrapper:nth-child(2) .ball:nth-child(8)::after {
+    animation: right1 0.4s ease 1.3s forwards; }
+
+.box2 .ball-wrapper:nth-child(3)::after {
+  animation: fall 0.4s cubic-bezier(0.82, 0.01, 1, 1) 0.65s forwards, scale 0.3s cubic-bezier(0.36, 0.4, 0.98, -0.15) 1.05s forwards; }
+
+.box2 .ball-wrapper:nth-child(3) .ball:nth-child(1) {
+  animation: bound1 0.4s ease-out 1.05s forwards; }
+  .box2 .ball-wrapper:nth-child(3) .ball:nth-child(1)::after {
+    animation: left1 0.4s ease 1.05s forwards; }
+
+.box2 .ball-wrapper:nth-child(3) .ball:nth-child(2) {
+  animation: bound3 0.4s ease-out 1.1s forwards; }
+  .box2 .ball-wrapper:nth-child(3) .ball:nth-child(2)::after {
+    animation: right1 0.4s ease 1.1s forwards; }
+
+.box2 .ball-wrapper:nth-child(3) .ball:nth-child(3) {
+  animation: bound1 0.4s ease-out 1.15s forwards; }
+  .box2 .ball-wrapper:nth-child(3) .ball:nth-child(3)::after {
+    animation: left2 0.4s ease 1.15s forwards; }
+
+.box2 .ball-wrapper:nth-child(3) .ball:nth-child(4) {
+  animation: bound3 0.4s ease-out 1.2s forwards; }
+  .box2 .ball-wrapper:nth-child(3) .ball:nth-child(4)::after {
+    animation: right2 0.4s ease 1.2s forwards; }
+
+.box2 .ball-wrapper:nth-child(3) .ball:nth-child(5) {
+  animation: bound1 0.4s ease-out 1.25s forwards; }
+  .box2 .ball-wrapper:nth-child(3) .ball:nth-child(5)::after {
+    animation: left3 0.4s ease 1.25s forwards; }
+
+.box2 .ball-wrapper:nth-child(3) .ball:nth-child(6) {
+  animation: bound3 0.4s ease-out 1.3s forwards; }
+  .box2 .ball-wrapper:nth-child(3) .ball:nth-child(6)::after {
+    animation: right3 0.4s ease 1.3s forwards; }
+
+.box2 .ball-wrapper:nth-child(3) .ball:nth-child(7) {
+  animation: bound1 0.4s ease-out 1.35s forwards; }
+  .box2 .ball-wrapper:nth-child(3) .ball:nth-child(7)::after {
+    animation: left1 0.4s ease 1.35s forwards; }
+
+.box2 .ball-wrapper:nth-child(3) .ball:nth-child(8) {
+  animation: bound3 0.4s ease-out 1.4s forwards; }
+  .box2 .ball-wrapper:nth-child(3) .ball:nth-child(8)::after {
+    animation: right1 0.4s ease 1.4s forwards; }
+
+.box2 .ball-wrapper:nth-child(4)::after {
+  animation: fall 0.4s cubic-bezier(0.82, 0.01, 1, 1) 0.75s forwards, scale 0.3s cubic-bezier(0.36, 0.4, 0.98, -0.15) 1.15s forwards; }
+
+.box2 .ball-wrapper:nth-child(4) .ball:nth-child(1) {
+  animation: bound1 0.4s ease-out 1.15s forwards; }
+  .box2 .ball-wrapper:nth-child(4) .ball:nth-child(1)::after {
+    animation: left1 0.4s ease 1.15s forwards; }
+
+.box2 .ball-wrapper:nth-child(4) .ball:nth-child(2) {
+  animation: bound3 0.4s ease-out 1.2s forwards; }
+  .box2 .ball-wrapper:nth-child(4) .ball:nth-child(2)::after {
+    animation: right1 0.4s ease 1.2s forwards; }
+
+.box2 .ball-wrapper:nth-child(4) .ball:nth-child(3) {
+  animation: bound1 0.4s ease-out 1.25s forwards; }
+  .box2 .ball-wrapper:nth-child(4) .ball:nth-child(3)::after {
+    animation: left2 0.4s ease 1.25s forwards; }
+
+.box2 .ball-wrapper:nth-child(4) .ball:nth-child(4) {
+  animation: bound3 0.4s ease-out 1.3s forwards; }
+  .box2 .ball-wrapper:nth-child(4) .ball:nth-child(4)::after {
+    animation: right2 0.4s ease 1.3s forwards; }
+
+.box2 .ball-wrapper:nth-child(4) .ball:nth-child(5) {
+  animation: bound1 0.4s ease-out 1.35s forwards; }
+  .box2 .ball-wrapper:nth-child(4) .ball:nth-child(5)::after {
+    animation: left3 0.4s ease 1.35s forwards; }
+
+.box2 .ball-wrapper:nth-child(4) .ball:nth-child(6) {
+  animation: bound3 0.4s ease-out 1.4s forwards; }
+  .box2 .ball-wrapper:nth-child(4) .ball:nth-child(6)::after {
+    animation: right3 0.4s ease 1.4s forwards; }
+
+.box2 .ball-wrapper:nth-child(4) .ball:nth-child(7) {
+  animation: bound1 0.4s ease-out 1.45s forwards; }
+  .box2 .ball-wrapper:nth-child(4) .ball:nth-child(7)::after {
+    animation: left1 0.4s ease 1.45s forwards; }
+
+.box2 .ball-wrapper:nth-child(4) .ball:nth-child(8) {
+  animation: bound3 0.4s ease-out 1.5s forwards; }
+  .box2 .ball-wrapper:nth-child(4) .ball:nth-child(8)::after {
+    animation: right1 0.4s ease 1.5s forwards; }
+
+.box2 .ball-wrapper:nth-child(5)::after {
+  animation: fall 0.4s cubic-bezier(0.82, 0.01, 1, 1) 0.85s forwards, scale 0.3s cubic-bezier(0.36, 0.4, 0.98, -0.15) 1.25s forwards; }
+
+.box2 .ball-wrapper:nth-child(5) .ball:nth-child(1) {
+  animation: bound1 0.4s ease-out 1.25s forwards; }
+  .box2 .ball-wrapper:nth-child(5) .ball:nth-child(1)::after {
+    animation: left1 0.4s ease 1.25s forwards; }
+
+.box2 .ball-wrapper:nth-child(5) .ball:nth-child(2) {
+  animation: bound3 0.4s ease-out 1.3s forwards; }
+  .box2 .ball-wrapper:nth-child(5) .ball:nth-child(2)::after {
+    animation: right1 0.4s ease 1.3s forwards; }
+
+.box2 .ball-wrapper:nth-child(5) .ball:nth-child(3) {
+  animation: bound1 0.4s ease-out 1.35s forwards; }
+  .box2 .ball-wrapper:nth-child(5) .ball:nth-child(3)::after {
+    animation: left2 0.4s ease 1.35s forwards; }
+
+.box2 .ball-wrapper:nth-child(5) .ball:nth-child(4) {
+  animation: bound3 0.4s ease-out 1.4s forwards; }
+  .box2 .ball-wrapper:nth-child(5) .ball:nth-child(4)::after {
+    animation: right2 0.4s ease 1.4s forwards; }
+
+.box2 .ball-wrapper:nth-child(5) .ball:nth-child(5) {
+  animation: bound1 0.4s ease-out 1.45s forwards; }
+  .box2 .ball-wrapper:nth-child(5) .ball:nth-child(5)::after {
+    animation: left3 0.4s ease 1.45s forwards; }
+
+.box2 .ball-wrapper:nth-child(5) .ball:nth-child(6) {
+  animation: bound3 0.4s ease-out 1.5s forwards; }
+  .box2 .ball-wrapper:nth-child(5) .ball:nth-child(6)::after {
+    animation: right3 0.4s ease 1.5s forwards; }
+
+.box2 .ball-wrapper:nth-child(5) .ball:nth-child(7) {
+  animation: bound1 0.4s ease-out 1.55s forwards; }
+  .box2 .ball-wrapper:nth-child(5) .ball:nth-child(7)::after {
+    animation: left1 0.4s ease 1.55s forwards; }
+
+.box2 .ball-wrapper:nth-child(5) .ball:nth-child(8) {
+  animation: bound3 0.4s ease-out 1.6s forwards; }
+  .box2 .ball-wrapper:nth-child(5) .ball:nth-child(8)::after {
+    animation: right1 0.4s ease 1.6s forwards; }
+
+.box .ball-wrapper:nth-child(1)::after {
+  animation: fall 0.4s cubic-bezier(0.82, 0.01, 1, 1) 0.1s forwards, scale 0.3s cubic-bezier(0.36, 0.4, 0.98, -0.15) 0.5s forwards; }
+
+.box .ball-wrapper:nth-child(1) .ball:nth-child(1) {
+  animation: bound1 0.4s ease-out 0.5s forwards; }
+  .box .ball-wrapper:nth-child(1) .ball:nth-child(1)::after {
+    animation: left1 0.4s ease 0.5s forwards; }
+
+.box .ball-wrapper:nth-child(1) .ball:nth-child(2) {
+  animation: bound3 0.4s ease-out 0.55s forwards; }
+  .box .ball-wrapper:nth-child(1) .ball:nth-child(2)::after {
+    animation: right1 0.4s ease 0.55s forwards; }
+
+.box .ball-wrapper:nth-child(1) .ball:nth-child(3) {
+  animation: bound1 0.4s ease-out 0.6s forwards; }
+  .box .ball-wrapper:nth-child(1) .ball:nth-child(3)::after {
+    animation: left2 0.4s ease 0.6s forwards; }
+
+.box .ball-wrapper:nth-child(1) .ball:nth-child(4) {
+  animation: bound3 0.4s ease-out 0.65s forwards; }
+  .box .ball-wrapper:nth-child(1) .ball:nth-child(4)::after {
+    animation: right2 0.4s ease 0.65s forwards; }
+
+.box .ball-wrapper:nth-child(1) .ball:nth-child(5) {
+  animation: bound1 0.4s ease-out 0.7s forwards; }
+  .box .ball-wrapper:nth-child(1) .ball:nth-child(5)::after {
+    animation: left3 0.4s ease 0.7s forwards; }
+
+.box .ball-wrapper:nth-child(1) .ball:nth-child(6) {
+  animation: bound3 0.4s ease-out 0.75s forwards; }
+  .box .ball-wrapper:nth-child(1) .ball:nth-child(6)::after {
+    animation: right3 0.4s ease 0.75s forwards; }
+
+.box .ball-wrapper:nth-child(1) .ball:nth-child(7) {
+  animation: bound1 0.4s ease-out 0.8s forwards; }
+  .box .ball-wrapper:nth-child(1) .ball:nth-child(7)::after {
+    animation: left1 0.4s ease 0.8s forwards; }
+
+.box .ball-wrapper:nth-child(1) .ball:nth-child(8) {
+  animation: bound3 0.4s ease-out 0.85s forwards; }
+  .box .ball-wrapper:nth-child(1) .ball:nth-child(8)::after {
+    animation: right1 0.4s ease 0.85s forwards; }
+
+.box .ball-wrapper:nth-child(2)::after {
+  animation: fall 0.4s cubic-bezier(0.82, 0.01, 1, 1) 0.2s forwards, scale 0.3s cubic-bezier(0.36, 0.4, 0.98, -0.15) 0.6s forwards; }
+
+.box .ball-wrapper:nth-child(2) .ball:nth-child(1) {
+  animation: bound1 0.4s ease-out 0.6s forwards; }
+  .box .ball-wrapper:nth-child(2) .ball:nth-child(1)::after {
+    animation: left1 0.4s ease 0.6s forwards; }
+
+.box .ball-wrapper:nth-child(2) .ball:nth-child(2) {
+  animation: bound3 0.4s ease-out 0.65s forwards; }
+  .box .ball-wrapper:nth-child(2) .ball:nth-child(2)::after {
+    animation: right1 0.4s ease 0.65s forwards; }
+
+.box .ball-wrapper:nth-child(2) .ball:nth-child(3) {
+  animation: bound1 0.4s ease-out 0.7s forwards; }
+  .box .ball-wrapper:nth-child(2) .ball:nth-child(3)::after {
+    animation: left2 0.4s ease 0.7s forwards; }
+
+.box .ball-wrapper:nth-child(2) .ball:nth-child(4) {
+  animation: bound3 0.4s ease-out 0.75s forwards; }
+  .box .ball-wrapper:nth-child(2) .ball:nth-child(4)::after {
+    animation: right2 0.4s ease 0.75s forwards; }
+
+.box .ball-wrapper:nth-child(2) .ball:nth-child(5) {
+  animation: bound1 0.4s ease-out 0.8s forwards; }
+  .box .ball-wrapper:nth-child(2) .ball:nth-child(5)::after {
+    animation: left3 0.4s ease 0.8s forwards; }
+
+.box .ball-wrapper:nth-child(2) .ball:nth-child(6) {
+  animation: bound3 0.4s ease-out 0.85s forwards; }
+  .box .ball-wrapper:nth-child(2) .ball:nth-child(6)::after {
+    animation: right3 0.4s ease 0.85s forwards; }
+
+.box .ball-wrapper:nth-child(2) .ball:nth-child(7) {
+  animation: bound1 0.4s ease-out 0.9s forwards; }
+  .box .ball-wrapper:nth-child(2) .ball:nth-child(7)::after {
+    animation: left1 0.4s ease 0.9s forwards; }
+
+.box .ball-wrapper:nth-child(2) .ball:nth-child(8) {
+  animation: bound3 0.4s ease-out 0.95s forwards; }
+  .box .ball-wrapper:nth-child(2) .ball:nth-child(8)::after {
+    animation: right1 0.4s ease 0.95s forwards; }
+
+.box .ball-wrapper:nth-child(3)::after {
+  animation: fall 0.4s cubic-bezier(0.82, 0.01, 1, 1) 0.3s forwards, scale 0.3s cubic-bezier(0.36, 0.4, 0.98, -0.15) 0.7s forwards; }
+
+.box .ball-wrapper:nth-child(3) .ball:nth-child(1) {
+  animation: bound1 0.4s ease-out 0.7s forwards; }
+  .box .ball-wrapper:nth-child(3) .ball:nth-child(1)::after {
+    animation: left1 0.4s ease 0.7s forwards; }
+
+.box .ball-wrapper:nth-child(3) .ball:nth-child(2) {
+  animation: bound3 0.4s ease-out 0.75s forwards; }
+  .box .ball-wrapper:nth-child(3) .ball:nth-child(2)::after {
+    animation: right1 0.4s ease 0.75s forwards; }
+
+.box .ball-wrapper:nth-child(3) .ball:nth-child(3) {
+  animation: bound1 0.4s ease-out 0.8s forwards; }
+  .box .ball-wrapper:nth-child(3) .ball:nth-child(3)::after {
+    animation: left2 0.4s ease 0.8s forwards; }
+
+.box .ball-wrapper:nth-child(3) .ball:nth-child(4) {
+  animation: bound3 0.4s ease-out 0.85s forwards; }
+  .box .ball-wrapper:nth-child(3) .ball:nth-child(4)::after {
+    animation: right2 0.4s ease 0.85s forwards; }
+
+.box .ball-wrapper:nth-child(3) .ball:nth-child(5) {
+  animation: bound1 0.4s ease-out 0.9s forwards; }
+  .box .ball-wrapper:nth-child(3) .ball:nth-child(5)::after {
+    animation: left3 0.4s ease 0.9s forwards; }
+
+.box .ball-wrapper:nth-child(3) .ball:nth-child(6) {
+  animation: bound3 0.4s ease-out 0.95s forwards; }
+  .box .ball-wrapper:nth-child(3) .ball:nth-child(6)::after {
+    animation: right3 0.4s ease 0.95s forwards; }
+
+.box .ball-wrapper:nth-child(3) .ball:nth-child(7) {
+  animation: bound1 0.4s ease-out 1s forwards; }
+  .box .ball-wrapper:nth-child(3) .ball:nth-child(7)::after {
+    animation: left1 0.4s ease 1s forwards; }
+
+.box .ball-wrapper:nth-child(3) .ball:nth-child(8) {
+  animation: bound3 0.4s ease-out 1.05s forwards; }
+  .box .ball-wrapper:nth-child(3) .ball:nth-child(8)::after {
+    animation: right1 0.4s ease 1.05s forwards; }
+
+.box .ball-wrapper:nth-child(4)::after {
+  animation: fall 0.4s cubic-bezier(0.82, 0.01, 1, 1) 0.4s forwards, scale 0.3s cubic-bezier(0.36, 0.4, 0.98, -0.15) 0.8s forwards; }
+
+.box .ball-wrapper:nth-child(4) .ball:nth-child(1) {
+  animation: bound1 0.4s ease-out 0.8s forwards; }
+  .box .ball-wrapper:nth-child(4) .ball:nth-child(1)::after {
+    animation: left1 0.4s ease 0.8s forwards; }
+
+.box .ball-wrapper:nth-child(4) .ball:nth-child(2) {
+  animation: bound3 0.4s ease-out 0.85s forwards; }
+  .box .ball-wrapper:nth-child(4) .ball:nth-child(2)::after {
+    animation: right1 0.4s ease 0.85s forwards; }
+
+.box .ball-wrapper:nth-child(4) .ball:nth-child(3) {
+  animation: bound1 0.4s ease-out 0.9s forwards; }
+  .box .ball-wrapper:nth-child(4) .ball:nth-child(3)::after {
+    animation: left2 0.4s ease 0.9s forwards; }
+
+.box .ball-wrapper:nth-child(4) .ball:nth-child(4) {
+  animation: bound3 0.4s ease-out 0.95s forwards; }
+  .box .ball-wrapper:nth-child(4) .ball:nth-child(4)::after {
+    animation: right2 0.4s ease 0.95s forwards; }
+
+.box .ball-wrapper:nth-child(4) .ball:nth-child(5) {
+  animation: bound1 0.4s ease-out 1s forwards; }
+  .box .ball-wrapper:nth-child(4) .ball:nth-child(5)::after {
+    animation: left3 0.4s ease 1s forwards; }
+
+.box .ball-wrapper:nth-child(4) .ball:nth-child(6) {
+  animation: bound3 0.4s ease-out 1.05s forwards; }
+  .box .ball-wrapper:nth-child(4) .ball:nth-child(6)::after {
+    animation: right3 0.4s ease 1.05s forwards; }
+
+.box .ball-wrapper:nth-child(4) .ball:nth-child(7) {
+  animation: bound1 0.4s ease-out 1.1s forwards; }
+  .box .ball-wrapper:nth-child(4) .ball:nth-child(7)::after {
+    animation: left1 0.4s ease 1.1s forwards; }
+
+.box .ball-wrapper:nth-child(4) .ball:nth-child(8) {
+  animation: bound3 0.4s ease-out 1.15s forwards; }
+  .box .ball-wrapper:nth-child(4) .ball:nth-child(8)::after {
+    animation: right1 0.4s ease 1.15s forwards; }
+
+.box .ball-wrapper:nth-child(5)::after {
+  animation: fall 0.4s cubic-bezier(0.82, 0.01, 1, 1) 0.5s forwards, scale 0.3s cubic-bezier(0.36, 0.4, 0.98, -0.15) 0.9s forwards; }
+
+.box .ball-wrapper:nth-child(5) .ball:nth-child(1) {
+  animation: bound1 0.4s ease-out 0.9s forwards; }
+  .box .ball-wrapper:nth-child(5) .ball:nth-child(1)::after {
+    animation: left1 0.4s ease 0.9s forwards; }
+
+.box .ball-wrapper:nth-child(5) .ball:nth-child(2) {
+  animation: bound3 0.4s ease-out 0.95s forwards; }
+  .box .ball-wrapper:nth-child(5) .ball:nth-child(2)::after {
+    animation: right1 0.4s ease 0.95s forwards; }
+
+.box .ball-wrapper:nth-child(5) .ball:nth-child(3) {
+  animation: bound1 0.4s ease-out 1s forwards; }
+  .box .ball-wrapper:nth-child(5) .ball:nth-child(3)::after {
+    animation: left2 0.4s ease 1s forwards; }
+
+.box .ball-wrapper:nth-child(5) .ball:nth-child(4) {
+  animation: bound3 0.4s ease-out 1.05s forwards; }
+  .box .ball-wrapper:nth-child(5) .ball:nth-child(4)::after {
+    animation: right2 0.4s ease 1.05s forwards; }
+
+.box .ball-wrapper:nth-child(5) .ball:nth-child(5) {
+  animation: bound1 0.4s ease-out 1.1s forwards; }
+  .box .ball-wrapper:nth-child(5) .ball:nth-child(5)::after {
+    animation: left3 0.4s ease 1.1s forwards; }
+
+.box .ball-wrapper:nth-child(5) .ball:nth-child(6) {
+  animation: bound3 0.4s ease-out 1.15s forwards; }
+  .box .ball-wrapper:nth-child(5) .ball:nth-child(6)::after {
+    animation: right3 0.4s ease 1.15s forwards; }
+
+.box .ball-wrapper:nth-child(5) .ball:nth-child(7) {
+  animation: bound1 0.4s ease-out 1.2s forwards; }
+  .box .ball-wrapper:nth-child(5) .ball:nth-child(7)::after {
+    animation: left1 0.4s ease 1.2s forwards; }
+
+.box .ball-wrapper:nth-child(5) .ball:nth-child(8) {
+  animation: bound3 0.4s ease-out 1.25s forwards; }
+  .box .ball-wrapper:nth-child(5) .ball:nth-child(8)::after {
+    animation: right1 0.4s ease 1.25s forwards; }
+
+@keyframes scale {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(0); } }
+
+@keyframes fall {
+  from {
+    transform: translateY(-800%);
+    opacity: 0; }
+  to {
+    transform: translateY(0%);
+    opacity: 1; } }
+
+@keyframes bound1 {
+  0% {
+    transform: translate(-50%, 0%);
+    opacity: 0; }
+  30% {
+    transform: translate(-50%, -100%);
+    opacity: 1; }
+  40% {
+    transform: translate(-50%, 0%);
+    opacity: 1; }
+  50% {
+    transform: translate(-50%, -40%);
+    opacity: 1; }
+  60% {
+    transform: translate(-50%, 0%);
+    opacity: 1; }
+  70% {
+    transform: translate(-50%, -20%);
+    opacity: 1; }
+  80% {
+    transform: translate(-50%, 0%);
+    opacity: 1; }
+  90% {
+    transform: translate(-50%, -10%);
+    opacity: 1; }
+  100% {
+    transform: translate(-50%, 0%);
+    opacity: 1; } }
+
+@keyframes bound2 {
+  0% {
+    transform: translate(-50%, 0%);
+    opacity: 0; }
+  30% {
+    transform: translate(-50%, -200%);
+    opacity: 1; }
+  40% {
+    transform: translate(-50%, 0%);
+    opacity: 1; }
+  50% {
+    transform: translate(-50%, -80%);
+    opacity: 1; }
+  60% {
+    transform: translate(-50%, 0%);
+    opacity: 1; }
+  70% {
+    transform: translate(-50%, -40%);
+    opacity: 1; }
+  80% {
+    transform: translate(-50%, 0%);
+    opacity: 1; }
+  90% {
+    transform: translate(-50%, -20%);
+    opacity: 1; }
+  100% {
+    transform: translate(-50%, 0%);
+    opacity: 1; } }
+
+@keyframes bound3 {
+  0% {
+    transform: translate(-50%, 0%);
+    opacity: 0; }
+  30% {
+    transform: translate(-50%, -150%);
+    opacity: 1; }
+  40% {
+    transform: translate(-50%, 0%);
+    opacity: 1; }
+  50% {
+    transform: translate(-50%, -30%);
+    opacity: 1; }
+  60% {
+    transform: translate(-50%, 0%);
+    opacity: 1; }
+  70% {
+    transform: translate(-50%, -15%);
+    opacity: 1; }
+  80% {
+    transform: translate(-50%, 0%);
+    opacity: 1; }
+  90% {
+    transform: translate(-50%, -7.5%);
+    opacity: 1; }
+  100% {
+    transform: translate(-50%, 0%);
+    opacity: 1; } }
+
+@keyframes left1 {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(-300%); } }
+
+@keyframes right1 {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(240%); } }
+
+@keyframes left2 {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(-80%); } }
+
+@keyframes right2 {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(140%); } }
+
+@keyframes left3 {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(-140%); } }
+
+@keyframes right3 {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(80%); } }

@@ -455,5 +455,12 @@ export default [
     "thumb": "./images/thumb/small/particle.png",
     "thumb_large": "./images/thumb/large/particle.png"
   },
-
+  {
+    "id": "mix-blend",
+    "title": "mix-blend",
+    "link": "./content/mix-blend/",
+    "description": "mix-blend-mode",
+    "thumb": "./images/thumb/small/mix-blend.png",
+    "thumb_large": "./images/thumb/large/mix-blend.png"
+  },
 ]
