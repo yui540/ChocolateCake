@@ -447,4 +447,13 @@ export default [
     "thumb": "./images/thumb/small/hover.png",
     "thumb_large": "./images/thumb/large/hover.png"
   },
+  {
+    "id": "particle",
+    "title": "particle",
+    "link": "./content/particle/",
+    "description": "パラパラ〜。",
+    "thumb": "./images/thumb/small/particle.png",
+    "thumb_large": "./images/thumb/large/particle.png"
+  },
+
 ]

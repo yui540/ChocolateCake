@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  padding: 0;
+  cursor: none; }
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #E8E5E3; }
+
+.point {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  pointer-events: none; }
+  .point::before, .point::after,
+  .point .frame {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; }
+  .point::before {
+    background-color: #a9a2b3;
+    opacity: 0;
+    animation: pop 2s ease 0s infinite; }
+  .point::after {
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    background-color: #454053; }
+  .point .frame {
+    border-top: solid 1px #454053;
+    border-bottom: solid 1px #454053;
+    border-left: solid 1px transparent;
+    border-right: solid 1px transparent;
+    box-sizing: border-box;
+    animation: rotate 2s linear 0s infinite; }
+
+.particle {
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 50px;
+  height: 50px;
+  mix-blend-mode: screen; }
+  .particle .circle {
+    position: absolute;
+    border-radius: 50%; }
+    .particle .circle::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%; }
+    .particle .circle:nth-child(1n) {
+      top: calc(50% - 15px);
+      left: calc(50% - 15px);
+      width: 30px;
+      height: 30px; }
+      .particle .circle:nth-child(1n)::after {
+        background-color: #C37074;
+        box-shadow: 0 0 5px #C37074; }
+    .particle .circle:nth-child(2n) {
+      top: calc(50% - 10px);
+      left: calc(50% - 10px);
+      width: 20px;
+      height: 20px; }
+      .particle .circle:nth-child(2n)::after {
+        background-color: #CDD5AF;
+        box-shadow: 0 0 5px #CDD5AF; }
+    .particle .circle:nth-child(3n) {
+      top: calc(50% - 7.5px);
+      left: calc(50% - 7.5px);
+      width: 15px;
+      height: 15px; }
+      .particle .circle:nth-child(3n)::after {
+        background-color: #C58FB8;
+        box-shadow: 0 0 5px #C58FB8; }
+    .particle .circle:nth-child(4n) {
+      top: calc(50% - 12.5px);
+      left: calc(50% - 12.5px);
+      width: 25px;
+      height: 25px; }
+      .particle .circle:nth-child(4n)::after {
+        background-color: #ECB35D;
+        box-shadow: 0 0 5px #ECB35D; }
+    .particle .circle:nth-child(1) {
+      animation: up 1s ease-in 0.04s forwards; }
+      .particle .circle:nth-child(1)::after {
+        animation: move1 1s ease 0.04s forwards; }
+    .particle .circle:nth-child(2) {
+      animation: up 1s ease-in 0.08s forwards; }
+      .particle .circle:nth-child(2)::after {
+        animation: move2 1s ease 0.08s forwards; }
+    .particle .circle:nth-child(3) {
+      animation: up 1s ease-in 0.12s forwards; }
+      .particle .circle:nth-child(3)::after {
+        animation: move3 1s ease 0.12s forwards; }
+    .particle .circle:nth-child(4) {
+      animation: up 1s ease-in 0.16s forwards; }
+      .particle .circle:nth-child(4)::after {
+        animation: move4 1s ease 0.16s forwards; }
+    .particle .circle:nth-child(5) {
+      animation: up 1s ease-in 0.2s forwards; }
+      .particle .circle:nth-child(5)::after {
+        animation: move5 1s ease 0.2s forwards; }
+    .particle .circle:nth-child(6) {
+      animation: up 1s ease-in 0.24s forwards; }
+      .particle .circle:nth-child(6)::after {
+        animation: move6 1s ease 0.24s forwards; }
+    .particle .circle:nth-child(7) {
+      animation: up 1s ease-in 0.28s forwards; }
+      .particle .circle:nth-child(7)::after {
+        animation: move7 1s ease 0.28s forwards; }
+    .particle .circle:nth-child(8) {
+      animation: up 1s ease-in 0.32s forwards; }
+      .particle .circle:nth-child(8)::after {
+        animation: move8 1s ease 0.32s forwards; }
+    .particle .circle:nth-child(9) {
+      animation: up 1s ease-in 0.36s forwards; }
+      .particle .circle:nth-child(9)::after {
+        animation: move9 1s ease 0.36s forwards; }
+    .particle .circle:nth-child(10) {
+      animation: up 1s ease-in 0.4s forwards; }
+      .particle .circle:nth-child(10)::after {
+        animation: move10 1s ease 0.4s forwards; }
+    .particle .circle:nth-child(11) {
+      animation: up 1s ease-in 0.44s forwards; }
+      .particle .circle:nth-child(11)::after {
+        animation: move11 1s ease 0.44s forwards; }
+    .particle .circle:nth-child(12) {
+      animation: up 1s ease-in 0.48s forwards; }
+      .particle .circle:nth-child(12)::after {
+        animation: move12 1s ease 0.48s forwards; }
+
+@keyframes pop {
+  from {
+    transform: scale(0);
+    opacity: 1; }
+  to {
+    transform: scale(2.5);
+    opacity: 0; } }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0turn); }
+  to {
+    transform: rotate(1turn); } }
+
+@keyframes up {
+  from {
+    transform: translateY(0) scale(1); }
+  to {
+    transform: translateY(-50vh) scale(0); } }
+
+@keyframes move1 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(-300%); } }
+
+@keyframes move2 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(200%); } }
+
+@keyframes move3 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(-100%); } }
+
+@keyframes move4 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(130%); } }
+
+@keyframes move5 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(-200%); } }
+
+@keyframes move6 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(300%); } }
+
+@keyframes move7 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(-180%); } }
+
+@keyframes move8 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(250%); } }
+
+@keyframes move9 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(-300%); } }
+
+@keyframes move10 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(200%); } }
+
+@keyframes move11 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(-100%); } }
+
+@keyframes move12 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(130%); } }
+
+@keyframes move13 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(-200%); } }
+
+@keyframes move14 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(300%); } }
+
+@keyframes move15 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(-180%); } }
+
+@keyframes move16 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(250%); } }

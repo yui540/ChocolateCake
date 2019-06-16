@@ -1,0 +1,206 @@
+body {
+  margin: 0;
+  padding: 0;
+  cursor: none;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #E8E5E3;
+}
+
+.point {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+
+  &::before,
+  &::after,
+  .frame {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  &::before {
+    background-color: #a9a2b3;
+    opacity: 0;
+    animation: pop 2s ease 0s infinite;
+  }
+
+  &::after {
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    background-color: #454053;
+  }
+
+  .frame {
+    border-top: solid 1px #454053;
+    border-bottom: solid 1px #454053;
+    border-left: solid 1px transparent;
+    border-right: solid 1px transparent;
+    box-sizing: border-box;
+    animation: rotate 2s linear 0s infinite;
+  }
+}
+
+.particle {
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 50px;
+  height: 50px;
+  mix-blend-mode: screen;
+
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    &:nth-child(1n) {
+      top: calc(50% - 15px);
+      left: calc(50% - 15px);
+      width: 30px;
+      height: 30px;
+      &::after {
+        background-color: #C37074;
+        box-shadow: 0 0 5px #C37074;
+      }
+    }
+    &:nth-child(2n) {
+      top: calc(50% - 10px);
+      left: calc(50% - 10px);
+      width: 20px;
+      height: 20px;
+      &::after {
+        background-color: #CDD5AF;
+        box-shadow: 0 0 5px #CDD5AF;
+      }
+    }
+    &:nth-child(3n) {
+      top: calc(50% - 7.5px);
+      left: calc(50% - 7.5px);
+      width: 15px;
+      height: 15px;
+      &::after {
+        background-color: #C58FB8;
+        box-shadow: 0 0 5px #C58FB8;
+      }
+    }
+    &:nth-child(4n) {
+      top: calc(50% - 12.5px);
+      left: calc(50% - 12.5px);
+      width: 25px;
+      height: 25px;
+      &::after {
+        background-color: #ECB35D;
+        box-shadow: 0 0 5px #ECB35D;
+      }
+    }
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        animation: up 1s ease-in #{$i * 0.04}s forwards;
+        &::after {
+          animation: move#{$i} 1s ease #{$i * 0.04}s forwards;
+        }
+      }
+    }
+  }
+}
+
+@keyframes pop {
+  from { transform: scale(0); opacity: 1; }
+  to   { transform: scale(2.5); opacity: 0; }
+}
+@keyframes rotate {
+  from { transform: rotate(0turn); }
+  to   { transform: rotate(1turn); }
+}
+@keyframes up {
+  from { transform: translateY(0) scale(1); }
+  to   { transform: translateY(-50vh) scale(0); }
+}
+@keyframes move1 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-300%); }
+}
+@keyframes move2 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(200%); }
+}
+@keyframes move3 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-100%); }
+}
+@keyframes move4 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(130%); }
+}
+@keyframes move5 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-200%); }
+}
+@keyframes move6 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(300%); }
+}
+@keyframes move7 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-180%); }
+}
+@keyframes move8 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(250%); }
+}
+@keyframes move9 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-300%); }
+}
+@keyframes move10 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(200%); }
+}
+@keyframes move11 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-100%); }
+}
+@keyframes move12 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(130%); }
+}
+@keyframes move13 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-200%); }
+}
+@keyframes move14 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(300%); }
+}
+@keyframes move15 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-180%); }
+}
+@keyframes move16 {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(250%); }
+}
