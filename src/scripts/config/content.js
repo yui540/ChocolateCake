@@ -463,4 +463,12 @@ export default [
     "thumb": "./images/thumb/small/mix-blend.png",
     "thumb_large": "./images/thumb/large/mix-blend.png"
   },
+  {
+    "id": "circle-bubbles",
+    "title": "circle-bubbles",
+    "link": "./content/circle-bubbles/",
+    "description": "mix-blend-modeを使ったローディングアイコン",
+    "thumb": "./images/thumb/small/circle-bubbles.png",
+    "thumb_large": "./images/thumb/large/circle-bubbles.png"
+  },
 ]

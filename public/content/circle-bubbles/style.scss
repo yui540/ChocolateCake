@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+// #1e242b
+// #485E78
+
+$bubbles-colors: #EB8F8F, #CDD6AD, #A1CEC2, #BAD3E4, #CFC9EF, #D99145;
+
+@mixin setSize($size) {
+  width: $size;
+  height: $size;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: radial-gradient(
+    ellipse,
+    #485E78,
+    #2f4156
+  );
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+}
+
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1px);
+  width: 2px;
+  height: 50%;
+  transform-origin: center bottom;
+  mix-blend-mode: screen;
+
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center bottom;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@for $i from 1 through 60 {
+  .bubbles:nth-child(#{$i}) {
+    transform: rotate(#{random() * 360}deg);
+
+    div {
+      animation: rotate #{random() * 3 + 2.5}s linear 0s infinite;
+
+      &::after {
+        $index: random(6);
+        background-color: nth($bubbles-colors, $index);
+        box-shadow: 0 0 10px nth($bubbles-colors, $index);
+        @include setSize(random() * 30 + 10);
+        animation: beart #{random() * 3 + 2}s ease-in-out 0s infinite;
+      }
+    }
+  }
+}
+
+@keyframes bound {
+  0%   { transform: translateY(100%); }
+  40%  { transform: translateY(0%); }
+  50%  { transform: translateY(10%); }
+  60%  { transform: translateY(0%); }
+  70%  { transform: translateY(5%); }
+  80%  { transform: translateY(0%); }
+  90%  { transform: translateY(2.5%); }
+  100% { transform: translateY(0%); }
+}
+@keyframes rotate {
+  from { transform: rotate(0); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes beart {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(0.5); }
+  100% { transform: scale(1); }
+}
