@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$colors: #C24B5F, #469246, #ECB35D, #356F80, #66585D;
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #a9998d;
+}
+
+.ball {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 25%;
+  opacity: 0;
+  mix-blend-mode: screen;
+
+  .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@for $i from 1 through 60 {
+  $val: #{random()};
+  $color: nth($colors, random(5));
+  .ball:nth-child(#{$i}) {
+    left: #{random() * 100vw};
+    animation:
+      fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) #{$i * 0.06}s forwards,
+      fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) #{$i * 0.06}s forwards,
+      fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) #{$i * 0.06 + 0.7}s forwards,
+      fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) #{$i * 0.06 + 1.4}s forwards,
+      fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) #{$i * 0.06 + 2.1}s forwards;
+
+    .inner {
+      animation:
+        bound 0.4s ease-out #{$i * 0.06 + 0.3}s forwards,
+        bound 0.4s ease-out #{$i * 0.06 + 1}s forwards,
+        bound 0.4s ease-out #{$i * 0.06 + 1.7}s forwards,
+        bound 0.4s ease-out #{$i * 0.06 + 2.4}s forwards;
+
+      &::after {
+        width: calc(#{$val} * 50px + 20px);
+        height: calc(#{$val} * 50px + 20px);
+        background-color: $color;
+        box-shadow: 0 0 3px $color;
+      }
+    }
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fall1 {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(0%); }
+}
+@keyframes fall2 {
+  from { transform: translateY(0%); }
+  to   { transform: translateY(100%); }
+}
+@keyframes fall3 {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(200%); }
+}
+@keyframes fall4 {
+  from { transform: translateY(200%); }
+  to   { transform: translateY(300%); }
+}
+@keyframes bound {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-25%); }
+  40%  { transform: translateY(0); }
+  50%  { transform: translateY(-12.5%); }
+  60%  { transform: translateY(0); }
+  70%  { transform: translateY(-6.25%); }
+  80%  { transform: translateY(0); }
+  90%  { transform: translateY(-3%); }
+  100% { transform: translateY(0); }
+}

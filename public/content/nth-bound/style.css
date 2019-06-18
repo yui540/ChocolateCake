@@ -1,0 +1,744 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #a9998d; }
+
+.ball {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 25%;
+  opacity: 0;
+  mix-blend-mode: screen; }
+  .ball .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    .ball .inner::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transform: translateX(-50%); }
+
+.ball:nth-child(1) {
+  left: 63.49148vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.06s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.06s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.76s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.46s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.16s forwards; }
+  .ball:nth-child(1) .inner {
+    animation: bound 0.4s ease-out 0.36s forwards, bound 0.4s ease-out 1.06s forwards, bound 0.4s ease-out 1.76s forwards, bound 0.4s ease-out 2.46s forwards; }
+    .ball:nth-child(1) .inner::after {
+      width: calc(0.96718 * 50px + 20px);
+      height: calc(0.96718 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(2) {
+  left: 67.28668vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.12s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.12s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.82s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.52s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.22s forwards; }
+  .ball:nth-child(2) .inner {
+    animation: bound 0.4s ease-out 0.42s forwards, bound 0.4s ease-out 1.12s forwards, bound 0.4s ease-out 1.82s forwards, bound 0.4s ease-out 2.52s forwards; }
+    .ball:nth-child(2) .inner::after {
+      width: calc(0.47135 * 50px + 20px);
+      height: calc(0.47135 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(3) {
+  left: 91.20004vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.18s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.18s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.88s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.58s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.28s forwards; }
+  .ball:nth-child(3) .inner {
+    animation: bound 0.4s ease-out 0.48s forwards, bound 0.4s ease-out 1.18s forwards, bound 0.4s ease-out 1.88s forwards, bound 0.4s ease-out 2.58s forwards; }
+    .ball:nth-child(3) .inner::after {
+      width: calc(0.38626 * 50px + 20px);
+      height: calc(0.38626 * 50px + 20px);
+      background-color: #66585D;
+      box-shadow: 0 0 3px #66585D; }
+
+.ball:nth-child(4) {
+  left: 30.56099vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.24s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.24s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.94s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.64s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.34s forwards; }
+  .ball:nth-child(4) .inner {
+    animation: bound 0.4s ease-out 0.54s forwards, bound 0.4s ease-out 1.24s forwards, bound 0.4s ease-out 1.94s forwards, bound 0.4s ease-out 2.64s forwards; }
+    .ball:nth-child(4) .inner::after {
+      width: calc(0.41248 * 50px + 20px);
+      height: calc(0.41248 * 50px + 20px);
+      background-color: #66585D;
+      box-shadow: 0 0 3px #66585D; }
+
+.ball:nth-child(5) {
+  left: 5.36184vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.3s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.3s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.7s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.4s forwards; }
+  .ball:nth-child(5) .inner {
+    animation: bound 0.4s ease-out 0.6s forwards, bound 0.4s ease-out 1.3s forwards, bound 0.4s ease-out 2s forwards, bound 0.4s ease-out 2.7s forwards; }
+    .ball:nth-child(5) .inner::after {
+      width: calc(0.72089 * 50px + 20px);
+      height: calc(0.72089 * 50px + 20px);
+      background-color: #66585D;
+      box-shadow: 0 0 3px #66585D; }
+
+.ball:nth-child(6) {
+  left: 30.47437vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.36s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.36s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.06s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.76s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.46s forwards; }
+  .ball:nth-child(6) .inner {
+    animation: bound 0.4s ease-out 0.66s forwards, bound 0.4s ease-out 1.36s forwards, bound 0.4s ease-out 2.06s forwards, bound 0.4s ease-out 2.76s forwards; }
+    .ball:nth-child(6) .inner::after {
+      width: calc(0.83816 * 50px + 20px);
+      height: calc(0.83816 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+.ball:nth-child(7) {
+  left: 36.05318vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.42s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.42s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.12s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.82s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.52s forwards; }
+  .ball:nth-child(7) .inner {
+    animation: bound 0.4s ease-out 0.72s forwards, bound 0.4s ease-out 1.42s forwards, bound 0.4s ease-out 2.12s forwards, bound 0.4s ease-out 2.82s forwards; }
+    .ball:nth-child(7) .inner::after {
+      width: calc(0.70809 * 50px + 20px);
+      height: calc(0.70809 * 50px + 20px);
+      background-color: #356F80;
+      box-shadow: 0 0 3px #356F80; }
+
+.ball:nth-child(8) {
+  left: 24.251vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.48s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.48s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.18s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.88s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.58s forwards; }
+  .ball:nth-child(8) .inner {
+    animation: bound 0.4s ease-out 0.78s forwards, bound 0.4s ease-out 1.48s forwards, bound 0.4s ease-out 2.18s forwards, bound 0.4s ease-out 2.88s forwards; }
+    .ball:nth-child(8) .inner::after {
+      width: calc(0.16584 * 50px + 20px);
+      height: calc(0.16584 * 50px + 20px);
+      background-color: #356F80;
+      box-shadow: 0 0 3px #356F80; }
+
+.ball:nth-child(9) {
+  left: 93.91589vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.54s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.54s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.24s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.94s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.64s forwards; }
+  .ball:nth-child(9) .inner {
+    animation: bound 0.4s ease-out 0.84s forwards, bound 0.4s ease-out 1.54s forwards, bound 0.4s ease-out 2.24s forwards, bound 0.4s ease-out 2.94s forwards; }
+    .ball:nth-child(9) .inner::after {
+      width: calc(0.93416 * 50px + 20px);
+      height: calc(0.93416 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(10) {
+  left: 42.20963vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.6s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.6s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.3s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.7s forwards; }
+  .ball:nth-child(10) .inner {
+    animation: bound 0.4s ease-out 0.9s forwards, bound 0.4s ease-out 1.6s forwards, bound 0.4s ease-out 2.3s forwards, bound 0.4s ease-out 3s forwards; }
+    .ball:nth-child(10) .inner::after {
+      width: calc(0.38845 * 50px + 20px);
+      height: calc(0.38845 * 50px + 20px);
+      background-color: #356F80;
+      box-shadow: 0 0 3px #356F80; }
+
+.ball:nth-child(11) {
+  left: 96.31807vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.66s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.66s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.36s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.06s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.76s forwards; }
+  .ball:nth-child(11) .inner {
+    animation: bound 0.4s ease-out 0.96s forwards, bound 0.4s ease-out 1.66s forwards, bound 0.4s ease-out 2.36s forwards, bound 0.4s ease-out 3.06s forwards; }
+    .ball:nth-child(11) .inner::after {
+      width: calc(0.42345 * 50px + 20px);
+      height: calc(0.42345 * 50px + 20px);
+      background-color: #356F80;
+      box-shadow: 0 0 3px #356F80; }
+
+.ball:nth-child(12) {
+  left: 77.61145vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.72s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.72s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.42s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.12s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.82s forwards; }
+  .ball:nth-child(12) .inner {
+    animation: bound 0.4s ease-out 1.02s forwards, bound 0.4s ease-out 1.72s forwards, bound 0.4s ease-out 2.42s forwards, bound 0.4s ease-out 3.12s forwards; }
+    .ball:nth-child(12) .inner::after {
+      width: calc(0.12672 * 50px + 20px);
+      height: calc(0.12672 * 50px + 20px);
+      background-color: #356F80;
+      box-shadow: 0 0 3px #356F80; }
+
+.ball:nth-child(13) {
+  left: 74.20525vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.78s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.78s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.48s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.18s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.88s forwards; }
+  .ball:nth-child(13) .inner {
+    animation: bound 0.4s ease-out 1.08s forwards, bound 0.4s ease-out 1.78s forwards, bound 0.4s ease-out 2.48s forwards, bound 0.4s ease-out 3.18s forwards; }
+    .ball:nth-child(13) .inner::after {
+      width: calc(0.1085 * 50px + 20px);
+      height: calc(0.1085 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+.ball:nth-child(14) {
+  left: 46.64199vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.84s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.84s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.54s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.24s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.94s forwards; }
+  .ball:nth-child(14) .inner {
+    animation: bound 0.4s ease-out 1.14s forwards, bound 0.4s ease-out 1.84s forwards, bound 0.4s ease-out 2.54s forwards, bound 0.4s ease-out 3.24s forwards; }
+    .ball:nth-child(14) .inner::after {
+      width: calc(0.45212 * 50px + 20px);
+      height: calc(0.45212 * 50px + 20px);
+      background-color: #66585D;
+      box-shadow: 0 0 3px #66585D; }
+
+.ball:nth-child(15) {
+  left: 2.35148vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.9s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.9s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.6s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.3s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3s forwards; }
+  .ball:nth-child(15) .inner {
+    animation: bound 0.4s ease-out 1.2s forwards, bound 0.4s ease-out 1.9s forwards, bound 0.4s ease-out 2.6s forwards, bound 0.4s ease-out 3.3s forwards; }
+    .ball:nth-child(15) .inner::after {
+      width: calc(0.2503 * 50px + 20px);
+      height: calc(0.2503 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(16) {
+  left: 71.62757vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.96s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 0.96s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.66s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.36s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.06s forwards; }
+  .ball:nth-child(16) .inner {
+    animation: bound 0.4s ease-out 1.26s forwards, bound 0.4s ease-out 1.96s forwards, bound 0.4s ease-out 2.66s forwards, bound 0.4s ease-out 3.36s forwards; }
+    .ball:nth-child(16) .inner::after {
+      width: calc(0.49338 * 50px + 20px);
+      height: calc(0.49338 * 50px + 20px);
+      background-color: #66585D;
+      box-shadow: 0 0 3px #66585D; }
+
+.ball:nth-child(17) {
+  left: 53.86007vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.02s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.02s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.72s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.42s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.12s forwards; }
+  .ball:nth-child(17) .inner {
+    animation: bound 0.4s ease-out 1.32s forwards, bound 0.4s ease-out 2.02s forwards, bound 0.4s ease-out 2.72s forwards, bound 0.4s ease-out 3.42s forwards; }
+    .ball:nth-child(17) .inner::after {
+      width: calc(0.57368 * 50px + 20px);
+      height: calc(0.57368 * 50px + 20px);
+      background-color: #C24B5F;
+      box-shadow: 0 0 3px #C24B5F; }
+
+.ball:nth-child(18) {
+  left: 39.25965vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.08s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.08s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.78s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.48s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.18s forwards; }
+  .ball:nth-child(18) .inner {
+    animation: bound 0.4s ease-out 1.38s forwards, bound 0.4s ease-out 2.08s forwards, bound 0.4s ease-out 2.78s forwards, bound 0.4s ease-out 3.48s forwards; }
+    .ball:nth-child(18) .inner::after {
+      width: calc(0.16588 * 50px + 20px);
+      height: calc(0.16588 * 50px + 20px);
+      background-color: #356F80;
+      box-shadow: 0 0 3px #356F80; }
+
+.ball:nth-child(19) {
+  left: 12.30135vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.14s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.14s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.84s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.54s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.24s forwards; }
+  .ball:nth-child(19) .inner {
+    animation: bound 0.4s ease-out 1.44s forwards, bound 0.4s ease-out 2.14s forwards, bound 0.4s ease-out 2.84s forwards, bound 0.4s ease-out 3.54s forwards; }
+    .ball:nth-child(19) .inner::after {
+      width: calc(0.59284 * 50px + 20px);
+      height: calc(0.59284 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(20) {
+  left: 66.55589vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.2s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.2s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.9s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.6s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.3s forwards; }
+  .ball:nth-child(20) .inner {
+    animation: bound 0.4s ease-out 1.5s forwards, bound 0.4s ease-out 2.2s forwards, bound 0.4s ease-out 2.9s forwards, bound 0.4s ease-out 3.6s forwards; }
+    .ball:nth-child(20) .inner::after {
+      width: calc(0.69248 * 50px + 20px);
+      height: calc(0.69248 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(21) {
+  left: 20.83141vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.26s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.26s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.96s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.66s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.36s forwards; }
+  .ball:nth-child(21) .inner {
+    animation: bound 0.4s ease-out 1.56s forwards, bound 0.4s ease-out 2.26s forwards, bound 0.4s ease-out 2.96s forwards, bound 0.4s ease-out 3.66s forwards; }
+    .ball:nth-child(21) .inner::after {
+      width: calc(0.43856 * 50px + 20px);
+      height: calc(0.43856 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+.ball:nth-child(22) {
+  left: 12.38112vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.32s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.32s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.02s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.72s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.42s forwards; }
+  .ball:nth-child(22) .inner {
+    animation: bound 0.4s ease-out 1.62s forwards, bound 0.4s ease-out 2.32s forwards, bound 0.4s ease-out 3.02s forwards, bound 0.4s ease-out 3.72s forwards; }
+    .ball:nth-child(22) .inner::after {
+      width: calc(0.99619 * 50px + 20px);
+      height: calc(0.99619 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+.ball:nth-child(23) {
+  left: 37.71295vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.38s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.38s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.08s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.78s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.48s forwards; }
+  .ball:nth-child(23) .inner {
+    animation: bound 0.4s ease-out 1.68s forwards, bound 0.4s ease-out 2.38s forwards, bound 0.4s ease-out 3.08s forwards, bound 0.4s ease-out 3.78s forwards; }
+    .ball:nth-child(23) .inner::after {
+      width: calc(0.42664 * 50px + 20px);
+      height: calc(0.42664 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(24) {
+  left: 93.17683vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.44s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.44s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.14s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.84s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.54s forwards; }
+  .ball:nth-child(24) .inner {
+    animation: bound 0.4s ease-out 1.74s forwards, bound 0.4s ease-out 2.44s forwards, bound 0.4s ease-out 3.14s forwards, bound 0.4s ease-out 3.84s forwards; }
+    .ball:nth-child(24) .inner::after {
+      width: calc(0.66966 * 50px + 20px);
+      height: calc(0.66966 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(25) {
+  left: 10.35588vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.5s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.5s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.2s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.9s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.6s forwards; }
+  .ball:nth-child(25) .inner {
+    animation: bound 0.4s ease-out 1.8s forwards, bound 0.4s ease-out 2.5s forwards, bound 0.4s ease-out 3.2s forwards, bound 0.4s ease-out 3.9s forwards; }
+    .ball:nth-child(25) .inner::after {
+      width: calc(0.92954 * 50px + 20px);
+      height: calc(0.92954 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(26) {
+  left: 8.80675vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.56s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.56s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.26s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.96s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.66s forwards; }
+  .ball:nth-child(26) .inner {
+    animation: bound 0.4s ease-out 1.86s forwards, bound 0.4s ease-out 2.56s forwards, bound 0.4s ease-out 3.26s forwards, bound 0.4s ease-out 3.96s forwards; }
+    .ball:nth-child(26) .inner::after {
+      width: calc(0.49317 * 50px + 20px);
+      height: calc(0.49317 * 50px + 20px);
+      background-color: #C24B5F;
+      box-shadow: 0 0 3px #C24B5F; }
+
+.ball:nth-child(27) {
+  left: 27.51616vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.62s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.62s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.32s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.02s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.72s forwards; }
+  .ball:nth-child(27) .inner {
+    animation: bound 0.4s ease-out 1.92s forwards, bound 0.4s ease-out 2.62s forwards, bound 0.4s ease-out 3.32s forwards, bound 0.4s ease-out 4.02s forwards; }
+    .ball:nth-child(27) .inner::after {
+      width: calc(0.26913 * 50px + 20px);
+      height: calc(0.26913 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+.ball:nth-child(28) {
+  left: 70.71431vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.68s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.68s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.38s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.08s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.78s forwards; }
+  .ball:nth-child(28) .inner {
+    animation: bound 0.4s ease-out 1.98s forwards, bound 0.4s ease-out 2.68s forwards, bound 0.4s ease-out 3.38s forwards, bound 0.4s ease-out 4.08s forwards; }
+    .ball:nth-child(28) .inner::after {
+      width: calc(0.78977 * 50px + 20px);
+      height: calc(0.78977 * 50px + 20px);
+      background-color: #66585D;
+      box-shadow: 0 0 3px #66585D; }
+
+.ball:nth-child(29) {
+  left: 33.10717vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.74s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.74s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.44s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.14s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.84s forwards; }
+  .ball:nth-child(29) .inner {
+    animation: bound 0.4s ease-out 2.04s forwards, bound 0.4s ease-out 2.74s forwards, bound 0.4s ease-out 3.44s forwards, bound 0.4s ease-out 4.14s forwards; }
+    .ball:nth-child(29) .inner::after {
+      width: calc(0.54044 * 50px + 20px);
+      height: calc(0.54044 * 50px + 20px);
+      background-color: #C24B5F;
+      box-shadow: 0 0 3px #C24B5F; }
+
+.ball:nth-child(30) {
+  left: 4.1835vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.8s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.8s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.5s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.2s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.9s forwards; }
+  .ball:nth-child(30) .inner {
+    animation: bound 0.4s ease-out 2.1s forwards, bound 0.4s ease-out 2.8s forwards, bound 0.4s ease-out 3.5s forwards, bound 0.4s ease-out 4.2s forwards; }
+    .ball:nth-child(30) .inner::after {
+      width: calc(0.22844 * 50px + 20px);
+      height: calc(0.22844 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(31) {
+  left: 92.04996vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.86s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.86s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.56s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.26s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.96s forwards; }
+  .ball:nth-child(31) .inner {
+    animation: bound 0.4s ease-out 2.16s forwards, bound 0.4s ease-out 2.86s forwards, bound 0.4s ease-out 3.56s forwards, bound 0.4s ease-out 4.26s forwards; }
+    .ball:nth-child(31) .inner::after {
+      width: calc(0.98907 * 50px + 20px);
+      height: calc(0.98907 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+.ball:nth-child(32) {
+  left: 58.32698vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.92s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.92s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.62s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.32s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.02s forwards; }
+  .ball:nth-child(32) .inner {
+    animation: bound 0.4s ease-out 2.22s forwards, bound 0.4s ease-out 2.92s forwards, bound 0.4s ease-out 3.62s forwards, bound 0.4s ease-out 4.32s forwards; }
+    .ball:nth-child(32) .inner::after {
+      width: calc(0.43041 * 50px + 20px);
+      height: calc(0.43041 * 50px + 20px);
+      background-color: #C24B5F;
+      box-shadow: 0 0 3px #C24B5F; }
+
+.ball:nth-child(33) {
+  left: 6.8511vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.98s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 1.98s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.68s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.38s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.08s forwards; }
+  .ball:nth-child(33) .inner {
+    animation: bound 0.4s ease-out 2.28s forwards, bound 0.4s ease-out 2.98s forwards, bound 0.4s ease-out 3.68s forwards, bound 0.4s ease-out 4.38s forwards; }
+    .ball:nth-child(33) .inner::after {
+      width: calc(0.89228 * 50px + 20px);
+      height: calc(0.89228 * 50px + 20px);
+      background-color: #356F80;
+      box-shadow: 0 0 3px #356F80; }
+
+.ball:nth-child(34) {
+  left: 4.54805vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.04s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.04s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.74s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.44s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.14s forwards; }
+  .ball:nth-child(34) .inner {
+    animation: bound 0.4s ease-out 2.34s forwards, bound 0.4s ease-out 3.04s forwards, bound 0.4s ease-out 3.74s forwards, bound 0.4s ease-out 4.44s forwards; }
+    .ball:nth-child(34) .inner::after {
+      width: calc(0.63718 * 50px + 20px);
+      height: calc(0.63718 * 50px + 20px);
+      background-color: #356F80;
+      box-shadow: 0 0 3px #356F80; }
+
+.ball:nth-child(35) {
+  left: 10.11913vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.1s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.1s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.8s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.5s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.2s forwards; }
+  .ball:nth-child(35) .inner {
+    animation: bound 0.4s ease-out 2.4s forwards, bound 0.4s ease-out 3.1s forwards, bound 0.4s ease-out 3.8s forwards, bound 0.4s ease-out 4.5s forwards; }
+    .ball:nth-child(35) .inner::after {
+      width: calc(0.87919 * 50px + 20px);
+      height: calc(0.87919 * 50px + 20px);
+      background-color: #356F80;
+      box-shadow: 0 0 3px #356F80; }
+
+.ball:nth-child(36) {
+  left: 67.08277vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.16s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.16s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.86s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.56s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.26s forwards; }
+  .ball:nth-child(36) .inner {
+    animation: bound 0.4s ease-out 2.46s forwards, bound 0.4s ease-out 3.16s forwards, bound 0.4s ease-out 3.86s forwards, bound 0.4s ease-out 4.56s forwards; }
+    .ball:nth-child(36) .inner::after {
+      width: calc(0.34345 * 50px + 20px);
+      height: calc(0.34345 * 50px + 20px);
+      background-color: #C24B5F;
+      box-shadow: 0 0 3px #C24B5F; }
+
+.ball:nth-child(37) {
+  left: 60.27105vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.22s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.22s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.92s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.62s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.32s forwards; }
+  .ball:nth-child(37) .inner {
+    animation: bound 0.4s ease-out 2.52s forwards, bound 0.4s ease-out 3.22s forwards, bound 0.4s ease-out 3.92s forwards, bound 0.4s ease-out 4.62s forwards; }
+    .ball:nth-child(37) .inner::after {
+      width: calc(0.28386 * 50px + 20px);
+      height: calc(0.28386 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(38) {
+  left: 2.84127vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.28s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.28s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.98s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.68s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.38s forwards; }
+  .ball:nth-child(38) .inner {
+    animation: bound 0.4s ease-out 2.58s forwards, bound 0.4s ease-out 3.28s forwards, bound 0.4s ease-out 3.98s forwards, bound 0.4s ease-out 4.68s forwards; }
+    .ball:nth-child(38) .inner::after {
+      width: calc(0.26741 * 50px + 20px);
+      height: calc(0.26741 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(39) {
+  left: 13.63397vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.34s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.34s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.04s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.74s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.44s forwards; }
+  .ball:nth-child(39) .inner {
+    animation: bound 0.4s ease-out 2.64s forwards, bound 0.4s ease-out 3.34s forwards, bound 0.4s ease-out 4.04s forwards, bound 0.4s ease-out 4.74s forwards; }
+    .ball:nth-child(39) .inner::after {
+      width: calc(0.77508 * 50px + 20px);
+      height: calc(0.77508 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+.ball:nth-child(40) {
+  left: 40.53093vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.4s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.4s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.1s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.8s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.5s forwards; }
+  .ball:nth-child(40) .inner {
+    animation: bound 0.4s ease-out 2.7s forwards, bound 0.4s ease-out 3.4s forwards, bound 0.4s ease-out 4.1s forwards, bound 0.4s ease-out 4.8s forwards; }
+    .ball:nth-child(40) .inner::after {
+      width: calc(0.27147 * 50px + 20px);
+      height: calc(0.27147 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+.ball:nth-child(41) {
+  left: 91.80473vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.46s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.46s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.16s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.86s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.56s forwards; }
+  .ball:nth-child(41) .inner {
+    animation: bound 0.4s ease-out 2.76s forwards, bound 0.4s ease-out 3.46s forwards, bound 0.4s ease-out 4.16s forwards, bound 0.4s ease-out 4.86s forwards; }
+    .ball:nth-child(41) .inner::after {
+      width: calc(0.65922 * 50px + 20px);
+      height: calc(0.65922 * 50px + 20px);
+      background-color: #C24B5F;
+      box-shadow: 0 0 3px #C24B5F; }
+
+.ball:nth-child(42) {
+  left: 95.63549vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.52s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.52s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.22s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.92s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.62s forwards; }
+  .ball:nth-child(42) .inner {
+    animation: bound 0.4s ease-out 2.82s forwards, bound 0.4s ease-out 3.52s forwards, bound 0.4s ease-out 4.22s forwards, bound 0.4s ease-out 4.92s forwards; }
+    .ball:nth-child(42) .inner::after {
+      width: calc(0.16485 * 50px + 20px);
+      height: calc(0.16485 * 50px + 20px);
+      background-color: #356F80;
+      box-shadow: 0 0 3px #356F80; }
+
+.ball:nth-child(43) {
+  left: 4.16896vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.58s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.58s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.28s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.98s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.68s forwards; }
+  .ball:nth-child(43) .inner {
+    animation: bound 0.4s ease-out 2.88s forwards, bound 0.4s ease-out 3.58s forwards, bound 0.4s ease-out 4.28s forwards, bound 0.4s ease-out 4.98s forwards; }
+    .ball:nth-child(43) .inner::after {
+      width: calc(0.62729 * 50px + 20px);
+      height: calc(0.62729 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+.ball:nth-child(44) {
+  left: 51.75599vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.64s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.64s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.34s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.04s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.74s forwards; }
+  .ball:nth-child(44) .inner {
+    animation: bound 0.4s ease-out 2.94s forwards, bound 0.4s ease-out 3.64s forwards, bound 0.4s ease-out 4.34s forwards, bound 0.4s ease-out 5.04s forwards; }
+    .ball:nth-child(44) .inner::after {
+      width: calc(0.21165 * 50px + 20px);
+      height: calc(0.21165 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(45) {
+  left: 93.3327vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.7s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.7s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.4s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.1s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.8s forwards; }
+  .ball:nth-child(45) .inner {
+    animation: bound 0.4s ease-out 3s forwards, bound 0.4s ease-out 3.7s forwards, bound 0.4s ease-out 4.4s forwards, bound 0.4s ease-out 5.1s forwards; }
+    .ball:nth-child(45) .inner::after {
+      width: calc(0.03212 * 50px + 20px);
+      height: calc(0.03212 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+.ball:nth-child(46) {
+  left: 14.0272vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.76s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.76s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.46s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.16s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.86s forwards; }
+  .ball:nth-child(46) .inner {
+    animation: bound 0.4s ease-out 3.06s forwards, bound 0.4s ease-out 3.76s forwards, bound 0.4s ease-out 4.46s forwards, bound 0.4s ease-out 5.16s forwards; }
+    .ball:nth-child(46) .inner::after {
+      width: calc(0.87081 * 50px + 20px);
+      height: calc(0.87081 * 50px + 20px);
+      background-color: #356F80;
+      box-shadow: 0 0 3px #356F80; }
+
+.ball:nth-child(47) {
+  left: 46.69612vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.82s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.82s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.52s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.22s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.92s forwards; }
+  .ball:nth-child(47) .inner {
+    animation: bound 0.4s ease-out 3.12s forwards, bound 0.4s ease-out 3.82s forwards, bound 0.4s ease-out 4.52s forwards, bound 0.4s ease-out 5.22s forwards; }
+    .ball:nth-child(47) .inner::after {
+      width: calc(0.46 * 50px + 20px);
+      height: calc(0.46 * 50px + 20px);
+      background-color: #C24B5F;
+      box-shadow: 0 0 3px #C24B5F; }
+
+.ball:nth-child(48) {
+  left: 88.16385vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.88s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.88s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.58s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.28s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.98s forwards; }
+  .ball:nth-child(48) .inner {
+    animation: bound 0.4s ease-out 3.18s forwards, bound 0.4s ease-out 3.88s forwards, bound 0.4s ease-out 4.58s forwards, bound 0.4s ease-out 5.28s forwards; }
+    .ball:nth-child(48) .inner::after {
+      width: calc(0.05393 * 50px + 20px);
+      height: calc(0.05393 * 50px + 20px);
+      background-color: #C24B5F;
+      box-shadow: 0 0 3px #C24B5F; }
+
+.ball:nth-child(49) {
+  left: 71.83591vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.94s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 2.94s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.64s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.34s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 5.04s forwards; }
+  .ball:nth-child(49) .inner {
+    animation: bound 0.4s ease-out 3.24s forwards, bound 0.4s ease-out 3.94s forwards, bound 0.4s ease-out 4.64s forwards, bound 0.4s ease-out 5.34s forwards; }
+    .ball:nth-child(49) .inner::after {
+      width: calc(0.12047 * 50px + 20px);
+      height: calc(0.12047 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+.ball:nth-child(50) {
+  left: 46.42456vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.7s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.4s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 5.1s forwards; }
+  .ball:nth-child(50) .inner {
+    animation: bound 0.4s ease-out 3.3s forwards, bound 0.4s ease-out 4s forwards, bound 0.4s ease-out 4.7s forwards, bound 0.4s ease-out 5.4s forwards; }
+    .ball:nth-child(50) .inner::after {
+      width: calc(0.19184 * 50px + 20px);
+      height: calc(0.19184 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+.ball:nth-child(51) {
+  left: 9.10983vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.06s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.06s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.76s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.46s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 5.16s forwards; }
+  .ball:nth-child(51) .inner {
+    animation: bound 0.4s ease-out 3.36s forwards, bound 0.4s ease-out 4.06s forwards, bound 0.4s ease-out 4.76s forwards, bound 0.4s ease-out 5.46s forwards; }
+    .ball:nth-child(51) .inner::after {
+      width: calc(0.82749 * 50px + 20px);
+      height: calc(0.82749 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(52) {
+  left: 81.37441vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.12s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.12s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.82s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.52s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 5.22s forwards; }
+  .ball:nth-child(52) .inner {
+    animation: bound 0.4s ease-out 3.42s forwards, bound 0.4s ease-out 4.12s forwards, bound 0.4s ease-out 4.82s forwards, bound 0.4s ease-out 5.52s forwards; }
+    .ball:nth-child(52) .inner::after {
+      width: calc(0.16385 * 50px + 20px);
+      height: calc(0.16385 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+.ball:nth-child(53) {
+  left: 33.37679vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.18s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.18s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.88s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.58s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 5.28s forwards; }
+  .ball:nth-child(53) .inner {
+    animation: bound 0.4s ease-out 3.48s forwards, bound 0.4s ease-out 4.18s forwards, bound 0.4s ease-out 4.88s forwards, bound 0.4s ease-out 5.58s forwards; }
+    .ball:nth-child(53) .inner::after {
+      width: calc(0.40626 * 50px + 20px);
+      height: calc(0.40626 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+.ball:nth-child(54) {
+  left: 67.7004vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.24s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.24s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.94s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.64s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 5.34s forwards; }
+  .ball:nth-child(54) .inner {
+    animation: bound 0.4s ease-out 3.54s forwards, bound 0.4s ease-out 4.24s forwards, bound 0.4s ease-out 4.94s forwards, bound 0.4s ease-out 5.64s forwards; }
+    .ball:nth-child(54) .inner::after {
+      width: calc(0.83069 * 50px + 20px);
+      height: calc(0.83069 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(55) {
+  left: 68.90771vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.3s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.3s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.7s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 5.4s forwards; }
+  .ball:nth-child(55) .inner {
+    animation: bound 0.4s ease-out 3.6s forwards, bound 0.4s ease-out 4.3s forwards, bound 0.4s ease-out 5s forwards, bound 0.4s ease-out 5.7s forwards; }
+    .ball:nth-child(55) .inner::after {
+      width: calc(0.53039 * 50px + 20px);
+      height: calc(0.53039 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(56) {
+  left: 94.73773vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.36s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.36s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.06s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.76s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 5.46s forwards; }
+  .ball:nth-child(56) .inner {
+    animation: bound 0.4s ease-out 3.66s forwards, bound 0.4s ease-out 4.36s forwards, bound 0.4s ease-out 5.06s forwards, bound 0.4s ease-out 5.76s forwards; }
+    .ball:nth-child(56) .inner::after {
+      width: calc(0.99715 * 50px + 20px);
+      height: calc(0.99715 * 50px + 20px);
+      background-color: #356F80;
+      box-shadow: 0 0 3px #356F80; }
+
+.ball:nth-child(57) {
+  left: 33.95623vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.42s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.42s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.12s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.82s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 5.52s forwards; }
+  .ball:nth-child(57) .inner {
+    animation: bound 0.4s ease-out 3.72s forwards, bound 0.4s ease-out 4.42s forwards, bound 0.4s ease-out 5.12s forwards, bound 0.4s ease-out 5.82s forwards; }
+    .ball:nth-child(57) .inner::after {
+      width: calc(0.42363 * 50px + 20px);
+      height: calc(0.42363 * 50px + 20px);
+      background-color: #66585D;
+      box-shadow: 0 0 3px #66585D; }
+
+.ball:nth-child(58) {
+  left: 16.78415vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.48s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.48s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.18s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.88s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 5.58s forwards; }
+  .ball:nth-child(58) .inner {
+    animation: bound 0.4s ease-out 3.78s forwards, bound 0.4s ease-out 4.48s forwards, bound 0.4s ease-out 5.18s forwards, bound 0.4s ease-out 5.88s forwards; }
+    .ball:nth-child(58) .inner::after {
+      width: calc(0.02101 * 50px + 20px);
+      height: calc(0.02101 * 50px + 20px);
+      background-color: #469246;
+      box-shadow: 0 0 3px #469246; }
+
+.ball:nth-child(59) {
+  left: 23.37594vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.54s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.54s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.24s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.94s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 5.64s forwards; }
+  .ball:nth-child(59) .inner {
+    animation: bound 0.4s ease-out 3.84s forwards, bound 0.4s ease-out 4.54s forwards, bound 0.4s ease-out 5.24s forwards, bound 0.4s ease-out 5.94s forwards; }
+    .ball:nth-child(59) .inner::after {
+      width: calc(0.26452 * 50px + 20px);
+      height: calc(0.26452 * 50px + 20px);
+      background-color: #C24B5F;
+      box-shadow: 0 0 3px #C24B5F; }
+
+.ball:nth-child(60) {
+  left: 83.51987vw;
+  animation: fadein 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.6s forwards, fall1 0.3s cubic-bezier(1, 0.01, 1, 0.99) 3.6s forwards, fall2 0.3s cubic-bezier(1, 0.01, 1, 0.99) 4.3s forwards, fall3 0.3s cubic-bezier(1, 0.01, 1, 0.99) 5s forwards, fall4 0.3s cubic-bezier(1, 0.01, 1, 0.99) 5.7s forwards; }
+  .ball:nth-child(60) .inner {
+    animation: bound 0.4s ease-out 3.9s forwards, bound 0.4s ease-out 4.6s forwards, bound 0.4s ease-out 5.3s forwards, bound 0.4s ease-out 6s forwards; }
+    .ball:nth-child(60) .inner::after {
+      width: calc(0.29851 * 50px + 20px);
+      height: calc(0.29851 * 50px + 20px);
+      background-color: #ECB35D;
+      box-shadow: 0 0 3px #ECB35D; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fall1 {
+  from {
+    transform: translateY(-100%); }
+  to {
+    transform: translateY(0%); } }
+
+@keyframes fall2 {
+  from {
+    transform: translateY(0%); }
+  to {
+    transform: translateY(100%); } }
+
+@keyframes fall3 {
+  from {
+    transform: translateY(100%); }
+  to {
+    transform: translateY(200%); } }
+
+@keyframes fall4 {
+  from {
+    transform: translateY(200%); }
+  to {
+    transform: translateY(300%); } }
+
+@keyframes bound {
+  0% {
+    transform: translateY(0); }
+  30% {
+    transform: translateY(-25%); }
+  40% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-12.5%); }
+  60% {
+    transform: translateY(0); }
+  70% {
+    transform: translateY(-6.25%); }
+  80% {
+    transform: translateY(0); }
+  90% {
+    transform: translateY(-3%); }
+  100% {
+    transform: translateY(0); } }
