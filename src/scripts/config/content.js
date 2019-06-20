@@ -479,4 +479,12 @@ export default [
     "thumb": "./images/thumb/small/nth-bound.png",
     "thumb_large": "./images/thumb/large/nth-bound.png"
   },
+  {
+    "id": "box-flow",
+    "title": "box-flow",
+    "link": "./content/box-flow/",
+    "description": "立体的な箱が流れる。",
+    "thumb": "./images/thumb/small/box-flow.png",
+    "thumb_large": "./images/thumb/large/box-flow.png"
+  },
 ]

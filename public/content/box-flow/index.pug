@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title box
+    link(rel="stylesheet" href="./style.css")
+  body
+    .stage
+      - for (let i=0; i < 60; i++)
+        .box
+          .inner
+            .plane.front
+            .plane.back
+            .plane.top
+            .plane.bottom
+            .plane.left
+            .plane.right

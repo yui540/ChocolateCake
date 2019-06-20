@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$colors: #B76268, #B6BE69, #8A728D, #82D5EA, #AC3664, #B27B5C;
+$size: 30px;
+
+@mixin setRect($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin setSize($size) {
+  width: $size;
+  height: $size;
+}
+
+%fixed100per {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include setSize(100%);
+}
+
+.stage {
+  position: relative;
+  @include setRect(100%, 100vh);
+  oveflow: hidden;
+  background-color: #E9E5E3;
+}
+
+.box {
+  position: absolute;
+  bottom: 0;
+  transform: translateZ(-200px);
+  perspective: 500px;
+  @include setSize($size);
+  opacity: 0;
+
+  .inner {
+    @extend %fixed100per;
+    transform-style: preserve-3d;
+
+    .plane {
+      @extend %fixed100per;
+      background-color: nth($colors, 6);
+      box-shadow: 0 0 30px rgba(0,0,0,0.6) inset;
+    }
+    .front {
+      transform: translateZ(($size / 2));
+    }
+    .back {
+      transform: translateZ(-($size / 2));
+    }
+    .top {
+      transform: translateY(-50%) rotateX(90deg);
+    }
+    .bottom {
+      transform: translateY(50%) rotateX(90deg);
+    }
+    .left {
+      transform: translateX(-50%) rotateY(90deg);
+    }
+    .right {
+      transform: translateX(50%) rotateY(90deg);
+    }
+  }
+}
+
+@for $i from 1 through 60 {
+  $random: #{random() * 4};
+  .box:nth-child(#{$i}) {
+    left: #{random() * 100%};
+    animation:
+      fadein 4s ease-out #{$random}s infinite,
+      bound 4s ease-out #{$random}s infinite;
+  
+    .inner {
+      animation: rotate 2s linear #{$random}s infinite;
+
+      .plane {
+        background-color: nth($colors, random(6));
+      }
+    }
+  }
+}
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes rotate {
+  0%   { transform: scale(0.4) rotateX(0deg) rotateY(0deg); }
+  50%  { transform: scale(2) rotateX(-180deg) rotateY(180deg); }
+  100% { transform: scale(0.4) rotateX(-360deg) rotateY(360deg); }
+}
+@keyframes bound {
+  0%   { transform: translate(0%, 0vh) translateZ(-($size / 2)); }
+  100% { transform: translate(0%, -120vh) translateZ(-($size / 2)); }
+}
+
