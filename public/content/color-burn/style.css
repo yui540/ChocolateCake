@@ -1,0 +1,1126 @@
+.ball-wrapper .ball::after {
+  content: "";
+  display: block; }
+
+.wrapper, .ball-wrapper .ball::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #E9E5E3;
+  overflow: hidden; }
+
+.ball-wrapper .ball {
+  position: absolute;
+  opacity: 0;
+  mix-blend-mode: color-burn; }
+  .ball-wrapper .ball::after {
+    transform: rotate(45deg); }
+  .ball-wrapper .ball:nth-child(even)::after {
+    border-radius: 50%; }
+
+.ball-wrapper .ball:nth-child(1) {
+  top: calc(50% - 45.91987px);
+  left: calc(84.24736% - 45.91987px);
+  width: 91.83975px;
+  height: 91.83975px; }
+  .ball-wrapper .ball:nth-child(1)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(2) {
+  top: calc(50% - 37.52873px);
+  left: calc(24.69656% - 37.52873px);
+  width: 75.05745px;
+  height: 75.05745px; }
+  .ball-wrapper .ball:nth-child(2)::after {
+    background-color: #8FB2D6;
+    box-shadow: 0 0 10px #8FB2D6; }
+
+.ball-wrapper .ball:nth-child(3) {
+  top: calc(50% - 61.2753px);
+  left: calc(94.77186% - 61.2753px);
+  width: 122.5506px;
+  height: 122.5506px; }
+  .ball-wrapper .ball:nth-child(3)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(4) {
+  top: calc(50% - 54.63511px);
+  left: calc(47.42809% - 54.63511px);
+  width: 109.27022px;
+  height: 109.27022px; }
+  .ball-wrapper .ball:nth-child(4)::after {
+    background-color: #8FB2D6;
+    box-shadow: 0 0 10px #8FB2D6; }
+
+.ball-wrapper .ball:nth-child(5) {
+  top: calc(50% - 64.08346px);
+  left: calc(39.42493% - 64.08346px);
+  width: 128.16691px;
+  height: 128.16691px; }
+  .ball-wrapper .ball:nth-child(5)::after {
+    background-color: #8FB2D6;
+    box-shadow: 0 0 10px #8FB2D6; }
+
+.ball-wrapper .ball:nth-child(6) {
+  top: calc(50% - 58.92868px);
+  left: calc(32.92817% - 58.92868px);
+  width: 117.85737px;
+  height: 117.85737px; }
+  .ball-wrapper .ball:nth-child(6)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(7) {
+  top: calc(50% - 66.06192px);
+  left: calc(14.70989% - 66.06192px);
+  width: 132.12384px;
+  height: 132.12384px; }
+  .ball-wrapper .ball:nth-child(7)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(8) {
+  top: calc(50% - 61.92083px);
+  left: calc(76.35999% - 61.92083px);
+  width: 123.84167px;
+  height: 123.84167px; }
+  .ball-wrapper .ball:nth-child(8)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(9) {
+  top: calc(50% - 58.95945px);
+  left: calc(22.38959% - 58.95945px);
+  width: 117.91889px;
+  height: 117.91889px; }
+  .ball-wrapper .ball:nth-child(9)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(10) {
+  top: calc(50% - 64.67008px);
+  left: calc(22.34907% - 64.67008px);
+  width: 129.34015px;
+  height: 129.34015px; }
+  .ball-wrapper .ball:nth-child(10)::after {
+    background-color: #BBB783;
+    box-shadow: 0 0 10px #BBB783; }
+
+.ball-wrapper .ball:nth-child(11) {
+  top: calc(50% - 55.67109px);
+  left: calc(46.20907% - 55.67109px);
+  width: 111.34218px;
+  height: 111.34218px; }
+  .ball-wrapper .ball:nth-child(11)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(12) {
+  top: calc(50% - 53.23589px);
+  left: calc(54.44802% - 53.23589px);
+  width: 106.47178px;
+  height: 106.47178px; }
+  .ball-wrapper .ball:nth-child(12)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(13) {
+  top: calc(50% - 53.37561px);
+  left: calc(92.90813% - 53.37561px);
+  width: 106.75122px;
+  height: 106.75122px; }
+  .ball-wrapper .ball:nth-child(13)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(14) {
+  top: calc(50% - 67.14263px);
+  left: calc(78.81457% - 67.14263px);
+  width: 134.28525px;
+  height: 134.28525px; }
+  .ball-wrapper .ball:nth-child(14)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(15) {
+  top: calc(50% - 47.99257px);
+  left: calc(90.21258% - 47.99257px);
+  width: 95.98514px;
+  height: 95.98514px; }
+  .ball-wrapper .ball:nth-child(15)::after {
+    background-color: #BBB783;
+    box-shadow: 0 0 10px #BBB783; }
+
+.ball-wrapper .ball:nth-child(16) {
+  top: calc(50% - 55.33575px);
+  left: calc(48.73107% - 55.33575px);
+  width: 110.67151px;
+  height: 110.67151px; }
+  .ball-wrapper .ball:nth-child(16)::after {
+    background-color: #BBB783;
+    box-shadow: 0 0 10px #BBB783; }
+
+.ball-wrapper .ball:nth-child(17) {
+  top: calc(50% - 58.98429px);
+  left: calc(39.85671% - 58.98429px);
+  width: 117.96858px;
+  height: 117.96858px; }
+  .ball-wrapper .ball:nth-child(17)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(18) {
+  top: calc(50% - 68.25609px);
+  left: calc(95.97034% - 68.25609px);
+  width: 136.51219px;
+  height: 136.51219px; }
+  .ball-wrapper .ball:nth-child(18)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(19) {
+  top: calc(50% - 65.17281px);
+  left: calc(1.06899% - 65.17281px);
+  width: 130.34563px;
+  height: 130.34563px; }
+  .ball-wrapper .ball:nth-child(19)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(20) {
+  top: calc(50% - 46.52816px);
+  left: calc(79.86762% - 46.52816px);
+  width: 93.05633px;
+  height: 93.05633px; }
+  .ball-wrapper .ball:nth-child(20)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(21) {
+  top: calc(50% - 49.47824px);
+  left: calc(78.772% - 49.47824px);
+  width: 98.95648px;
+  height: 98.95648px; }
+  .ball-wrapper .ball:nth-child(21)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(22) {
+  top: calc(50% - 68.40432px);
+  left: calc(67.99071% - 68.40432px);
+  width: 136.80863px;
+  height: 136.80863px; }
+  .ball-wrapper .ball:nth-child(22)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(23) {
+  top: calc(50% - 51.85763px);
+  left: calc(68.94999% - 51.85763px);
+  width: 103.71526px;
+  height: 103.71526px; }
+  .ball-wrapper .ball:nth-child(23)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(24) {
+  top: calc(50% - 57.12135px);
+  left: calc(32.17333% - 57.12135px);
+  width: 114.2427px;
+  height: 114.2427px; }
+  .ball-wrapper .ball:nth-child(24)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(25) {
+  top: calc(50% - 43.69507px);
+  left: calc(53.9215% - 43.69507px);
+  width: 87.39013px;
+  height: 87.39013px; }
+  .ball-wrapper .ball:nth-child(25)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(26) {
+  top: calc(50% - 35.50471px);
+  left: calc(27.01086% - 35.50471px);
+  width: 71.00943px;
+  height: 71.00943px; }
+  .ball-wrapper .ball:nth-child(26)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(27) {
+  top: calc(50% - 63.79529px);
+  left: calc(96.27512% - 63.79529px);
+  width: 127.59059px;
+  height: 127.59059px; }
+  .ball-wrapper .ball:nth-child(27)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(28) {
+  top: calc(50% - 39.85778px);
+  left: calc(77.9693% - 39.85778px);
+  width: 79.71557px;
+  height: 79.71557px; }
+  .ball-wrapper .ball:nth-child(28)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(29) {
+  top: calc(50% - 61.56317px);
+  left: calc(29.45432% - 61.56317px);
+  width: 123.12635px;
+  height: 123.12635px; }
+  .ball-wrapper .ball:nth-child(29)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(30) {
+  top: calc(50% - 63.89025px);
+  left: calc(10.76561% - 63.89025px);
+  width: 127.78049px;
+  height: 127.78049px; }
+  .ball-wrapper .ball:nth-child(30)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(31) {
+  top: calc(50% - 68.98907px);
+  left: calc(31.41246% - 68.98907px);
+  width: 137.97814px;
+  height: 137.97814px; }
+  .ball-wrapper .ball:nth-child(31)::after {
+    background-color: #BBB783;
+    box-shadow: 0 0 10px #BBB783; }
+
+.ball-wrapper .ball:nth-child(32) {
+  top: calc(50% - 67.52812px);
+  left: calc(62.89404% - 67.52812px);
+  width: 135.05624px;
+  height: 135.05624px; }
+  .ball-wrapper .ball:nth-child(32)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(33) {
+  top: calc(50% - 62.47769px);
+  left: calc(74.49655% - 62.47769px);
+  width: 124.95538px;
+  height: 124.95538px; }
+  .ball-wrapper .ball:nth-child(33)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(34) {
+  top: calc(50% - 56.14745px);
+  left: calc(34.17897% - 56.14745px);
+  width: 112.29491px;
+  height: 112.29491px; }
+  .ball-wrapper .ball:nth-child(34)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(35) {
+  top: calc(50% - 50.33757px);
+  left: calc(33.28519% - 50.33757px);
+  width: 100.67515px;
+  height: 100.67515px; }
+  .ball-wrapper .ball:nth-child(35)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(36) {
+  top: calc(50% - 42.17619px);
+  left: calc(68.37663% - 42.17619px);
+  width: 84.35239px;
+  height: 84.35239px; }
+  .ball-wrapper .ball:nth-child(36)::after {
+    background-color: #8FB2D6;
+    box-shadow: 0 0 10px #8FB2D6; }
+
+.ball-wrapper .ball:nth-child(37) {
+  top: calc(50% - 38.31448px);
+  left: calc(26.40346% - 38.31448px);
+  width: 76.62897px;
+  height: 76.62897px; }
+  .ball-wrapper .ball:nth-child(37)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(38) {
+  top: calc(50% - 41.63141px);
+  left: calc(2.20104% - 41.63141px);
+  width: 83.26282px;
+  height: 83.26282px; }
+  .ball-wrapper .ball:nth-child(38)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(39) {
+  top: calc(50% - 51.93514px);
+  left: calc(60.18119% - 51.93514px);
+  width: 103.87028px;
+  height: 103.87028px; }
+  .ball-wrapper .ball:nth-child(39)::after {
+    background-color: #8FB2D6;
+    box-shadow: 0 0 10px #8FB2D6; }
+
+.ball-wrapper .ball:nth-child(40) {
+  top: calc(50% - 45.83599px);
+  left: calc(91.958% - 45.83599px);
+  width: 91.67198px;
+  height: 91.67198px; }
+  .ball-wrapper .ball:nth-child(40)::after {
+    background-color: #8FB2D6;
+    box-shadow: 0 0 10px #8FB2D6; }
+
+.ball-wrapper .ball:nth-child(41) {
+  top: calc(50% - 67.79194px);
+  left: calc(49.09657% - 67.79194px);
+  width: 135.58389px;
+  height: 135.58389px; }
+  .ball-wrapper .ball:nth-child(41)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(42) {
+  top: calc(50% - 64.09779px);
+  left: calc(73.28787% - 64.09779px);
+  width: 128.19557px;
+  height: 128.19557px; }
+  .ball-wrapper .ball:nth-child(42)::after {
+    background-color: #BBB783;
+    box-shadow: 0 0 10px #BBB783; }
+
+.ball-wrapper .ball:nth-child(43) {
+  top: calc(50% - 63.35289px);
+  left: calc(10.34782% - 63.35289px);
+  width: 126.70578px;
+  height: 126.70578px; }
+  .ball-wrapper .ball:nth-child(43)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(44) {
+  top: calc(50% - 40.26038px);
+  left: calc(40.7678% - 40.26038px);
+  width: 80.52076px;
+  height: 80.52076px; }
+  .ball-wrapper .ball:nth-child(44)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(45) {
+  top: calc(50% - 35.69408px);
+  left: calc(76.35226% - 35.69408px);
+  width: 71.38816px;
+  height: 71.38816px; }
+  .ball-wrapper .ball:nth-child(45)::after {
+    background-color: #8FB2D6;
+    box-shadow: 0 0 10px #8FB2D6; }
+
+.ball-wrapper .ball:nth-child(46) {
+  top: calc(50% - 63.10327px);
+  left: calc(41.28894% - 63.10327px);
+  width: 126.20655px;
+  height: 126.20655px; }
+  .ball-wrapper .ball:nth-child(46)::after {
+    background-color: #BBB783;
+    box-shadow: 0 0 10px #BBB783; }
+
+.ball-wrapper .ball:nth-child(47) {
+  top: calc(50% - 51.68538px);
+  left: calc(85.72557% - 51.68538px);
+  width: 103.37076px;
+  height: 103.37076px; }
+  .ball-wrapper .ball:nth-child(47)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(48) {
+  top: calc(50% - 51.38415px);
+  left: calc(83.31553% - 51.38415px);
+  width: 102.7683px;
+  height: 102.7683px; }
+  .ball-wrapper .ball:nth-child(48)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(49) {
+  top: calc(50% - 37.63751px);
+  left: calc(7.83161% - 37.63751px);
+  width: 75.27503px;
+  height: 75.27503px; }
+  .ball-wrapper .ball:nth-child(49)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(50) {
+  top: calc(50% - 44.59699px);
+  left: calc(45.05566% - 44.59699px);
+  width: 89.19398px;
+  height: 89.19398px; }
+  .ball-wrapper .ball:nth-child(50)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(51) {
+  top: calc(50% - 65.3477px);
+  left: calc(42.47179% - 65.3477px);
+  width: 130.6954px;
+  height: 130.6954px; }
+  .ball-wrapper .ball:nth-child(51)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(52) {
+  top: calc(50% - 40.39193px);
+  left: calc(49.73144% - 40.39193px);
+  width: 80.78386px;
+  height: 80.78386px; }
+  .ball-wrapper .ball:nth-child(52)::after {
+    background-color: #BBB783;
+    box-shadow: 0 0 10px #BBB783; }
+
+.ball-wrapper .ball:nth-child(53) {
+  top: calc(50% - 65.37972px);
+  left: calc(32.03166% - 65.37972px);
+  width: 130.75944px;
+  height: 130.75944px; }
+  .ball-wrapper .ball:nth-child(53)::after {
+    background-color: #BBB783;
+    box-shadow: 0 0 10px #BBB783; }
+
+.ball-wrapper .ball:nth-child(54) {
+  top: calc(50% - 50.14102px);
+  left: calc(96.95055% - 50.14102px);
+  width: 100.28204px;
+  height: 100.28204px; }
+  .ball-wrapper .ball:nth-child(54)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(55) {
+  top: calc(50% - 55.4685px);
+  left: calc(30.0019% - 55.4685px);
+  width: 110.937px;
+  height: 110.937px; }
+  .ball-wrapper .ball:nth-child(55)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(56) {
+  top: calc(50% - 44.92601px);
+  left: calc(69.01477% - 44.92601px);
+  width: 89.85202px;
+  height: 89.85202px; }
+  .ball-wrapper .ball:nth-child(56)::after {
+    background-color: #BBB783;
+    box-shadow: 0 0 10px #BBB783; }
+
+.ball-wrapper .ball:nth-child(57) {
+  top: calc(50% - 44.76037px);
+  left: calc(16.08064% - 44.76037px);
+  width: 89.52075px;
+  height: 89.52075px; }
+  .ball-wrapper .ball:nth-child(57)::after {
+    background-color: #BBB783;
+    box-shadow: 0 0 10px #BBB783; }
+
+.ball-wrapper .ball:nth-child(58) {
+  top: calc(50% - 48.0053px);
+  left: calc(73.9314% - 48.0053px);
+  width: 96.0106px;
+  height: 96.0106px; }
+  .ball-wrapper .ball:nth-child(58)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(59) {
+  top: calc(50% - 57.0244px);
+  left: calc(66.04319% - 57.0244px);
+  width: 114.0488px;
+  height: 114.0488px; }
+  .ball-wrapper .ball:nth-child(59)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(60) {
+  top: calc(50% - 55.75916px);
+  left: calc(76.01947% - 55.75916px);
+  width: 111.51833px;
+  height: 111.51833px; }
+  .ball-wrapper .ball:nth-child(60)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(61) {
+  top: calc(50% - 55.85409px);
+  left: calc(38.79178% - 55.85409px);
+  width: 111.70817px;
+  height: 111.70817px; }
+  .ball-wrapper .ball:nth-child(61)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(62) {
+  top: calc(50% - 50.84333px);
+  left: calc(63.04537% - 50.84333px);
+  width: 101.68665px;
+  height: 101.68665px; }
+  .ball-wrapper .ball:nth-child(62)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(63) {
+  top: calc(50% - 58.64991px);
+  left: calc(48.02706% - 58.64991px);
+  width: 117.29982px;
+  height: 117.29982px; }
+  .ball-wrapper .ball:nth-child(63)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(64) {
+  top: calc(50% - 48.45934px);
+  left: calc(22.37188% - 48.45934px);
+  width: 96.91868px;
+  height: 96.91868px; }
+  .ball-wrapper .ball:nth-child(64)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(65) {
+  top: calc(50% - 48.73437px);
+  left: calc(59.60929% - 48.73437px);
+  width: 97.46875px;
+  height: 97.46875px; }
+  .ball-wrapper .ball:nth-child(65)::after {
+    background-color: #BBB783;
+    box-shadow: 0 0 10px #BBB783; }
+
+.ball-wrapper .ball:nth-child(66) {
+  top: calc(50% - 47.74317px);
+  left: calc(92.24101% - 47.74317px);
+  width: 95.48634px;
+  height: 95.48634px; }
+  .ball-wrapper .ball:nth-child(66)::after {
+    background-color: #BBB783;
+    box-shadow: 0 0 10px #BBB783; }
+
+.ball-wrapper .ball:nth-child(67) {
+  top: calc(50% - 63.61927px);
+  left: calc(28.00005% - 63.61927px);
+  width: 127.23853px;
+  height: 127.23853px; }
+  .ball-wrapper .ball:nth-child(67)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(68) {
+  top: calc(50% - 52.28238px);
+  left: calc(9.50025% - 52.28238px);
+  width: 104.56475px;
+  height: 104.56475px; }
+  .ball-wrapper .ball:nth-child(68)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(69) {
+  top: calc(50% - 52.70294px);
+  left: calc(50.05261% - 52.70294px);
+  width: 105.40588px;
+  height: 105.40588px; }
+  .ball-wrapper .ball:nth-child(69)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(70) {
+  top: calc(50% - 59.41027px);
+  left: calc(64.28878% - 59.41027px);
+  width: 118.82055px;
+  height: 118.82055px; }
+  .ball-wrapper .ball:nth-child(70)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(71) {
+  top: calc(50% - 62.77028px);
+  left: calc(96.74221% - 62.77028px);
+  width: 125.54056px;
+  height: 125.54056px; }
+  .ball-wrapper .ball:nth-child(71)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(72) {
+  top: calc(50% - 49.91313px);
+  left: calc(78.45192% - 49.91313px);
+  width: 99.82626px;
+  height: 99.82626px; }
+  .ball-wrapper .ball:nth-child(72)::after {
+    background-color: #8FB2D6;
+    box-shadow: 0 0 10px #8FB2D6; }
+
+.ball-wrapper .ball:nth-child(73) {
+  top: calc(50% - 51.98007px);
+  left: calc(33.04402% - 51.98007px);
+  width: 103.96015px;
+  height: 103.96015px; }
+  .ball-wrapper .ball:nth-child(73)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(74) {
+  top: calc(50% - 42.97077px);
+  left: calc(84.99488% - 42.97077px);
+  width: 85.94155px;
+  height: 85.94155px; }
+  .ball-wrapper .ball:nth-child(74)::after {
+    background-color: #8FB2D6;
+    box-shadow: 0 0 10px #8FB2D6; }
+
+.ball-wrapper .ball:nth-child(75) {
+  top: calc(50% - 54.81926px);
+  left: calc(95.80603% - 54.81926px);
+  width: 109.63852px;
+  height: 109.63852px; }
+  .ball-wrapper .ball:nth-child(75)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(76) {
+  top: calc(50% - 62.59211px);
+  left: calc(6.57901% - 62.59211px);
+  width: 125.18422px;
+  height: 125.18422px; }
+  .ball-wrapper .ball:nth-child(76)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(77) {
+  top: calc(50% - 48.22915px);
+  left: calc(26.29942% - 48.22915px);
+  width: 96.4583px;
+  height: 96.4583px; }
+  .ball-wrapper .ball:nth-child(77)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(78) {
+  top: calc(50% - 44.84468px);
+  left: calc(25.95362% - 44.84468px);
+  width: 89.68936px;
+  height: 89.68936px; }
+  .ball-wrapper .ball:nth-child(78)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(79) {
+  top: calc(50% - 35.27445px);
+  left: calc(16.57536% - 35.27445px);
+  width: 70.5489px;
+  height: 70.5489px; }
+  .ball-wrapper .ball:nth-child(79)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(80) {
+  top: calc(50% - 60.13493px);
+  left: calc(32.61729% - 60.13493px);
+  width: 120.26985px;
+  height: 120.26985px; }
+  .ball-wrapper .ball:nth-child(80)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(81) {
+  top: calc(50% - 37.44618px);
+  left: calc(99.85945% - 37.44618px);
+  width: 74.89236px;
+  height: 74.89236px; }
+  .ball-wrapper .ball:nth-child(81)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(82) {
+  top: calc(50% - 53.58623px);
+  left: calc(0.55234% - 53.58623px);
+  width: 107.17247px;
+  height: 107.17247px; }
+  .ball-wrapper .ball:nth-child(82)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(83) {
+  top: calc(50% - 52.79979px);
+  left: calc(67.18142% - 52.79979px);
+  width: 105.59958px;
+  height: 105.59958px; }
+  .ball-wrapper .ball:nth-child(83)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(84) {
+  top: calc(50% - 35.37577px);
+  left: calc(29.39029% - 35.37577px);
+  width: 70.75154px;
+  height: 70.75154px; }
+  .ball-wrapper .ball:nth-child(84)::after {
+    background-color: #F1C357;
+    box-shadow: 0 0 10px #F1C357; }
+
+.ball-wrapper .ball:nth-child(85) {
+  top: calc(50% - 55.24893px);
+  left: calc(38.71815% - 55.24893px);
+  width: 110.49786px;
+  height: 110.49786px; }
+  .ball-wrapper .ball:nth-child(85)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(86) {
+  top: calc(50% - 44.43956px);
+  left: calc(2.97655% - 44.43956px);
+  width: 88.87911px;
+  height: 88.87911px; }
+  .ball-wrapper .ball:nth-child(86)::after {
+    background-color: #B19BC4;
+    box-shadow: 0 0 10px #B19BC4; }
+
+.ball-wrapper .ball:nth-child(87) {
+  top: calc(50% - 53.52685px);
+  left: calc(30.42849% - 53.52685px);
+  width: 107.0537px;
+  height: 107.0537px; }
+  .ball-wrapper .ball:nth-child(87)::after {
+    background-color: #F19CC1;
+    box-shadow: 0 0 10px #F19CC1; }
+
+.ball-wrapper .ball:nth-child(88) {
+  top: calc(50% - 45.18992px);
+  left: calc(2.6185% - 45.18992px);
+  width: 90.37983px;
+  height: 90.37983px; }
+  .ball-wrapper .ball:nth-child(88)::after {
+    background-color: #EB8F8E;
+    box-shadow: 0 0 10px #EB8F8E; }
+
+.ball-wrapper .ball:nth-child(89) {
+  top: calc(50% - 37.71262px);
+  left: calc(27.62878% - 37.71262px);
+  width: 75.42523px;
+  height: 75.42523px; }
+  .ball-wrapper .ball:nth-child(89)::after {
+    background-color: #8FB2D6;
+    box-shadow: 0 0 10px #8FB2D6; }
+
+.ball-wrapper .ball:nth-child(90) {
+  top: calc(50% - 41.60553px);
+  left: calc(65.25807% - 41.60553px);
+  width: 83.21106px;
+  height: 83.21106px; }
+  .ball-wrapper .ball:nth-child(90)::after {
+    background-color: #BBB783;
+    box-shadow: 0 0 10px #BBB783; }
+
+.ball:nth-child(1) {
+  animation: up 0.6s ease-in 1.63979s infinite; }
+
+.ball:nth-child(2) {
+  animation: up 0.6s ease-in 0.58141s infinite; }
+
+.ball:nth-child(3) {
+  animation: down 0.6s ease-in 0.69754s infinite; }
+
+.ball:nth-child(4) {
+  animation: down 0.6s ease-in 1.72456s infinite; }
+
+.ball:nth-child(5) {
+  animation: down 0.6s ease-in 1.95659s infinite; }
+
+.ball:nth-child(6) {
+  animation: up 0.6s ease-in 1.01595s infinite; }
+
+.ball:nth-child(7) {
+  animation: down 0.6s ease-in 1.42976s infinite; }
+
+.ball:nth-child(8) {
+  animation: down 0.6s ease-in 1.59201s infinite; }
+
+.ball:nth-child(9) {
+  animation: up 0.6s ease-in 1.49717s infinite; }
+
+.ball:nth-child(10) {
+  animation: down 0.6s ease-in 1.93711s infinite; }
+
+.ball:nth-child(11) {
+  animation: down 0.6s ease-in 0.05082s infinite; }
+
+.ball:nth-child(12) {
+  animation: up 0.6s ease-in 1.69901s infinite; }
+
+.ball:nth-child(13) {
+  animation: down 0.6s ease-in 1.16628s infinite; }
+
+.ball:nth-child(14) {
+  animation: up 0.6s ease-in 0.77436s infinite; }
+
+.ball:nth-child(15) {
+  animation: down 0.6s ease-in 1.92263s infinite; }
+
+.ball:nth-child(16) {
+  animation: down 0.6s ease-in 1.56873s infinite; }
+
+.ball:nth-child(17) {
+  animation: down 0.6s ease-in 1.94799s infinite; }
+
+.ball:nth-child(18) {
+  animation: up 0.6s ease-in 0.53689s infinite; }
+
+.ball:nth-child(19) {
+  animation: up 0.6s ease-in 0.43463s infinite; }
+
+.ball:nth-child(20) {
+  animation: down 0.6s ease-in 0.03009s infinite; }
+
+.ball:nth-child(21) {
+  animation: up 0.6s ease-in 0.81206s infinite; }
+
+.ball:nth-child(22) {
+  animation: down 0.6s ease-in 0.00413s infinite; }
+
+.ball:nth-child(23) {
+  animation: up 0.6s ease-in 0.38039s infinite; }
+
+.ball:nth-child(24) {
+  animation: up 0.6s ease-in 0.05532s infinite; }
+
+.ball:nth-child(25) {
+  animation: down 0.6s ease-in 0.6458s infinite; }
+
+.ball:nth-child(26) {
+  animation: down 0.6s ease-in 1.25628s infinite; }
+
+.ball:nth-child(27) {
+  animation: up 0.6s ease-in 1.24063s infinite; }
+
+.ball:nth-child(28) {
+  animation: up 0.6s ease-in 1.23719s infinite; }
+
+.ball:nth-child(29) {
+  animation: up 0.6s ease-in 1.10583s infinite; }
+
+.ball:nth-child(30) {
+  animation: down 0.6s ease-in 1.96052s infinite; }
+
+.ball:nth-child(31) {
+  animation: down 0.6s ease-in 1.66462s infinite; }
+
+.ball:nth-child(32) {
+  animation: up 0.6s ease-in 0.29435s infinite; }
+
+.ball:nth-child(33) {
+  animation: up 0.6s ease-in 1.78458s infinite; }
+
+.ball:nth-child(34) {
+  animation: down 0.6s ease-in 1.40349s infinite; }
+
+.ball:nth-child(35) {
+  animation: down 0.6s ease-in 0.58604s infinite; }
+
+.ball:nth-child(36) {
+  animation: down 0.6s ease-in 1.60862s infinite; }
+
+.ball:nth-child(37) {
+  animation: up 0.6s ease-in 1.60469s infinite; }
+
+.ball:nth-child(38) {
+  animation: down 0.6s ease-in 0.0415s infinite; }
+
+.ball:nth-child(39) {
+  animation: down 0.6s ease-in 1.96222s infinite; }
+
+.ball:nth-child(40) {
+  animation: down 0.6s ease-in 1.47884s infinite; }
+
+.ball:nth-child(41) {
+  animation: up 0.6s ease-in 1.07709s infinite; }
+
+.ball:nth-child(42) {
+  animation: up 0.6s ease-in 0.79503s infinite; }
+
+.ball:nth-child(43) {
+  animation: up 0.6s ease-in 1.85695s infinite; }
+
+.ball:nth-child(44) {
+  animation: up 0.6s ease-in 1.56355s infinite; }
+
+.ball:nth-child(45) {
+  animation: down 0.6s ease-in 0.64134s infinite; }
+
+.ball:nth-child(46) {
+  animation: up 0.6s ease-in 0.07736s infinite; }
+
+.ball:nth-child(47) {
+  animation: up 0.6s ease-in 0.52538s infinite; }
+
+.ball:nth-child(48) {
+  animation: up 0.6s ease-in 1.06548s infinite; }
+
+.ball:nth-child(49) {
+  animation: up 0.6s ease-in 0.31977s infinite; }
+
+.ball:nth-child(50) {
+  animation: up 0.6s ease-in 1.21262s infinite; }
+
+.ball:nth-child(51) {
+  animation: down 0.6s ease-in 1.47039s infinite; }
+
+.ball:nth-child(52) {
+  animation: up 0.6s ease-in 0.62917s infinite; }
+
+.ball:nth-child(53) {
+  animation: down 0.6s ease-in 0.56601s infinite; }
+
+.ball:nth-child(54) {
+  animation: up 0.6s ease-in 0.29954s infinite; }
+
+.ball:nth-child(55) {
+  animation: up 0.6s ease-in 0.15075s infinite; }
+
+.ball:nth-child(56) {
+  animation: down 0.6s ease-in 1.84725s infinite; }
+
+.ball:nth-child(57) {
+  animation: down 0.6s ease-in 1.80112s infinite; }
+
+.ball:nth-child(58) {
+  animation: down 0.6s ease-in 1.37163s infinite; }
+
+.ball:nth-child(59) {
+  animation: up 0.6s ease-in 1.66649s infinite; }
+
+.ball:nth-child(60) {
+  animation: up 0.6s ease-in 0.1292s infinite; }
+
+.ball:nth-child(61) {
+  animation: up 0.6s ease-in 1.13265s infinite; }
+
+.ball:nth-child(62) {
+  animation: up 0.6s ease-in 0.94525s infinite; }
+
+.ball:nth-child(63) {
+  animation: up 0.6s ease-in 1.98768s infinite; }
+
+.ball:nth-child(64) {
+  animation: down 0.6s ease-in 1.05182s infinite; }
+
+.ball:nth-child(65) {
+  animation: down 0.6s ease-in 0.92615s infinite; }
+
+.ball:nth-child(66) {
+  animation: up 0.6s ease-in 0.61231s infinite; }
+
+.ball:nth-child(67) {
+  animation: up 0.6s ease-in 0.44621s infinite; }
+
+.ball:nth-child(68) {
+  animation: up 0.6s ease-in 0.13473s infinite; }
+
+.ball:nth-child(69) {
+  animation: down 0.6s ease-in 1.04579s infinite; }
+
+.ball:nth-child(70) {
+  animation: down 0.6s ease-in 0.012s infinite; }
+
+.ball:nth-child(71) {
+  animation: down 0.6s ease-in 1.86208s infinite; }
+
+.ball:nth-child(72) {
+  animation: up 0.6s ease-in 0.48909s infinite; }
+
+.ball:nth-child(73) {
+  animation: down 0.6s ease-in 1.208s infinite; }
+
+.ball:nth-child(74) {
+  animation: up 0.6s ease-in 0.9968s infinite; }
+
+.ball:nth-child(75) {
+  animation: up 0.6s ease-in 0.41131s infinite; }
+
+.ball:nth-child(76) {
+  animation: down 0.6s ease-in 0.41131s infinite; }
+
+.ball:nth-child(77) {
+  animation: down 0.6s ease-in 1.30265s infinite; }
+
+.ball:nth-child(78) {
+  animation: up 0.6s ease-in 0.76056s infinite; }
+
+.ball:nth-child(79) {
+  animation: down 0.6s ease-in 1.40695s infinite; }
+
+.ball:nth-child(80) {
+  animation: up 0.6s ease-in 0.92433s infinite; }
+
+.ball:nth-child(81) {
+  animation: up 0.6s ease-in 1.21142s infinite; }
+
+.ball:nth-child(82) {
+  animation: up 0.6s ease-in 0.24972s infinite; }
+
+.ball:nth-child(83) {
+  animation: up 0.6s ease-in 0.71473s infinite; }
+
+.ball:nth-child(84) {
+  animation: up 0.6s ease-in 0.26507s infinite; }
+
+.ball:nth-child(85) {
+  animation: up 0.6s ease-in 0.23472s infinite; }
+
+.ball:nth-child(86) {
+  animation: up 0.6s ease-in 1.56839s infinite; }
+
+.ball:nth-child(87) {
+  animation: up 0.6s ease-in 1.87869s infinite; }
+
+.ball:nth-child(88) {
+  animation: down 0.6s ease-in 1.011s infinite; }
+
+.ball:nth-child(89) {
+  animation: up 0.6s ease-in 0.10277s infinite; }
+
+.ball:nth-child(90) {
+  animation: down 0.6s ease-in 1.71583s infinite; }
+
+@keyframes up {
+  from {
+    transform: translateY(0vh) scale(1);
+    opacity: 1; }
+  to {
+    transform: translateY(-50vh) scale(0.2);
+    opacity: 0; } }
+
+@keyframes down {
+  from {
+    transform: translateY(0vh) scale(1);
+    opacity: 1; }
+  to {
+    transform: translateY(50vh) scale(0.2);
+    opacity: 0; } }

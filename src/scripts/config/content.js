@@ -487,4 +487,12 @@ export default [
     "thumb": "./images/thumb/small/box-flow.png",
     "thumb_large": "./images/thumb/large/box-flow.png"
   },
+  {
+    "id": "color-burn",
+    "title": "color-burn",
+    "link": "./content/color-burn/",
+    "description": "mix-blend-mode: color-burn;",
+    "thumb": "./images/thumb/small/color-burn.png",
+    "thumb_large": "./images/thumb/large/color-burn.png"
+  },
 ]

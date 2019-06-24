@@ -1,0 +1,89 @@
+$colors: #EB8F8E, #BBB783, #B19BC4, #8FB2D6, #F19CC1, #F1C357;
+
+%element {
+  content: "";
+  display: block;
+}
+%fixed100per {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@mixin setBox($size) {
+  width: $size;
+  height: $size;
+}
+@mixin setSize($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #E9E5E3;
+  overflow: hidden;
+}
+
+.wrapper {
+  @extend %fixed100per;
+}
+
+.ball-wrapper {
+  .ball {
+    position: absolute;
+    opacity: 0;
+    mix-blend-mode: color-burn;
+
+    &::after {
+      @extend %element;
+      @extend %fixed100per;
+      transform: rotate(45deg);
+    
+    }
+    &:nth-child(even)::after {
+      border-radius: 50%;
+    }
+  }
+
+  @for $i from 1 through 90 {
+    $size: random() * 70px + 70px;
+    $index: random(6);
+    .ball:nth-child(#{$i}) {
+      top: calc(50% - #{$size / 2});
+      left: calc(#{random() * 100%} - #{$size / 2});
+      @include setBox($size);
+
+      &::after {
+        background-color: nth($colors, $index);
+        box-shadow: 0 0 10px nth($colors, $index);
+      }
+    }
+  }
+}
+
+// animation
+$keyframes: up, down;
+@for $i from 1 through 90 {
+  .ball:nth-child(#{$i}) {
+    animation: #{nth($keyframes, random(2))} 0.6s ease-in #{random() * 2}s infinite;
+  }
+}
+
+@keyframes up {
+  from { transform: translateY(0vh) scale(1); opacity: 1; }
+  to   { transform: translateY(-50vh) scale(0.2); opacity: 0; }
+}
+@keyframes down {
+  from { transform: translateY(0vh) scale(1); opacity: 1; }
+  to   { transform: translateY(50vh) scale(0.2); opacity: 0; }
+}
+
