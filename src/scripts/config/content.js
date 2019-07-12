@@ -495,4 +495,12 @@ export default [
     "thumb": "./images/thumb/small/color-burn.png",
     "thumb_large": "./images/thumb/large/color-burn.png"
   },
+  {
+    "id": "friend-modal",
+    "title": "friend-modal",
+    "link": "./content/friend-modal/",
+    "description": "友達申請モーダル",
+    "thumb": "./images/thumb/small/friend-modal.png",
+    "thumb_large": "./images/thumb/large/friend-modal.png"
+  },
 ]
