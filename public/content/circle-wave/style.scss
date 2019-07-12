@@ -1,0 +1,205 @@
+@mixin setBox($size) {
+  width: $size;
+  height: $size;
+}
+@mixin setSize($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin setRect($x, $y, $width, $height) {
+  position: absolute;
+  top: $y;
+  left: $x;
+  @include setSize($width, $height);
+}
+
+$colors: #34435b, #415c7a, #f3d9bf, #b87180;
+
+%fixed100per {
+  @include setRect(0, 0, 100%, 100%);
+}
+
+%epseudo {
+  content: "";
+  display: blovk;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.stage {
+  position: relative;
+  @include setSize(100%, 100vh);
+  background-color: #fdfefe;
+  overflow: hidden;
+}
+
+.box {
+  @include setRect(50%, 50%, 500px, 500px);
+  transform: translate(-50%, -50%);
+
+  .circle {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        @include setBox(#{$i * 50}px);
+      }
+    }
+
+    .left,
+    .right {
+      position: relative;
+      @include setSize(50%, 100%);
+      overflow: hidden;
+
+      .inner {
+        @extend %fixed100per;
+        overflow: hidden;
+        transform: rotate(180deg);
+
+        &::after {
+          @extend %epseudo;
+          border-radius: 50%;
+          box-sizing: border-box;
+          border: solid 6px transparent;
+        }
+      }
+    }
+    .left .inner {
+      transform-origin: right center;
+
+      &::after {
+        @include setRect(0, 0, 200%, 100%);
+      }
+    }
+    .right .inner {
+      transform-origin: left center;
+
+      &::after {
+        @include setRect(-100%, 0, 200%, 100%);
+      }
+    }
+    &:nth-child(1n) .left .inner::after,
+    &:nth-child(1n) .right .inner::after {
+      border-color: nth($colors, 1);
+    }
+    &:nth-child(2n) .left .inner::after,
+    &:nth-child(2n) .right .inner::after {
+      border-color: nth($colors, 2);
+    }
+    &:nth-child(3n) .left .inner::after,
+    &:nth-child(3n) .right .inner::after {
+      border-color: nth($colors, 3);
+    }
+    &:nth-child(4n) .left .inner::after,
+    &:nth-child(4n) .right .inner::after {
+      border-color: nth($colors, 4);
+    }
+  }
+}
+
+.box {
+  @for $i from 1 through 10 {
+    .circle:nth-child(#{$i}) {
+      .left .inner {
+        animation: rotate1 0.4s ease-in #{$i * 0.05}s forwards,
+          rotate1- 0.4s ease-in #{$i * 0.05 + 0.5}s forwards,
+          rotate3 0.4s ease-in #{$i * 0.05 + 1}s forwards,
+          rotate3- 0.4s ease-in #{$i * 0.05 + 1.5}s forwards,
+          rotate4 0.4s ease-in #{$i * 0.05 + 2}s forwards,
+          rotate4- 0.4s ease-in #{$i * 0.05 + 2.5}s forwards,
+          rotate4 0.4s ease-in #{$i * 0.05 + 3}s forwards,
+          rotate4- 0.4s ease-in #{$i * 0.05 + 3.5}s forwards;
+      }
+      .right .inner {
+        animation: rotate2 0.4s ease-in #{$i * 0.05}s forwards,
+          rotate2- 0.4s ease-in #{$i * 0.05 + 0.5}s forwards,
+          rotate4 0.4s ease-in #{$i * 0.05 + 1}s forwards,
+          rotate4- 0.4s ease-in #{$i * 0.05 + 1.5}s forwards,
+          rotate4 0.4s ease-in #{$i * 0.05 + 2}s forwards,
+          rotate4- 0.4s ease-in #{$i * 0.05 + 2.5}s forwards,
+          rotate3 0.4s ease-in #{$i * 0.05 + 3}s forwards,
+          rotate3- 0.4s ease-in #{$i * 0.05 + 3.5}s forwards;
+      }
+    }
+  }
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotate(180deg);
+  }
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate1- {
+  0% {
+    transform: rotate(0deg);
+  }
+  50%,
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes rotate2 {
+  0%,
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate2- {
+  0%,
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes rotate3 {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate3- {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes rotate4 {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate4- {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}

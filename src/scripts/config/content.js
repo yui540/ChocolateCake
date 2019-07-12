@@ -503,4 +503,12 @@ export default [
     "thumb": "./images/thumb/small/friend-modal.png",
     "thumb_large": "./images/thumb/large/friend-modal.png"
   },
+  {
+    "id": "circle-wave",
+    "title": "circle-wave",
+    "link": "./content/circle-wave/",
+    "description": "波。",
+    "thumb": "./images/thumb/small/circle-wave.png",
+    "thumb_large": "./images/thumb/large/circle-wave.png"
+  },
 ]

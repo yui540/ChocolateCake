@@ -1,0 +1,222 @@
+.box .circle .left .inner,
+.box .circle .right .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.box .circle .left .inner::after,
+.box .circle .right .inner::after {
+  content: "";
+  display: blovk; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #fdfefe;
+  overflow: hidden; }
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%); }
+  .box .circle {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .box .circle:nth-child(1) {
+      width: 50px;
+      height: 50px; }
+    .box .circle:nth-child(2) {
+      width: 100px;
+      height: 100px; }
+    .box .circle:nth-child(3) {
+      width: 150px;
+      height: 150px; }
+    .box .circle:nth-child(4) {
+      width: 200px;
+      height: 200px; }
+    .box .circle:nth-child(5) {
+      width: 250px;
+      height: 250px; }
+    .box .circle:nth-child(6) {
+      width: 300px;
+      height: 300px; }
+    .box .circle:nth-child(7) {
+      width: 350px;
+      height: 350px; }
+    .box .circle:nth-child(8) {
+      width: 400px;
+      height: 400px; }
+    .box .circle:nth-child(9) {
+      width: 450px;
+      height: 450px; }
+    .box .circle:nth-child(10) {
+      width: 500px;
+      height: 500px; }
+    .box .circle .left,
+    .box .circle .right {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      overflow: hidden; }
+      .box .circle .left .inner,
+      .box .circle .right .inner {
+        overflow: hidden;
+        transform: rotate(180deg); }
+        .box .circle .left .inner::after,
+        .box .circle .right .inner::after {
+          border-radius: 50%;
+          box-sizing: border-box;
+          border: solid 6px transparent; }
+    .box .circle .left .inner {
+      transform-origin: right center; }
+      .box .circle .left .inner::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%; }
+    .box .circle .right .inner {
+      transform-origin: left center; }
+      .box .circle .right .inner::after {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 200%;
+        height: 100%; }
+    .box .circle:nth-child(1n) .left .inner::after,
+    .box .circle:nth-child(1n) .right .inner::after {
+      border-color: #34435b; }
+    .box .circle:nth-child(2n) .left .inner::after,
+    .box .circle:nth-child(2n) .right .inner::after {
+      border-color: #415c7a; }
+    .box .circle:nth-child(3n) .left .inner::after,
+    .box .circle:nth-child(3n) .right .inner::after {
+      border-color: #f3d9bf; }
+    .box .circle:nth-child(4n) .left .inner::after,
+    .box .circle:nth-child(4n) .right .inner::after {
+      border-color: #b87180; }
+
+.box .circle:nth-child(1) .left .inner {
+  animation: rotate1 0.4s ease-in 0.05s forwards, rotate1- 0.4s ease-in 0.55s forwards, rotate3 0.4s ease-in 1.05s forwards, rotate3- 0.4s ease-in 1.55s forwards, rotate4 0.4s ease-in 2.05s forwards, rotate4- 0.4s ease-in 2.55s forwards, rotate4 0.4s ease-in 3.05s forwards, rotate4- 0.4s ease-in 3.55s forwards; }
+
+.box .circle:nth-child(1) .right .inner {
+  animation: rotate2 0.4s ease-in 0.05s forwards, rotate2- 0.4s ease-in 0.55s forwards, rotate4 0.4s ease-in 1.05s forwards, rotate4- 0.4s ease-in 1.55s forwards, rotate4 0.4s ease-in 2.05s forwards, rotate4- 0.4s ease-in 2.55s forwards, rotate3 0.4s ease-in 3.05s forwards, rotate3- 0.4s ease-in 3.55s forwards; }
+
+.box .circle:nth-child(2) .left .inner {
+  animation: rotate1 0.4s ease-in 0.1s forwards, rotate1- 0.4s ease-in 0.6s forwards, rotate3 0.4s ease-in 1.1s forwards, rotate3- 0.4s ease-in 1.6s forwards, rotate4 0.4s ease-in 2.1s forwards, rotate4- 0.4s ease-in 2.6s forwards, rotate4 0.4s ease-in 3.1s forwards, rotate4- 0.4s ease-in 3.6s forwards; }
+
+.box .circle:nth-child(2) .right .inner {
+  animation: rotate2 0.4s ease-in 0.1s forwards, rotate2- 0.4s ease-in 0.6s forwards, rotate4 0.4s ease-in 1.1s forwards, rotate4- 0.4s ease-in 1.6s forwards, rotate4 0.4s ease-in 2.1s forwards, rotate4- 0.4s ease-in 2.6s forwards, rotate3 0.4s ease-in 3.1s forwards, rotate3- 0.4s ease-in 3.6s forwards; }
+
+.box .circle:nth-child(3) .left .inner {
+  animation: rotate1 0.4s ease-in 0.15s forwards, rotate1- 0.4s ease-in 0.65s forwards, rotate3 0.4s ease-in 1.15s forwards, rotate3- 0.4s ease-in 1.65s forwards, rotate4 0.4s ease-in 2.15s forwards, rotate4- 0.4s ease-in 2.65s forwards, rotate4 0.4s ease-in 3.15s forwards, rotate4- 0.4s ease-in 3.65s forwards; }
+
+.box .circle:nth-child(3) .right .inner {
+  animation: rotate2 0.4s ease-in 0.15s forwards, rotate2- 0.4s ease-in 0.65s forwards, rotate4 0.4s ease-in 1.15s forwards, rotate4- 0.4s ease-in 1.65s forwards, rotate4 0.4s ease-in 2.15s forwards, rotate4- 0.4s ease-in 2.65s forwards, rotate3 0.4s ease-in 3.15s forwards, rotate3- 0.4s ease-in 3.65s forwards; }
+
+.box .circle:nth-child(4) .left .inner {
+  animation: rotate1 0.4s ease-in 0.2s forwards, rotate1- 0.4s ease-in 0.7s forwards, rotate3 0.4s ease-in 1.2s forwards, rotate3- 0.4s ease-in 1.7s forwards, rotate4 0.4s ease-in 2.2s forwards, rotate4- 0.4s ease-in 2.7s forwards, rotate4 0.4s ease-in 3.2s forwards, rotate4- 0.4s ease-in 3.7s forwards; }
+
+.box .circle:nth-child(4) .right .inner {
+  animation: rotate2 0.4s ease-in 0.2s forwards, rotate2- 0.4s ease-in 0.7s forwards, rotate4 0.4s ease-in 1.2s forwards, rotate4- 0.4s ease-in 1.7s forwards, rotate4 0.4s ease-in 2.2s forwards, rotate4- 0.4s ease-in 2.7s forwards, rotate3 0.4s ease-in 3.2s forwards, rotate3- 0.4s ease-in 3.7s forwards; }
+
+.box .circle:nth-child(5) .left .inner {
+  animation: rotate1 0.4s ease-in 0.25s forwards, rotate1- 0.4s ease-in 0.75s forwards, rotate3 0.4s ease-in 1.25s forwards, rotate3- 0.4s ease-in 1.75s forwards, rotate4 0.4s ease-in 2.25s forwards, rotate4- 0.4s ease-in 2.75s forwards, rotate4 0.4s ease-in 3.25s forwards, rotate4- 0.4s ease-in 3.75s forwards; }
+
+.box .circle:nth-child(5) .right .inner {
+  animation: rotate2 0.4s ease-in 0.25s forwards, rotate2- 0.4s ease-in 0.75s forwards, rotate4 0.4s ease-in 1.25s forwards, rotate4- 0.4s ease-in 1.75s forwards, rotate4 0.4s ease-in 2.25s forwards, rotate4- 0.4s ease-in 2.75s forwards, rotate3 0.4s ease-in 3.25s forwards, rotate3- 0.4s ease-in 3.75s forwards; }
+
+.box .circle:nth-child(6) .left .inner {
+  animation: rotate1 0.4s ease-in 0.3s forwards, rotate1- 0.4s ease-in 0.8s forwards, rotate3 0.4s ease-in 1.3s forwards, rotate3- 0.4s ease-in 1.8s forwards, rotate4 0.4s ease-in 2.3s forwards, rotate4- 0.4s ease-in 2.8s forwards, rotate4 0.4s ease-in 3.3s forwards, rotate4- 0.4s ease-in 3.8s forwards; }
+
+.box .circle:nth-child(6) .right .inner {
+  animation: rotate2 0.4s ease-in 0.3s forwards, rotate2- 0.4s ease-in 0.8s forwards, rotate4 0.4s ease-in 1.3s forwards, rotate4- 0.4s ease-in 1.8s forwards, rotate4 0.4s ease-in 2.3s forwards, rotate4- 0.4s ease-in 2.8s forwards, rotate3 0.4s ease-in 3.3s forwards, rotate3- 0.4s ease-in 3.8s forwards; }
+
+.box .circle:nth-child(7) .left .inner {
+  animation: rotate1 0.4s ease-in 0.35s forwards, rotate1- 0.4s ease-in 0.85s forwards, rotate3 0.4s ease-in 1.35s forwards, rotate3- 0.4s ease-in 1.85s forwards, rotate4 0.4s ease-in 2.35s forwards, rotate4- 0.4s ease-in 2.85s forwards, rotate4 0.4s ease-in 3.35s forwards, rotate4- 0.4s ease-in 3.85s forwards; }
+
+.box .circle:nth-child(7) .right .inner {
+  animation: rotate2 0.4s ease-in 0.35s forwards, rotate2- 0.4s ease-in 0.85s forwards, rotate4 0.4s ease-in 1.35s forwards, rotate4- 0.4s ease-in 1.85s forwards, rotate4 0.4s ease-in 2.35s forwards, rotate4- 0.4s ease-in 2.85s forwards, rotate3 0.4s ease-in 3.35s forwards, rotate3- 0.4s ease-in 3.85s forwards; }
+
+.box .circle:nth-child(8) .left .inner {
+  animation: rotate1 0.4s ease-in 0.4s forwards, rotate1- 0.4s ease-in 0.9s forwards, rotate3 0.4s ease-in 1.4s forwards, rotate3- 0.4s ease-in 1.9s forwards, rotate4 0.4s ease-in 2.4s forwards, rotate4- 0.4s ease-in 2.9s forwards, rotate4 0.4s ease-in 3.4s forwards, rotate4- 0.4s ease-in 3.9s forwards; }
+
+.box .circle:nth-child(8) .right .inner {
+  animation: rotate2 0.4s ease-in 0.4s forwards, rotate2- 0.4s ease-in 0.9s forwards, rotate4 0.4s ease-in 1.4s forwards, rotate4- 0.4s ease-in 1.9s forwards, rotate4 0.4s ease-in 2.4s forwards, rotate4- 0.4s ease-in 2.9s forwards, rotate3 0.4s ease-in 3.4s forwards, rotate3- 0.4s ease-in 3.9s forwards; }
+
+.box .circle:nth-child(9) .left .inner {
+  animation: rotate1 0.4s ease-in 0.45s forwards, rotate1- 0.4s ease-in 0.95s forwards, rotate3 0.4s ease-in 1.45s forwards, rotate3- 0.4s ease-in 1.95s forwards, rotate4 0.4s ease-in 2.45s forwards, rotate4- 0.4s ease-in 2.95s forwards, rotate4 0.4s ease-in 3.45s forwards, rotate4- 0.4s ease-in 3.95s forwards; }
+
+.box .circle:nth-child(9) .right .inner {
+  animation: rotate2 0.4s ease-in 0.45s forwards, rotate2- 0.4s ease-in 0.95s forwards, rotate4 0.4s ease-in 1.45s forwards, rotate4- 0.4s ease-in 1.95s forwards, rotate4 0.4s ease-in 2.45s forwards, rotate4- 0.4s ease-in 2.95s forwards, rotate3 0.4s ease-in 3.45s forwards, rotate3- 0.4s ease-in 3.95s forwards; }
+
+.box .circle:nth-child(10) .left .inner {
+  animation: rotate1 0.4s ease-in 0.5s forwards, rotate1- 0.4s ease-in 1s forwards, rotate3 0.4s ease-in 1.5s forwards, rotate3- 0.4s ease-in 2s forwards, rotate4 0.4s ease-in 2.5s forwards, rotate4- 0.4s ease-in 3s forwards, rotate4 0.4s ease-in 3.5s forwards, rotate4- 0.4s ease-in 4s forwards; }
+
+.box .circle:nth-child(10) .right .inner {
+  animation: rotate2 0.4s ease-in 0.5s forwards, rotate2- 0.4s ease-in 1s forwards, rotate4 0.4s ease-in 1.5s forwards, rotate4- 0.4s ease-in 2s forwards, rotate4 0.4s ease-in 2.5s forwards, rotate4- 0.4s ease-in 3s forwards, rotate3 0.4s ease-in 3.5s forwards, rotate3- 0.4s ease-in 4s forwards; }
+
+@keyframes rotate1 {
+  0% {
+    transform: rotate(180deg); }
+  50%,
+  100% {
+    transform: rotate(0deg); } }
+
+@keyframes rotate1- {
+  0% {
+    transform: rotate(0deg); }
+  50%,
+  100% {
+    transform: rotate(-180deg); } }
+
+@keyframes rotate2 {
+  0%,
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+@keyframes rotate2- {
+  0%,
+  50% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(-180deg); } }
+
+@keyframes rotate3 {
+  from {
+    transform: rotate(180deg); }
+  to {
+    transform: rotate(0deg); } }
+
+@keyframes rotate3- {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(-180deg); } }
+
+@keyframes rotate4 {
+  from {
+    transform: rotate(-180deg); }
+  to {
+    transform: rotate(0deg); } }
+
+@keyframes rotate4- {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(180deg); } }
