@@ -28,7 +28,7 @@
     "babel-preset-es2015-riot": "^1.1.0",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "node-sass-glob-importer": "^5.1.1",
     "riot": "^3.9.0",
     "riot-hot-reload": "^1.0.0",
